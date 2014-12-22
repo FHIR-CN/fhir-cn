@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>FHIR 中文版</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="首页 &gt;文档 &gt; 总结    
+1.14.0  Using Codes in Resources
+ 
+Many elements in the FHIR resources have a coded value: some fixed string(a sequence of characters) assigned elsewhere that identifies some d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FHIR 中文版">
+<meta property="og:url" content="http://wanghaisheng.github.io/fhir-cn/home/index.html/doc/terminologies.html">
+<meta property="og:site_name" content="FHIR 中文版">
+<meta property="og:description" content="首页 &gt;文档 &gt; 总结    
+1.14.0  Using Codes in Resources
+ 
+Many elements in the FHIR resources have a coded value: some fixed string(a sequence of characters) assigned elsewhere that identifies some d">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FHIR 中文版">
+<meta name="twitter:description" content="首页 &gt;文档 &gt; 总结    
+1.14.0  Using Codes in Resources
+ 
+Many elements in the FHIR resources have a coded value: some fixed string(a sequence of characters) assigned elsewhere that identifies some d">
+
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50564678-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class='navbar menu'>
+    
+        <a href="/fhir-cn/home/index.html" title="首页">
+            <div class="menu-action"><img src="../images/icon-home.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/doc/documentation.html" title="文档">
+            <div class="menu-action"><img src="../images/icon-documentation.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/impl/implementation.html" title="实现">
+            <div class="menu-action"><img src="../images/icon-implementation.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/res/resourcelist.html" title="资源">
+            <div class="menu-action"><img src="../images/icon-res.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/clin/clinical.html" title="临床类资源">
+            <div class="menu-action"><img src="../images/icon-clinical.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/admin/administration.html" title="行政管理类资源">
+            <div class="menu-action"><img src="../images/icon-administration.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/infra/infrastructure.html" title="基础架构类资源">
+            <div class="menu-action"><img src="../images/icon-infrastructure.png"></div>
+        </a>
+    
+        <a href="https://github.com/hl7-fhir/hl7-fhir.github.io" title="github">
+            <div class="menu-action"><img src="../images/github.png"></div>
+        </a>
+    
+</div>
+
+    <div id="wrap">
+      <div class='header'>
+    
+        <h1> FHIR 中文版 </h1>
+    
+</div>
+
+      <div class="outer">
+        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <footer class="article-footer">
+        
+        
+
+      </footer>
+      <div class="article-entry" itemprop="articleBody">
+        
+          <p>  <a href="../home/index.html">首页</a> &gt;<a href="documentation.html">文档</a> &gt; <strong>总结</strong>    </p>
+<h1 id="1-14-0_Using_Codes_in_Resources"><span class="sectioncount">1.14.0<a name="1.14.0"> </a></span> Using Codes in Resources</h1>
+<p><a name="bindings"> </a></p>
+<p>Many elements in the FHIR resources have a <strong>coded value</strong>: some fixed string<br>(a sequence of characters) assigned elsewhere that identifies some defined &quot;concept&quot;. The<br>sequence of characters and it’s meaning may be defined in one of several places:</p>
+<ul>
+<li>As one of a set of fixed values defined in this specification</li>
+<li>In an internet RFC (e.g. mime type, language)</li>
+<li>An HL7 defined source (v3 code system, or v2 table)</li>
+<li>Some external terminology or ontology such as <a href="http://loinc.org" target="_blank" rel="external">LOINC</a>, <a href="http://www.ihtsdo.org" target="_blank" rel="external">SNOMED CT</a></li>
+<li>A locally maintained dictionary, look up table or enumeration in an application</li>
+</ul>
+<p>All of these kinds of ways of defining codes are collectively called &quot;code systems&quot;.<br>This list is far from complete; there are many ways to define code systems, and they<br>vary widely in sophistication and size. </p>
+<p>Throughout this specification, coded values are always treated as a pair<br>composed of &quot;system&quot; and &quot;code&quot;, where the system is a URL that identifies the<br>code system that defines the codes. </p>
+<p>The FHIR framework for using coded values is based on the fundamental framework defined in section 5 of the<br><a href="http://www.hl7.org/documentcenter/public/standards/V3/core_principles/infrastructure/coreprinciples/v3modelcoreprinciples.html" target="_blank" rel="external">HL7 v3 Core Principles</a> document.</p>
+<p>When codes are carried in resources, one of<br>3 different data types is used:</p>
+<table class="grid"><br> <tr><td><a href="datatypes.html#code">code</a></td><td>The instance represents the <em>code</em> only. The <em>system</em> is defined as part of the definition of the element, and not carried in the instance. </td></tr><br> <tr><td><a href="datatypes.html#Coding">Coding</a></td><td>A data type that has a <em>code</em> and a <em>system</em> element that identifies where the definition of the code comes from</td></tr><br> <tr><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td>A type that represents a concept by plain text and/or one or more <em>Codings</em></td></tr><br></table>
+
+<h2 id="1-14-0-1_Controlling_the_use_of_Coded_Values"><span class="sectioncount">1.14.0.1<a name="1.14.0.1"> </a></span> Controlling the use of Coded Values</h2>
+<p>The set of coded values that is allowed to be used in an element of one of these<br>3 data types is known as a &quot;value set&quot;. Anywhere these data types are used, the<br>specification &quot;binds&quot; a value set to the element. How this is done is different for<br>the simple <a href="datatypes.html#code">code</a> data type and the complex<br>data types (<a href="datatypes.html#Coding">Coding</a>/<a href="datatypes.html#CodeableConcept">CodeableConcept</a>).</p>
+<p><a name="simple"> </a><br><a name="code"> </a></p>
+<h3 id="1-14-0-1-1_Simple_Code_Data_Type"><span class="sectioncount">1.14.0.1.1<a name="1.14.0.1.1"> </a></span> Simple Code Data Type</h3>
+<p>Simple elements with type <a href="datatypes.html#code">code</a> are either bound to a<br>value set that contains a list of distinct codes with a specified system (and version, where required),<br>or the element is bound to some external standard that defines the set of valid codes that can be<br>used (typical examples of references are <a href="http://www.rfc-editor.org/bcp/bcp13.txt" target="_blank" rel="external">Mime Types</a>,<br><a href="http://tools.ietf.org/html/bcp47" target="_blank" rel="external">Language Codes</a>, <a href="http://unitsofmeasure.org" target="_blank" rel="external">UCUM</a>, etc.).</p>
+<p>In all cases, the value of the element SHALL be one of the codes defined by value set or the referenced specification. </p>
+<p>Note the following additional rules about these codes:</p>
+<ul>
+<li>Where the value set is defined by FHIR, the list of allowed codes will be fixed in the XML schema</li>
+<li>Comparison between codes is always case sensitive for codes unless the codes are defined by reference, and the referenced specification clearly states otherwise</li>
+<li>The list of codes that can be used can only be extended in subsequent releases of the FHIR specification</li>
+<li><a href="profile.html">Profiles</a> that define how a resource is used in some context may state rules on which codes can be used, but cannot define new or additional codes for these elements</li>
+</ul>
+<p><a name="complex"> </a><br><a name="codeable"> </a></p>
+<h3 id="1-14-0-1-2_Complex_Coded_Data_Types"><span class="sectioncount">1.14.0.1.2<a name="1.14.0.1.2"> </a></span> Complex Coded Data Types</h3>
+<p>Elements with type <a href="datatypes.html#CodeableConcept">CodeableConcept</a> or <a href="datatypes.html#Coding">Coding</a><br>are bound to a value set that defines a list of coded values that can be used. Because of the size and complexity of<br>these value sets, schemas are not used to enforce the correct use of valid coded values. Instead,<br>formal definitions of the value sets are provided using the <a href="valueset.html">Value Set</a> resource, and a cascading set of<br>rules is used to control how tightly the actual coded values are controlled by the value set.<br>In the base FHIR specification, the binding may be called &quot;incomplete&quot; or &quot;example&quot;. </p>
+<p><a name="incomplete"> </a></p>
+<h4 id="1-14-0-1-2-1_Incomplete_Bindings"><span class="sectioncount">1.14.0.1.2.1<a name="1.14.0.1.2.1"> </a></span> Incomplete Bindings</h4>
+<p>Incomplete bindings are used when there is consensus at the specification level about the coded values<br>that should be used. For these bindings:</p>
+<ul>
+<li><strong>Coding</strong>: the <em>system</em>/<em>code</em> values SHOULD be one of the codes in the value set.<em>   <em>*CodeableConcept</em></em>: one of the <em>coding</em> elements SHOULD contain a <em>system</em>/<em>code</em> that is in the value set.</li>
+</ul>
+<p>When none of the coded values in the value set is correct, some other coded value MAY be used, or (for<br>a CodeableConcept), a text alternative MAY be provided. Implementers are able to choose other codes<br>than those specified in recognition of the fact that:</p>
+<ul>
+<li>Licensing and Legal policy may dictate that particular coded values must or cannot be used</li>
+<li>Even when the specified value set can be used, the specification cannot account for all known use cases in advance</li>
+</ul>
+<p><a name="example"> </a></p>
+<h4 id="1-14-0-1-2-2_Example_Bindings"><span class="sectioncount">1.14.0.1.2.2<a name="1.14.0.1.2.2"> </a></span> Example Bindings</h4>
+<p>Example bindings are used when an element has a very broad meaning (such as <a href="list.html">List</a>.code),<br>or there is no consensus over the correct codes to be used. For these bindings:</p>
+<ul>
+<li><strong>Coding</strong>: the <em>system</em>/<em>code</em> values MAY be one of the codes in the value set.<em>   <em>*CodeableConcept</em></em>: one of the <em>coding</em> elements MAY  contain a <em>system</em>/<em>code</em> that is in the value set.</li>
+</ul>
+<p>Some other coded value MAY be used, or (for a CodeableConcept), a text alternative MAY be provided.<br>Example value sets are provided to assist implementers to understand the correct use of an element.<br>Value sets based on code systems such as SNOMED CT that have restrictive license terms will only be used as example bindings.</p>
+<h4 id="1-14-0-1-2-3_Implementation_Details"><span class="sectioncount">1.14.0.1.2.3<a name="1.14.0.1.2.3"> </a></span> Implementation Details</h4>
+<p>Irrespective of whether the binding is an incomplete or example binding, when a<br><a href="profile.html">Profile</a> is used to describe local usage, it can<br>bind the element to a different value set. When a profile redefines a<br>binding, it can redefine the binding and is able to be much more precise about<br>exactly which coded values can be used for these elements (see <a href="profile.html#binding">Binding<br>Control</a> for more detail).</p>
+<p>Generally it is expected that jurisdictions, projects and vendors<br>will work together to choose actual working value sets. Subsequent<br>versions of FHIR may replace example value sets with full bindings<br>if enough consensus emerges. </p>
+<p><em>System</em> values are always case sensitive. Different code systems make their own<br>rules as to whether the codes they define are case sensitive or not. Note that all the<br>codes defined by FHIR itself are case sensitive and SHALL be used in the provided case<br>(usually, but not always, lowercase).</p>
+<p>Bindings to value sets provided as part of the specification are always specific<br>to the version of the value set published with the specification. The value set<br>may be sealed by defining a simple list of enumerated codes, or it may include<br>codes by their properties, along with a non-version specific reference to an<br>underlying code system, in which case the list of valid concepts may grow<br>or change over time.</p>
+<p></p>
+<pre><code>            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>  <span class="comment">&lt;!-- /inner-wrapper --&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>  <span class="comment">&lt;!-- /row --&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>  <span class="comment">&lt;!-- /container --&gt;</span>
+
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>  <span class="comment">&lt;!-- /segment-content --&gt;</span>
+
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"segment-footer"</span> <span class="attribute">class</span>=<span class="value">"segment"</span>&gt;</span>  <span class="comment">&lt;!-- segment-footer --&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span>  <span class="comment">&lt;!-- container --&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"inner-wrapper"</span>&gt;</span>
+
+    &amp;copy; HL7.org 2011 - 2014. FHIR DSTU (v0.2.1-2606) generated on Wed, Jul 2, 2014 16:29+0800.   <span class="comment">&lt;!-- [QA Report](qa.html) --&gt;</span>   <span class="comment">&lt;!-- achive note --&gt;</span>
+
+    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">style</span>=<span class="value">"color: #FFFF77"</span>&gt;</span>
+    Links: [What's a DSTU?](dstu.html) | 
+           [Version History](history.html) | 
+           [Compare to DSTU](http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Fimplement%2Fstandards%2Ffhir%2Fterminologies.html&amp;amp;doc2=http%3A%2F%2Fhl7.org%2Fimplement%2Fstandards%2FFHIR-Develop%2Fterminologies.html) | 
+           [License](license.html) | 
+           [Propose a change](http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;amp;tracker_id=677)   
+    <span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>  <span class="comment">&lt;!-- /inner-wrapper --&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>  <span class="comment">&lt;!-- /container --&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>  <span class="comment">&lt;!-- /segment-footer --&gt;</span>
+</code></pre>  <!-- disqus thread --><br>  <!-- disqus --><br>  <!-- end disqus -->        
+
+<pre><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"segment-post-footer"</span> <span class="attribute">class</span>=<span class="value">"segment hidden"</span>&gt;</span>  <span class="comment">&lt;!-- segment-post-footer --&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span>  <span class="comment">&lt;!-- container --&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>  <span class="comment">&lt;!-- /container --&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>  <span class="comment">&lt;!-- /segment-post-footer --&gt;</span>
+</code></pre>
+        
+      </div>
+    
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+
+
+      </div>
+      <footer id="footer">
+  <div class="footer-desc">
+      
+  </div>
+  <div class="footer-info">
+    <div class="copyright">
+      &copy; 2014 wanghaisheng<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

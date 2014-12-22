@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>FHIR 中文版</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="首页 &gt;文档 &gt;资源定义 &gt; 资源格式       
+1.12.5.0 资源格式
+这部分记录了如何描述资源的内容.在实际的交换当中,资源可以是XML或者 JSON格式的.    
+1.12.5.0.1 资源定义
+资源以2种不同的方式来描述：UML图能够概述其内容;伪XML语法能够让大家直观的体会到XML格式的资源实例是长什么样的。注意尽管资源的描述是基于XML的，诸如JSON等其">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FHIR 中文版">
+<meta property="og:url" content="http://wanghaisheng.github.io/fhir-cn/home/index.html/doc/formats.html">
+<meta property="og:site_name" content="FHIR 中文版">
+<meta property="og:description" content="首页 &gt;文档 &gt;资源定义 &gt; 资源格式       
+1.12.5.0 资源格式
+这部分记录了如何描述资源的内容.在实际的交换当中,资源可以是XML或者 JSON格式的.    
+1.12.5.0.1 资源定义
+资源以2种不同的方式来描述：UML图能够概述其内容;伪XML语法能够让大家直观的体会到XML格式的资源实例是长什么样的。注意尽管资源的描述是基于XML的，诸如JSON等其">
+<meta property="og:image" content="../material/uml.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FHIR 中文版">
+<meta name="twitter:description" content="首页 &gt;文档 &gt;资源定义 &gt; 资源格式       
+1.12.5.0 资源格式
+这部分记录了如何描述资源的内容.在实际的交换当中,资源可以是XML或者 JSON格式的.    
+1.12.5.0.1 资源定义
+资源以2种不同的方式来描述：UML图能够概述其内容;伪XML语法能够让大家直观的体会到XML格式的资源实例是长什么样的。注意尽管资源的描述是基于XML的，诸如JSON等其">
+
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50564678-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class='navbar menu'>
+    
+        <a href="/fhir-cn/home/index.html" title="首页">
+            <div class="menu-action"><img src="../images/icon-home.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/doc/documentation.html" title="文档">
+            <div class="menu-action"><img src="../images/icon-documentation.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/impl/implementation.html" title="实现">
+            <div class="menu-action"><img src="../images/icon-implementation.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/res/resourcelist.html" title="资源">
+            <div class="menu-action"><img src="../images/icon-res.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/clin/clinical.html" title="临床类资源">
+            <div class="menu-action"><img src="../images/icon-clinical.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/admin/administration.html" title="行政管理类资源">
+            <div class="menu-action"><img src="../images/icon-administration.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/infra/infrastructure.html" title="基础架构类资源">
+            <div class="menu-action"><img src="../images/icon-infrastructure.png"></div>
+        </a>
+    
+        <a href="https://github.com/hl7-fhir/hl7-fhir.github.io" title="github">
+            <div class="menu-action"><img src="../images/github.png"></div>
+        </a>
+    
+</div>
+
+    <div id="wrap">
+      <div class='header'>
+    
+        <h1> FHIR 中文版 </h1>
+    
+</div>
+
+      <div class="outer">
+        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <footer class="article-footer">
+        
+        
+
+      </footer>
+      <div class="article-entry" itemprop="articleBody">
+        
+          <p><a href="../home/index.html">首页</a> &gt;<a href="documentation.html">文档</a> &gt;<a href="resources.html">资源定义</a> &gt; <strong>资源格式</strong>       </p>
+<h4 id="1-12-5-0_资源格式">1.12.5.0 资源格式</h4>
+<p>这部分记录了如何描述资源的内容.在实际的交换当中,资源可以是<a href="xml.html">XML</a>或者 <a href="json.html">JSON</a>格式的.    </p>
+<h5 id="1-12-5-0-1_资源定义">1.12.5.0.1 资源定义</h5>
+<p>资源以2种不同的方式来描述：UML图能够概述其内容;伪XML语法能够让大家直观的体会到XML格式的资源实例是长什么样的。注意尽管资源的描述是基于XML的，诸如JSON等其他格式也是等效的。      </p>
+<h6 id="1-12-5-0-1-1_XML">1.12.5.0.1.1 XML</h6>
+<p>XML语法使用如下标记：     </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">Name</span> <span class="attribute">xmlns</span>=<span class="value">"http://hl7.org/fhir"</span> (<span class="attribute">attrA</span>=<span class="value">"value"</span><span class="value">)</span>&gt;</span> </div><div class="line">  <span class="tag">&lt;<span class="title">nameA</span>&gt;</span><span class="comment">&lt;!-- 1..1 type description of content  --&gt;</span><span class="tag">&lt;<span class="title">nameA</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">nameB[x]</span>&gt;</span><span class="comment">&lt;!-- 0..1 type1|type2 description  --&gt;</span><span class="tag">&lt;/<span class="title">nameB</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">nameC</span>&gt;</span> <span class="comment">&lt;!--  1..* --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">nameD</span>&gt;</span><span class="comment">&lt;!-- 1..1 type&gt;Relevant records  --&gt;</span><span class="tag">&lt;/<span class="title">nameD</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">nameC</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">name</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>注意:      </p>
+<ul>
+<li>资源和元素名称是大小写敏感的()</li>
+<li>数据类型为<a href="datatypes.html#primitive">基本数据类型</a>的任何元素都有一个value属性.其中包含了该元素的实际值.      </li>
+<li>元素都有一个基数用以标识该元素可以或者必须出现的次数. 如果基数的字体是粉红色,也就说还有其他条件影响该基数.这种情况存在于鼠标悬停的文本或者正规定义当中.    </li>
+<li>除非元素直接包含子元素(如上例中的nameC),不然它们总归是有一个或datatypes.htmldatatypes.html多个数据类型.除”Resource”和”Narrative”之外,除”Resource”和”Narrative”之外都是在<a href="datatypes.html">数据类型</a>中定义的. 数据类型的名称是超链接形式的.           </li>
+<li>一些数据类型的子元素和资源中定义的其他一些元素的子元素是一样的.这样的情况下,该元素的数据类型会存在一个指向[path]的引用,而[path]就是拥有已事先定义好子元素的元素.    </li>
+<li>当一个逻辑元素能够有不止一个数据类型时,它们的名称采用先定义好子元素的元素.    nnn[x]的形式.其中nnn的部分为名称,是固定不变的,[x]可以用实际使用的类型标题大写字幕名称来替换,比如:    </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;name&gt;</div><div class="line">  &lt;nameBType1&gt;</div><div class="line">   <span class="keyword">...</span> contents <span class="keyword">for</span> type1 <span class="keyword">...</span></div><div class="line">  &lt;/nameBType1&gt;</div><div class="line">&lt;/name&gt;</div></pre></td></tr></table></figure>
+
+
+<p>该元素允许使用的数据类型用”|”来分隔,当其中之一是Resource([X])时,元素名称当中的类型名称就简化成”Resource”     </p>
+<ul>
+<li>伪语法中的每个元素名称都可以超链接到数据字典中该元素的正规定义上去.     </li>
+<li>如果元素名称是带下划线的,意味着应用程序必须<a href="conformance-rules.html#mustSupport">支持</a>和/或<a href="conformance-rules.html#ismodifier">理解</a>该元素.     </li>
+<li><p>FHIR元素值永远不能为空. 如果资源中出现了某个元素,它应该要么有一个value属性,子元素,要么有1到多个<a href="extensibility.html">扩展</a>     </p>
+<ul>
+<li>属性值也永远不能为空.要么不存在,要么至少要有一个非空格的内容.         </li>
+</ul>
+</li>
+</ul>
+<h6 id="1-12-5-0-1-2_UML">1.12.5.0.1.2 UML</h6>
+<p>UML图用一些类来表示资源的元素。<br><img src="../material/uml.png" alt=""></p>
+<p>当元素的数据类型为可选时，使用上述XML语法中一样的方式来表示可选项。考虑到UML的原理，元素实际的顺序不能够由图来确定的，也无法确定该元素是属性还是元素。元素和类型能够链接到正式定义中。UML图也能显示绑定，也有到详细绑定信息的超链接。     </p>
+<p>这些UML图旨在人与人之间资源内容的交流,不适合于用标准的UML代码生成工具来生成代码.     </p>
+<p> &copy; HL7.org 2011 - 2014. FHIR DSTU (v0.2.1-2606)构建于2014  7月2号 16:29+0800 星期三 .<br>链接：<a href="http://hl7.org/implement/standards/fhir/dstu.html" target="_blank" rel="external">试行版是什么</a> |<a href="http://hl7.org/implement/standards/fhir/history.html" target="_blank" rel="external">版本更新情况</a> | <a href="http://hl7.org/implement/standards/fhir/license.html" target="_blank" rel="external">许可协议</a> |<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank" rel="external">提交变更建议</a>      </p>
+
+        
+      </div>
+    
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+
+
+      </div>
+      <footer id="footer">
+  <div class="footer-desc">
+      
+  </div>
+  <div class="footer-info">
+    <div class="copyright">
+      &copy; 2014 wanghaisheng<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

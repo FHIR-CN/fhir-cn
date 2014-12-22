@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>FHIR 中文版</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="首页 &gt;文档 &gt;资源定义 &gt; 引用
+1.12.3 资源的引用
+资源包含2种类型的引用:
+
+内部引用-一个资源内的不同元素间的引用     
+外部引用一个资源与其他资源组件的引用    1.12.3.1 内部引用
+资源内元素间相互引用有3种情况:
+
+ResrouceReference和内嵌资源组件的引用ResrouceReference引用的元素指的是内嵌资源的id,一个相对于该资">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FHIR 中文版">
+<meta property="og:url" content="http://wanghaisheng.github.io/fhir-cn/home/index.html/doc/references.html">
+<meta property="og:site_name" content="FHIR 中文版">
+<meta property="og:description" content="首页 &gt;文档 &gt;资源定义 &gt; 引用
+1.12.3 资源的引用
+资源包含2种类型的引用:
+
+内部引用-一个资源内的不同元素间的引用     
+外部引用一个资源与其他资源组件的引用    1.12.3.1 内部引用
+资源内元素间相互引用有3种情况:
+
+ResrouceReference和内嵌资源组件的引用ResrouceReference引用的元素指的是内嵌资源的id,一个相对于该资">
+<meta property="og:image" content="../material/resourceReference.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FHIR 中文版">
+<meta name="twitter:description" content="首页 &gt;文档 &gt;资源定义 &gt; 引用
+1.12.3 资源的引用
+资源包含2种类型的引用:
+
+内部引用-一个资源内的不同元素间的引用     
+外部引用一个资源与其他资源组件的引用    1.12.3.1 内部引用
+资源内元素间相互引用有3种情况:
+
+ResrouceReference和内嵌资源组件的引用ResrouceReference引用的元素指的是内嵌资源的id,一个相对于该资">
+
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50564678-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class='navbar menu'>
+    
+        <a href="/fhir-cn/home/index.html" title="首页">
+            <div class="menu-action"><img src="../images/icon-home.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/doc/documentation.html" title="文档">
+            <div class="menu-action"><img src="../images/icon-documentation.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/impl/implementation.html" title="实现">
+            <div class="menu-action"><img src="../images/icon-implementation.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/res/resourcelist.html" title="资源">
+            <div class="menu-action"><img src="../images/icon-res.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/clin/clinical.html" title="临床类资源">
+            <div class="menu-action"><img src="../images/icon-clinical.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/admin/administration.html" title="行政管理类资源">
+            <div class="menu-action"><img src="../images/icon-administration.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/infra/infrastructure.html" title="基础架构类资源">
+            <div class="menu-action"><img src="../images/icon-infrastructure.png"></div>
+        </a>
+    
+        <a href="https://github.com/hl7-fhir/hl7-fhir.github.io" title="github">
+            <div class="menu-action"><img src="../images/github.png"></div>
+        </a>
+    
+</div>
+
+    <div id="wrap">
+      <div class='header'>
+    
+        <h1> FHIR 中文版 </h1>
+    
+</div>
+
+      <div class="outer">
+        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <footer class="article-footer">
+        
+        
+
+      </footer>
+      <div class="article-entry" itemprop="articleBody">
+        
+          <p><a href="../home/index.html">首页</a> &gt;<a href="documentation.html">文档</a> &gt;<a href="resources.html">资源定义</a> &gt; <strong>引用</strong></p>
+<h3 id="1-12-3_资源的引用">1.12.3 资源的引用</h3>
+<p>资源包含2种类型的引用:</p>
+<ul>
+<li><strong>内部引用</strong>-一个资源内的不同元素间的引用     </li>
+<li><strong>外部引用</strong>一个资源与其他资源组件的引用    <h4 id="1-12-3-1_内部引用">1.12.3.1 内部引用</h4>
+资源内元素间相互引用有3种情况:</li>
+</ul>
+<p><strong>ResrouceReference和内嵌资源组件的引用</strong><br>ResrouceReference引用的元素指的是内嵌资源的id,一个相对于该资源的不完整id.示例参考下面”内嵌资源”<br><strong>叙述性文本数据元素与结构化数据元素组件的引用</strong><br>通过基于id/idref的方法来实现,表示源数据元素与目的数据元素内容一致.xhtml元素与必须理解的数据元素之间的引用建立了一种”衍生自derived from”的关系,而所衍生出的内容指的是源数据元素的内容.注意这意味着有些引用可能是前向推理(对于这些元素的引用是随后在实例中定义的)    </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">Patient</span> <span class="attribute">xmlns</span>=<span class="value">"http://hl7.org/fhir"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">text</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">status</span> <span class="attribute">value</span>=<span class="value">"generated"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">xmlns</span>=<span class="value">"http://www.w3.org/1999/xhtml"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">p</span>&gt;</span>xxx <span class="tag">&lt;<span class="title">span</span> <span class="attribute">idref</span>=<span class="value">"dob"</span>/&gt;</span>30-11-1972<span class="tag">&lt;/<span class="title">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">text</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">birthDate</span> <span class="attribute">id</span>=<span class="value">"dob"</span> <span class="attribute">value</span>=<span class="value">"1972-11-30"</span> /&gt;</span></div></pre></td></tr></table></figure>
+
+
+<p><strong>叙述性文本中的图片的引用</strong><br>图片源可能是资源内可以找到的图片(比如一个内嵌的<a href="../infra/media.html">Media</a>或<a href="extras.html#binary">Binary</a>资源)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">Patient</span> <span class="attribute">xmlns</span>=<span class="value">"http://hl7.org/fhir"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">text</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">status</span> <span class="attribute">value</span>=<span class="value">"generated"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">xmlns</span>=<span class="value">"http://www.w3.org/1999/xhtml"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">p</span>&gt;</span>xxx <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"#pic1"</span>/&gt;</span>. xxx.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">text</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">contained</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">Binary</span> <span class="attribute">id</span>=<span class="value">"pic1"</span> <span class="attribute">contentType</span>=<span class="value">"image/gif"</span>&gt;</span>MEKHxxx.SD/Z<span class="tag">&lt;/<span class="title">Binary</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">contained</span>&gt;</span></div></pre></td></tr></table></figure>
+
+
+
+<p>在这三种情况下,目标元素都有一个”id”属性,与资源内其他的id属性相较,应保持唯一值.这些id引用的为一些和范围只是在包含它们的资源内部.如果多个资源整合成一个单独的XML片段,诸如<a href="xml.html#atom">atom feed</a>,资源间可能会出现重复值.这应该由读取资源的应用程序负责管理.”id”属性不属于任何命名空间.引用中的源数据元素应指向同一个资源内的某个属性.       </p>
+<h4 id="1-12-3-2_资源间的引用">1.12.3.2 资源间的引用</h4>
+<p>资源内部的许多已定义的元素都会引用其他资源.通过这些引用,这些资源能够整合成医疗保健的信息网络.<br>总是单向定义和标识引用-从源资源到目标资源.引用通过URL来标识,可能是绝对地址,也可能是相对地址.后面会继续讨论引用的解析.  </p>
+<p>逆向关系逻辑上也存在从目标资源到源资源的逆向关系,但是在资源中没有明确表示.浏览这些逆向关系需要一些外部的架构来追踪资源间的关系(<a href="../impl/http.html">REST API</a>提供了这样的一种架构,通过对引用搜索变量的命名来<a href="../impl/http.html#search">搜索</a>逆向关系)</p>
+<p>由于资源是单独处理的,不能认为资源间的关系是具有传递性的. 比如,<a href="../clin/condition.html">Conidition</a>资源引用了一个<a href="../admin/patient.html">patient</a>作为对象,关联了一个<a href="../clin/procedure.html">procedure</a>作为原因,并没有自动化规则或者说言外之意procedure的对象也是这patient. 反而,procedure的对象必须在procedure资源内明确指出. 另外一种方式是对象的语境并没有继承,也不会随着与procedure的关系而传递.这里仅有的例外在于是内嵌资源的情况.注意,在实践当中,关系必须要描述一个合乎逻辑和条理分明的记录。,在condition和procedure的案例中,常常要求对象是同一个病人,</p>
+<p>在资源中，引用是用reference和文字描述来表示的。引用最关键的属性是 reference_——资源是通过URL来标识和寻址的。实际的引用长得像如下：</p>
+<pre class="spec">
+&lt;<a title="A reference from one resource to another." class="dict" href="base-definitions.html#ResourceReference"><b>[name]</b></a> xmlns="http://hl7.org/fhir"&gt; 
+ &lt;!-- from Element: <a href="extensibility.html">extension</a> --&gt;
+ &lt;<a title="A reference to a location at which the other resource is found. The reference may a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." class="dict" href="base-definitions.html#ResourceReference.reference"><b>reference</b></a> value="[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]"/&gt;<span style="color: Gray">&lt;!--</span>   <span style="color: brown"><b>0..1</b></span><span style="color: red">Relative, internal or absolute URL reference</span><span style="color: Gray"> --&gt;</span>
+ &lt;<a title="Plain text narrative that identifies the resource in addition to the resource reference." class="dict" href="base-definitions.html#ResourceReference.display"><b>display</b></a> value="[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]"/&gt;<span style="color: html">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: red">Text alternative for the resource</span><span style="color: Gray"> --&gt;</span>
+&lt;/[name]&gt;
+</pre>
+
+<p><img src="../material/resourceReference.png" alt=""><br>另一种定义:资源规范(<a href="ResourceReference.profile.xml.html">XML</a>,<a href="ResourceReference.profile.json.html">JSON</a>)<br>注意:   </p>
+<ul>
+<li>reference元素包含一个url,这个url可以是<ul>
+<li>绝对的URL    </li>
+<li>相对的URL,相对于<a href="../impl/http.html#root">根服务地址</a>,或者是在bundle中相对于<a href="references.html#atom-refs">bundle的语境</a>    </li>
+</ul>
+</li>
+<li>使用绝对URL是一种稳定的 可扩展的方式,适合于云端/web应用,而使用相对URL/逻辑引用是一种灵活的方式,适合于封闭式的系统间互相交换的情况     </li>
+<li>尽管是首选方案,绝对URL不需要指向<a href="../impl/http.html"> FHIR RESTful server</a>.无论引用是否指向Restful的FHIR服务器,引用都应指向该标准中定义的某个资源.   </li>
+<li>URL总是大小写敏感的.   </li>
+<li>如果存在的话,display一般上和所引用资源的Resource.text的内容是不等同的.它的目的在于确定引用的是什么,而非完整的描述它.    </li>
+</ul>
+<blockquote>
+<p>约束  </p>
+<ul>
+<li><strong>INV-1</strong>:如果资源是內联的(xpath: not(starts-with(f:reference/@value, ‘#’)) or exists(ancestor::a:content/f:<em>/f:contained/f:</em>[@id=substring-after(current()/f:reference/@value, ‘#’)]|/f:<em>/f:contained/f:</em>[@id=substring-after(current()/f:reference/@value, ‘#’)])),则必须有一个局部引用    </li>
+</ul>
+</blockquote>
+<p>在一个restful FHIR服务器上通过”context”元素对病人”034AB16”的相对引用:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">context</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">reference</span> <span class="attribute">value</span>=<span class="value">"Patient/034AB16"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">context</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>通过”profile”元素对资源规范的绝对引用:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">profile</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">reference</span> <span class="attribute">value</span>=<span class="value">"http://fhir.hl7.org/svc/Profilec8973a22-2b5b-4e76-9c66-00639c99e61b"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">profile</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>注意 目前HL7还没有一个规范注册库,也没有一个确定的url.<br>display元素中可以提供一个供人可读的资源标识    </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">custodian</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">reference</span> <span class="attribute">value</span>=<span class="value">"Organization/123"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">display</span> <span class="attribute">value</span>=<span class="value">"HL7, Inc"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">custodian</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>当系统无法解析对应的资源时,系统可以利用这些文字描述.         </p>
+<h4 id="1-12-3-3_内嵌资源">1.12.3.3 内嵌资源</h4>
+<p>在一些情况下,资源引用的内容并不是能够脱离资源本身而独立存在的-它不能够被单独的标识,也不可能有它独立的事务范围.一般而言,这种情况是由于原始数据的二手用户对资源进行了组装,比如中间件引擎.如果在构建资源时没有包含记录主键或者绝对标识信息,那么就不可能得到一个准确标识的资源,即使将其与任意的标识关联起来,这个资源也永远不能脱离引用它的资源的语境而成为某个事务的对象。 　　　　　　　<br>比如,当某个接口引擎要通过一条V2消息构建某个病人的一条<a href="../clin/condition.html">condition</a>记录时,外科手术相关的仅有信息为她的姓名,如果没有可控的从业人员目录的话,就不足以创建一个可标识的<a href="../clin/practitioner.html">Practioner</a>资源 -同名同姓的医务人员可能不止一个。<br>在这样的情况下,资源是直接內联在资源内的.<strong>当内容能够准确标识时就不必这么做 因为一旦标识信息丢失以后,是极难再次恢复的</strong><br>An example of a contained resource:                     </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="subst">&</span><span class="literal">lt</span>;Document xmlns<span class="subst">=&</span>quot;http:<span class="comment">//hl7.org/fhir&quot;&gt;</span></div><div class="line"> <span class="subst">&</span><span class="literal">lt</span>;extension<span class="subst">&</span><span class="literal">gt</span>;<span class="attribute">...</span><span class="subst">&</span><span class="literal">lt</span>;/extension<span class="subst">&</span><span class="literal">gt</span>;</div><div class="line"> <span class="subst">&</span><span class="literal">lt</span>;text<span class="subst">&</span><span class="literal">gt</span>;<span class="attribute">...</span><span class="subst">&</span><span class="literal">lt</span>;/text<span class="subst">&</span><span class="literal">gt</span>;</div><div class="line"> <span class="subst">&</span><span class="literal">lt</span>;contained<span class="subst">&</span><span class="literal">gt</span>;</div><div class="line">   <span class="subst">&</span><span class="literal">lt</span>;Organization id<span class="subst">=&</span>quot;org1<span class="subst">&</span>quot;<span class="subst">&</span><span class="literal">gt</span>;</div><div class="line">     <span class="subst">&</span><span class="literal">lt</span>;<span class="subst">!--</span> whatever information is available <span class="subst">--&</span><span class="literal">gt</span>;</div><div class="line">   <span class="subst">&</span><span class="literal">lt</span>;/Organization<span class="subst">&</span><span class="literal">gt</span>;</div><div class="line"> <span class="subst">&</span><span class="literal">lt</span>;/contained<span class="subst">&</span><span class="literal">gt</span>;</div><div class="line"> <span class="subst">&</span><span class="literal">lt</span>;information<span class="subst">&</span><span class="literal">gt</span>;</div><div class="line">   <span class="subst">&</span><span class="literal">lt</span>;<span class="subst">!--</span> other attributes <span class="subst">--&</span><span class="literal">gt</span>;</div><div class="line">   <span class="subst">&</span><span class="literal">lt</span>;custodian<span class="subst">&</span><span class="literal">gt</span>;</div><div class="line">     <span class="subst">&</span><span class="literal">lt</span>;reference value<span class="subst">=&</span>quot;<span class="variable">#org1</span><span class="subst">&</span>quot; <span class="subst">/</span><span class="subst">&</span><span class="literal">gt</span>;</div><div class="line">   <span class="subst">&</span><span class="literal">lt</span>;/custodian<span class="subst">&</span><span class="literal">gt</span>;</div><div class="line">   <span class="subst">&</span><span class="literal">lt</span>;<span class="subst">!--</span> other attributes <span class="subst">--&</span><span class="literal">gt</span>;</div><div class="line"> <span class="subst">&</span><span class="literal">lt</span>;information<span class="subst">&</span><span class="literal">gt</span>;</div><div class="line"><span class="subst">&</span><span class="literal">lt</span>;/Document<span class="subst">&</span><span class="literal">gt</span>;</div></pre></td></tr></table></figure>
+
+<pre><code>               　
+</code></pre><p>The same example in JSON:            </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">{ &quot;resourceType&quot; : &quot;Document&quot;,</div><div class="line">  &quot;extension&quot; : { <span class="keyword">...</span> },</div><div class="line">  &quot;text&quot; : { .. },</div><div class="line">  &quot;contained: [</div><div class="line">    { &quot;resourceType&quot; : &quot;Organization&quot;,</div><div class="line">      &quot;id&quot; : &quot;org1&quot;,</div><div class="line">      .. whatever information is available <span class="keyword">...</span></div><div class="line">  }  ]</div><div class="line">  &quot;information: {</div><div class="line">    <span class="keyword">...</span> other attributes <span class="keyword">...</span></div><div class="line">    &quot;custodian&quot; : {</div><div class="line">      &quot;reference&quot; : &quot;<span class="comment">#org1&quot;</span></div><div class="line">  }</div><div class="line">    <span class="keyword">...</span> other attributes <span class="keyword">...</span></div><div class="line">  }</div><div class="line">}</div></pre></td></tr></table></figure>
+
+
+<p> 备注:内嵌资源仍然是一个引用,而不是直接对所引用元素的內联(比如上面的”custodian”),这样做是为了能够保证采用单一的方式来解析资源引用.尽管直接包含似乎会更简单些,当同样的内嵌资源引用不止一次时仍然会需要支持内在引用.最终,这样做会导致语法上的可选项.对于使用XPath处理资源的用户而言,如下的XPath能够解析内在引用:       </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">ancestor:</span><span class="symbol">:f</span><span class="symbol">:*</span>[<span class="keyword">not</span>(<span class="symbol">parent:</span><span class="symbol">:f</span><span class="symbol">:*</span>)]/<span class="symbol">f:</span>contained/*[<span class="variable">@id</span>=substring-after(current()/<span class="symbol">f:</span>reference/<span class="variable">@value</span>, <span class="string">'#'</span>)]</div></pre></td></tr></table></figure>
+
+
+<p> 对于内嵌资源的使用和解释要注意以下几点:       </p>
+<ul>
+<li>　内嵌资源和父资源拥有同样的内部id解析空间           </li>
+<li>　 内嵌资源不应包含另外的内嵌资源         </li>
+<li>　内嵌资源不宜包含任何叙述性文本         </li>
+<li><p>　 內联资源同样继承了父资源的语境.比如,如果父资源包含一个”subject”,          </p>
+<p>内嵌资源也同样拥有一个subject元素,但是并没有指明任何subject,处理程序可能会推理出二个subject是一样的.注意,然而,这些推理只是针对特定的场合.比如,并没有规则说明subject元素的含义在父资源和子资源中是一致的.           </p>
+<h4 id="1-12-3-4_解析bundle中的资源引用">1.12.3.4 解析bundle中的资源引用</h4>
+<p>在处理bundle时,当遇到一个<a href="references.html#Resource">资源引用</a>,应用程序宜总是先在bundle中检索资源.          </p>
+<h5 id="1-12-3-4-1_绝对引用">1.12.3.4.1 绝对引用</h5>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> <span class="tag">&lt;<span class="title">institution</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">reference</span> <span class="attribute">value</span>=<span class="value">"http://example.org/Organization/23"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">institution</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">institution</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">reference</span> <span class="attribute">value</span>=<span class="value">"http://example.org/Organization/ex/history/2"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">institution</span>&gt;</span></div></pre></td></tr></table></figure>
+
+
+<p>  这样应用程序宜查找bundle中的每个entry,看看entry.id或者entry.link与reference url匹配:      </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">   .. feed ..</div><div class="line"><span class="tag">&lt;<span class="title">entry</span>&gt;</span></div><div class="line">  .. </div><div class="line">  <span class="tag">&lt;<span class="title">id</span>&gt;</span>http://example.org/Organization/23<span class="tag">&lt;<span class="title">id</span>&gt;</span></div><div class="line">  .. </div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="title">content</span> <span class="attribute">type</span>=<span class="value">"text/xml"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">Organization</span> <span class="attribute">xmlns</span>=<span class="value">"http://hl7.org/fhir"</span>&gt;</span></div><div class="line">       <span class="comment">&lt;!-- Content for the resource --&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">Organization</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">content</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="title">entry</span>&gt;</span></div><div class="line">  .. </div><div class="line">  <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"self"</span> <span class="attribute">href</span>=<span class="value">"http://example.org/Organization/ex/history/2&lt;"</span>/&gt;</span></div><div class="line">  .. </div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="title">content</span> <span class="attribute">type</span>=<span class="value">"text/xml"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">Organization</span> <span class="attribute">xmlns</span>=<span class="value">"http://hl7.org/fhir"</span>&gt;</span></div><div class="line">       <span class="comment">&lt;!-- Content for the resource --&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">Organization</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">content</span>&gt;</span></div><div class="line">  xxx feed xxx</div></pre></td></tr></table></figure>
+
+
+<p>在第二种情况下,匹配到资源的一个特定版本.应用程序宜核对entry.id和entry.link两项-只有其中之一能改匹配.如果资源引用不能够解析到bundle内部,应用程序宜能够通过提供的URL直接获取资源.如果不能的话,就必须使用其他方法来找到资源.      </p>
+<p>注意 内部引用与其是literal URL,倒不如是URI,典型范例是<a href="../impl/http.html#transaction">cid:URI在事务中的使用</a>         </p>
+<h5 id="1-12-3-4-2_相对引用">1.12.3.4.2 相对引用</h5>
+<p>如果资源引用是一个相对URL,使用同样的基本原则:先尝试在bundle内部解析引用,然后再外面找.然而,在这些开始之前,首先要将相对URL转换成绝对URL,要实现这个,必须要指导逻辑上的服务根URL.这个值位于feed本身的叫”fhir-base”的link元素中      </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">feed</span> <span class="attribute">xmlns</span>=<span class="value">"http://www.w3.org/2005/Atom"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"fhir-base"</span> <span class="attribute">href</span>=<span class="value">"http://example.org"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">entry</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">id</span>&gt;</span>http://example.org/Organization/23<span class="tag">&lt;<span class="title">id</span>&gt;</span></div><div class="line">    .. </div><div class="line">    <span class="tag">&lt;<span class="title">content</span> <span class="attribute">type</span>=<span class="value">"text/xml"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">Organization</span> <span class="attribute">xmlns</span>=<span class="value">"http://hl7.org/fhir"</span>&gt;</span></div><div class="line">         <span class="comment">&lt;!-- Content for the resource --&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="title">Organization</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">content</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">entry</span>&gt;</span></div><div class="line">    .. </div><div class="line">    <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"self"</span> <span class="attribute">href</span>=<span class="value">"http://example.org/Practitioner/example"</span>/&gt;</span></div><div class="line">    .. </div><div class="line">    <span class="tag">&lt;<span class="title">content</span> <span class="attribute">type</span>=<span class="value">"text/xml"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">Practitioner</span> <span class="attribute">xmlns</span>=<span class="value">"http://hl7.org/fhir"</span>&gt;</span></div><div class="line">         <span class="comment">&lt;!-- Content for the resource --&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="title">institution</span>&gt;</span></div><div class="line">             <span class="tag">&lt;<span class="title">reference</span> <span class="attribute">value</span>=<span class="value">"Organization/23"</span> /&gt;</span></div><div class="line">           <span class="tag">&lt;/<span class="title">institution</span>&gt;</span></div><div class="line">         <span class="comment">&lt;!-- Content for the resource --&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="title">Practitioner</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">content</span>&gt;</span></div><div class="line">    xxx feed xxx</div></pre></td></tr></table></figure>
+
+
+
+<p>当应用程序遇到引用”Organization/23”时,首先查找”fhir-base”URL,也就是<a href="http://example.org.[根服务URL中结尾处没有斜线](../impl/http.html#root" target="_blank" rel="external">http://example.org.[根服务URL中结尾处没有斜线](../impl/http.html#root</a>),    这样应用程序在这二者之间添加一个”/“,绝对地址也就是 “<a href="http://example.org/Organization/23" target="_blank" rel="external">http://example.org/Organization/23</a>“,   这样就可以在bundle中解析了.注意:JSON格式的bundle方法是一样的.      </p>
+<p>为了让相对URL能够正确处理,如果bundle中任意资源存在相对引用,bundle link元素中应该有一个”fhir-base”的link.            </p>
+<p>注意:应用程序不宜假设服务根地址实际上是可以解析的.一些情况下,它是的.如果执行一个检索或者history操作,从某个服务器上得到一个bundle,那么服务根URL宜与客户端使用的匹配.然而,在其他情况下,bundle自身是从数据源向其他交换时,或者是独立的作为一个实体存储时(例如临床文档), 服务根url就只是在解析资源时bundle内部的一个逻辑构件,脱离了bundle则毫无意义.     </p>
+<p> &copy; HL7.org 2011 - 2014. FHIR DSTU (v0.2.1-2606)构建于2014  7月2号 16:29+0800 星期三 .<br>链接：<a href="http://hl7.org/implement/standards/fhir/dstu.html" target="_blank" rel="external">试行版是什么</a> |<a href="http://hl7.org/implement/standards/fhir/history.html" target="_blank" rel="external">版本更新情况</a> | <a href="http://hl7.org/implement/standards/fhir/license.html" target="_blank" rel="external">许可协议</a> |<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank" rel="external">提交变更建议</a>      </p>
+
+        
+      </div>
+    
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+
+
+      </div>
+      <footer id="footer">
+  <div class="footer-desc">
+      
+  </div>
+  <div class="footer-info">
+    <div class="copyright">
+      &copy; 2014 wanghaisheng<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
