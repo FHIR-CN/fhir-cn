@@ -5,24 +5,24 @@
   
   <title>FHIR 中文版</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首页 &gt;文档 &gt; 面向开发人员的简介    
+  <meta name="description" content="首页 &gt;文档 &gt; 开发者指南    
 1.9.1 FHIR Overview - Developers
 FHIR (Fast Health Interoperability Resources)旨在数据交换，能够支撑医疗领域的多种流程。该标准基于Restful的最佳实践，能够实现跨团队的医疗系统的集成。 
-FHIR 所支持的范围很广泛，包括人、兽医、临床、公共卫生、临床试验">
+FHIR 所支持的范围很广泛，包括人、兽医、临床、公共卫生、临床试验、管理和">
 <meta property="og:type" content="website">
 <meta property="og:title" content="FHIR 中文版">
 <meta property="og:url" content="http://wanghaisheng.github.io/fhir-cn/home/index.html/doc/overview-dev.html">
 <meta property="og:site_name" content="FHIR 中文版">
-<meta property="og:description" content="首页 &gt;文档 &gt; 面向开发人员的简介    
+<meta property="og:description" content="首页 &gt;文档 &gt; 开发者指南    
 1.9.1 FHIR Overview - Developers
 FHIR (Fast Health Interoperability Resources)旨在数据交换，能够支撑医疗领域的多种流程。该标准基于Restful的最佳实践，能够实现跨团队的医疗系统的集成。 
-FHIR 所支持的范围很广泛，包括人、兽医、临床、公共卫生、临床试验">
+FHIR 所支持的范围很广泛，包括人、兽医、临床、公共卫生、临床试验、管理和">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FHIR 中文版">
-<meta name="twitter:description" content="首页 &gt;文档 &gt; 面向开发人员的简介    
+<meta name="twitter:description" content="首页 &gt;文档 &gt; 开发者指南    
 1.9.1 FHIR Overview - Developers
 FHIR (Fast Health Interoperability Resources)旨在数据交换，能够支撑医疗领域的多种流程。该标准基于Restful的最佳实践，能够实现跨团队的医疗系统的集成。 
-FHIR 所支持的范围很广泛，包括人、兽医、临床、公共卫生、临床试验">
+FHIR 所支持的范围很广泛，包括人、兽医、临床、公共卫生、临床试验、管理和">
 
   
   
@@ -102,7 +102,7 @@ FHIR 所支持的范围很广泛，包括人、兽医、临床、公共卫生、
       </footer>
       <div class="article-entry" itemprop="articleBody">
         
-          <p>  <a href="../home/index.html">首页</a> &gt;<a href="documentation.html">文档</a> &gt; <strong>面向开发人员的简介</strong>    </p>
+          <p>  <a href="../home/index.html">首页</a> &gt;<a href="documentation.html">文档</a> &gt; <strong>开发者指南</strong>    </p>
 <h2 id="1-9-1_FHIR_Overview_-_Developers">1.9.1 FHIR Overview - Developers</h2>
 <p>FHIR (Fast Health Interoperability Resources)旨在数据交换，能够支撑医疗领域的多种流程。该标准基于Restful的最佳实践，能够实现跨团队的医疗系统的集成。 </p>
 <p>FHIR 所支持的范围很广泛，包括人、兽医、临床、公共卫生、临床试验、管理和财务等方面。全球通用且支持多种架构和场景。</p>
@@ -165,80 +165,80 @@ FHIR 所支持的范围很广泛，包括人、兽医、临床、公共卫生、
 
 <p>Notes:</p>
 <ul>
-<li><strong>HTTP/1.1 201</strong> (line 1) - the operation was successful. Note that HTTP/1.1 is strongly recommended but not required</li>
+<li><strong>HTTP/1.1 201</strong> (line 1) - 操作成功. Note that HTTP/1.1 is strongly recommended but not required</li>
 <li><strong>ETag</strong> (line 5) - used in the <a href="http.html#update">version aware update</a> pattern</li>
 <li><strong>Location</strong> (line 6) - the id the server assigned to the resource. The id in the url must match the id in the resource when it is subsequently returned</li>
 <li><strong>operationOutcome</strong> (line 9) - OperationOutcome resources in this context have no id or meta element (they have no managed identity)</li>
 </ul>
 <h4 id="1-9-1-6-1_Error_response">1.9.1.6.1 Error response</h4>
-<p>For a variety of reasons, servers may need to return an error. Clients should be alert to<br>authentication related responses, but FHIR content related errors should be returned using an<br>appropriate HTTP status code, with an <a href="operationoutcome.html">OperationOutcome</a> resource to provide additional information.<br>Here is an example of a server rejecting a resource because of server defined business rules:</p>
+<p>出于多种原因，服务器会返回一个错误信息，FHIR  内容相关的一些错误信息以HTTP 状态码加一个<a href="operationoutcome.html">OperationOutcome</a>来表达.<br>如下是一个不满足服务器端业务规则时的返回信息:</p>
 <div class="example"><br><pre class="http linecounter"><br><code>HTTP/1.1 422 Unprocessable Entity</code><br><code>Content-Length: 161</code><br><code>Content-Type: application/json+fhir</code><br><code>Date: Mon, 18 Aug 2014 01:43:30 GMT</code><br><code>`
-</code>{<code>`  &quot;resourceType&quot;: &quot;OperationOutcome&quot;,</code><br><code>&quot;text&quot;: {</code><br><code>&quot;status&quot;: &quot;generated&quot;,</code><br><code>&quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;MRN conflict</code><br><code>- the MRN 123456 is already assigned to a different patient&lt;/div&gt;&quot;</code><br><code>},</code><br><code>}</code><br></pre><br></div>
+</code>{<code>`  &quot;resourceType&quot;: &quot;OperationOutcome&quot;,</code><br><code>&quot;text&quot;: {</code><br><code>&quot;status&quot;: &quot;generated&quot;,</code><br><code>&quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;MRN冲突</code><br><code>- the MRN 123456 is already assigned to a different patient&lt;/div&gt;&quot;</code><br><code>},</code><br><code>}</code><br></pre><br></div>
 
 <p>Notes:</p>
 <ul>
-<li>The server can return additional structured information using the details of the <a href="operationoutcome.html">OperationOutcome</a></li>
+<li>服务器可通过<a href="operationoutcome.html">OperationOutcome</a>来表达更为详细的错误信息</li>
 </ul>
 <h3 id="1-9-1-7_Read_Request">1.9.1.7 Read Request</h3>
-<p><a href="http.html#read">Reading a resource</a> is done by sending HTTP GET requests to the desired Resource<br>end point, as in this example. </p>
+<p><a href="http.html#read">读取资源内容</a>是通过HTTP GET请求来实现的. </p>
 <div class="example"><br><pre class="http linecounter"><br><code>GET /Patient/347?_format=xml HTTP/1.1</code><br><code>Host: example.com</code><br><code>Accept: application/xml+fhir</code><br><code>Cache-Control: no-cache</code><br></pre><br></div>
 
 <p>Notes:</p>
 <ul>
-<li><strong>347</strong> (line 1) - The id of the resource that is being fetched</li>
-<li><strong>_format=xml</strong> (line 1) - this is another method for clients to indicate the desired response format, in addition to using the accept header, and is useful for clients that don’t have access to the HTTP Headers (e.g. XSLT transforms) (see <a href="http.html#mimetypes">Mime Types</a></li>
-<li><strong>cache control</strong> (line 4) - Concurrency control is important, though FHIR itself says nothing about it - see <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html" target="_blank" rel="external">http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</a> or <a href="https://www.mnot.net/cache_docs/" target="_blank" rel="external">https://www.mnot.net/cache_docs/</a></li>
+<li><strong>347</strong> (line 1) - 要访问资源的id</li>
+<li><strong>_format=xml</strong> (line 1) - 希望返回的数据格式，这种方式适合于客户端无法访问HTTP 头信息的情况，例如XSLT转换时，也可以通过HTTP 头中的accept字段来指定(see <a href="http.html#mimetypes">Mime Types</a></li>
+<li><strong>cache control</strong> (line 4) - 如何控制并发是很重要的，但FHIR中并未做出规定,更多信息请参考<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html" target="_blank" rel="external">http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</a> 或者 <a href="https://www.mnot.net/cache_docs/" target="_blank" rel="external">https://www.mnot.net/cache_docs/</a></li>
 </ul>
 <h3 id="1-9-1-8_Read_Response">1.9.1.8 Read Response</h3>
-<p>The response to a GET contains the Resource. </p>
+<p>读取单个资源内容GET请求的响应是单独的一个资源. </p>
 <div class="example"><br><pre class="http linecounter"><br><code>HTTP/1.1 200 OK</code><br><code>Content-Length: 729</code><br><code>Content-Type: application/xml+fhir</code><br><code>Last-Modified: Sun, 17 Aug 2014 15:43:30 GMT</code><br><code>ETag: &quot;1&quot;</code><br><code>`
 </code>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;<code>`&lt;Patient xmlns=&quot;http://hl7.org/fhir&quot;&gt;</code><br><code>&lt;id value=&quot;347&quot;/&gt;</code><br><code>&lt;meta&gt;</code><br><code>&lt;versionId value=&quot;1&quot;/&gt;</code><br><code>&lt;lastUpdated value=&quot;2014-08-18T01:43:30Z&quot;/&gt;</code><br><code>&lt;/meta&gt;</code><br><code>&lt;!-- content as shown above for patient --&gt;</code><br><code>&lt;/Patient&gt;</code><br></pre><br></div>
 
 <p>Notes:</p>
 <ul>
-<li><strong>id</strong> (line 8) - The id of the resource. This must match the id in the read request</li>
-<li><strong>versionId</strong> (line 11) - The current version id of the resource. Best practice is that this value matches the ETag (see <a href="http.html#update">version aware update</a>), but clients must never assume this. Note that some servers do not track the version of the resource</li>
-<li>Note that servers are not required to support versioning, but are strongly encouraged to do so</li>
-<li><strong>lastUpdated</strong> (line 12) - if present, this must match the value in the HTTP header</li>
+<li><strong>id</strong> (line 8) - 资源的id，与请求中的id一致 </li>
+<li><strong>versionId</strong> (line 11) - 该资源的最新版本. 最佳实践中要求该值与 ETag值匹配 (see <a href="http.html#update">version aware update</a>), 对于客户端而言，不能认为二者总是匹配的.  一部分服务器并不记录资源的版本信息。</li>
+<li>尽管建议服务器能够保留版本信息，但不做强制性要求</li>
+<li><strong>lastUpdated</strong> (line 12) - 如果存在该字段，字段值应与HTTP header中的值保持一致</li>
 </ul>
 <h3 id="1-9-1-9_Search_Request">1.9.1.9 Search Request</h3>
-<p>In addition to getting single known resources it is possible to find resources by<br><a href="http.html#search">searching the resource end point</a> with a <a href="search.html">set of<br>criteria</a> describing the set of resources that should be retrieved and their order. The<br>general pattern is:</p>
+<p>除了读取单个资源内容之外，也可以通过<a href="search.html">查询参数和变量</a> <a href="http.html#search">查询资源内容</a>，形式一般如下:</p>
 <div class="example"><br><pre class="http"><br>GET base/{resourceType}?criteria HTTP/1.1<br></pre><br></div>
 
 <p>or simply <a href="https://example.com/{resourceType}?criteria" target="_blank" rel="external">https://example.com/{resourceType}?criteria</a>. The criteria is a set of<br>http parameters that specify which resources to return. The search operation</p>
 <div class="example"><br><pre class="http"><br><a href="https://example.com/base/MedicationPrescription?patient=347" target="_blank" rel="external">https://example.com/base/MedicationPrescription?patient=347</a><br></pre><br></div>
 
-<p>returns all the prescriptions for the patient created above.</p>
+<p>会返回该患者的所有处方信息.</p>
 <h3 id="1-9-1-10_Search_Response">1.9.1.10 Search Response</h3>
-<p>The response to a search request is a <a href="extras.html#bundle">bundle</a>: list of matching resources with some metadata:</p>
+<p>查询请求返回的对象是一个<a href="extras.html#bundle">bundle</a>: 如未明确要求，只返回满足查询参数要求的资源元数据:</p>
 <div class="example"><br><pre class="json linecounter"><br><code>{</code><br><code>&quot;resourceType&quot;: &quot;Bundle&quot;,</code><br><code>&quot;id&quot; : &quot;eceb4882-5c7e-4ca4-af62-995dfb8cef01&quot;</code><br><code>&quot;meta&quot; : {</code><br><code>&quot;lastUpdated&quot; : &quot;2014-08-19T15:43:30Z&quot;</code><br><code>},</code><br><code>&quot;base&quot;: &quot;http://example.com/base&quot;,</code><br><code>&quot;total&quot;: &quot;3&quot;,</code><br><code>&quot;link&quot;: [</code><br><code>{</code><br><code>&quot;relation&quot; : &quot;next&quot;,</code><br><code>&quot;url&quot; : &quot;https://example.com/base/MedicationPrescription?patient=347&amp;searchId=ff15fd40-ff71-4b48-b366-09c706bed9d0&amp;page=2&quot;</code><br><code>}, {</code><br><code>&quot;relation&quot; : &quot;self&quot;,</code><br><code>&quot;url&quot; : &quot;https://example.com/base/MedicationPrescription?patient=347&quot;</code><br><code>}</code><br><code>],</code><br><code>&quot;item&quot;: [</code><br><code>{</code><br><code>&quot;resourceType&quot;: &quot;MedicationPrescription&quot;,</code><br><code>&quot;id&quot; : &quot;3123&quot;,</code><br><code>&quot;meta&quot; : {</code><br><code>&quot;versionId&quot; : &quot;1&quot;,</code><br><code>&quot;lastUpdated&quot; : &quot;2014-08-16T05:31:17Z&quot;</code><br><code>},</code><br><code>... content of resource ...</code><br><code>},</code><br><code>... 2 additional resources ....</code><br><code>]</code><br><code>}</code><br></pre><br></div>
 
 <p>Notes:</p>
 <ul>
 <li><strong>resourceType</strong> (line 7) - &quot;SearchResults&quot; is the name for a bundle returned from a search</li>
-<li><strong>id</strong> (line 3) - An identifier assigned to this particular bundle. The server should assign a unique id to this bundle that it will not be re-used. Note that in some bundles - though not search results - this must be <a href="extras.html#bundle-unique">globally unique</a></li>
+<li><strong>id</strong> (line 3) -服务器为该次查询响应bundle的唯一标识. 有些情况下要求该id满足 <a href="extras.html#bundle-unique"> 全球唯一</a></li>
 <li><strong>meta.lastUpdated</strong> (line 10) - This should match the HTTP header, and should be the date the search was executed, or more recent, depending on how the <a href="search.html#currency">server handles ongoing updates</a>. The lastUpdated data SHALL be the same or more recent than the most recent resource in the results</li>
-<li><strong>base</strong> (line 12) - The base URL for any relative <a href="references.html">references</a> in the resources. The server SHOULD provide this value</li>
-<li><strong>total</strong> (line 13) - The total number of matches in the search results. Not the number of matches in this particular bundle, which may be a <a href="http.html#search">paged view into the results</a></li>
+<li><strong>base</strong> (line 12) - 返回的内容中所有<a href="references.html">资源引用</a> 相对地址的根地址。</li>
+<li><strong>total</strong> (line 13) - 满足查询条件的记录数量. 这里的数量指的是总数，而非仅该bundle中所包含的数量，详情查看 <a href="http.html#search">可以对结果进行分页查询</a></li>
 <li><strong>link</strong> (line 14) - A set of named links that give related contexts to this bundle. Names defined in this specification: <a href="http.html#search">first</a>, <a href="http.html#search">prev</a>, <a href="http.html#search">next</a>, <a href="http.html#search">last</a>, <a href="http.html#search">self</a></li>
-<li><strong>item</strong> (line 23) - The actual resources in this set of results</li>
-<li>In addition, the search operation is also able to <a href="search.html#include">return additional related resources</a> as well</li>
+<li><strong>item</strong> (line 23) - 用来表达满足查询条件的实际资源的元数据信息</li>
+<li>如果加上include标签，可以强制要求服务器在返回结果中包含资源的内容，详情请参阅<a href="search.html#include">return additional related resources</a></li>
 </ul>
 <h3 id="1-9-1-11_Update_Request">1.9.1.11 Update Request</h3>
-<p>The client sends the server a new version of the resource to replace the exist version.</p>
+<p>客户端用新版本的资源记录替换服务器中的老版本.</p>
 <div class="example"><br><pre class="http linecounter"><br><code>PUT /Patient/347 HTTP/1.1</code><br><code>Host: example.com</code><br><code>Content-Type: application/json+fhir</code><br><code>Content-Length: 1435</code><br><code>Accept: application/json+fhir</code><br><code>If-Match: 1</code><br><code>`
 </code>{<code>`  &quot;resourceType&quot;: &quot;Patient&quot;,</code><br><code>&quot;id&quot; : &quot;347&quot;,</code><br><code>&quot;meta&quot; : {</code><br><code>&quot;versionId&quot; : &quot;1&quot;,</code><br><code>&quot;lastUpdated&quot; : &quot;2014-08-18T01:43:30Z&quot;</code><br><code>},</code><br><code>...</code><br><code>}</code><br></pre><br></div>
 
 <p>Notes:</p>
 <ul>
-<li><strong>resourceType</strong> (line 1) - &quot;Patient&quot; in the url must match the resource type in the resource (line 9)</li>
-<li><strong>resource id</strong> (line 1, &quot;347&quot;) - This must match the id in the resource (line 9)</li>
-<li><strong>If-Match</strong> (line 6) - if this is provided, it must match the value in meta.versionId (line 12), and the server must check the version integrity, or return 412 if it doesn’t support versions</li>
+<li><strong>resourceType</strong> (line 1) - &quot;Patient&quot; URL请求中的资源类型必须与提交的数据中的资源类型保持一致 (line 9)</li>
+<li><strong>resource id</strong> (line 1, &quot;347&quot;) - URL中的资源id必须与提交的数据中id值保持一致(line 9)</li>
+<li><strong>If-Match</strong> (line 6) - 如果存在该字段，必须与资源内容中的meta.versionId值保持一致 (line 12), 服务器必须核实版本的完整性，如果不支持版本则返回412状态码</li>
 <li><strong>meta.lastUpdated</strong> (line 10) - This value is ignored, and will be updated by the server</li>
-<li><strong>resource content</strong> (line 14) - Not shown here, the same as Patient above</li>
+<li><strong>resource content</strong> (line 14) - 这里省略了资源内容</li>
 </ul>
 <h3 id="1-9-1-12_Update_Response">1.9.1.12 Update Response</h3>
-<p>The response to an update request has metadata / status, and optionally an OperationOutcome:</p>
+<p>更新请求的响应包括了元数据、状态和OperationOutcome(可选):</p>
 <div class="example"><br><pre class="http linecounter"><br><code>HTTP/1.1 200 OK</code><br><code>Content-Length: 161</code><br><code>Content-Type: application/json+fhir</code><br><code>Date: Mon, 18 Aug 2014 01:43:30 GMT</code><br><code>ETag: &quot;2&quot;</code><br><code>`
 </code>{<code>`  &quot;resourceType&quot;: &quot;OperationOutcome&quot;,</code><br><code>&quot;text&quot;: {</code><br><code>&quot;status&quot;: &quot;generated&quot;,</code><br><code>&quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;The operation was successful&lt;/div&gt;&quot;</code><br><code>}</code><br><code>}</code><br></pre><br></div>
 
@@ -247,20 +247,20 @@ FHIR 所支持的范围很广泛，包括人、兽医、临床、公共卫生、
 <li><strong>ETag</strong> (line 5) - This is the versionId of the new version</li>
 </ul>
 <h3 id="1-9-1-13_Base_Resource_Content">1.9.1.13 Base Resource Content</h3>
-<p>Here is an example that shows all the information found in all resources, fully populated:</p>
+<p>所有资源都会包含的基础信息:</p>
 <div class="example"><br><pre class="json linecounter"><br><code>{</code><br><code>&quot;resourceType&quot; : &quot;X&quot;,</code><br><code>&quot;id&quot; : &quot;12&quot;,</code><br><code>&quot;meta&quot; : {</code><br><code>&quot;versionId&quot; : &quot;12&quot;,</code><br><code>&quot;lastUpdated&quot; : &quot;2014-08-18T01:43:30Z&quot;,</code><br><code>&quot;profile&quot; : [&quot;http://example-consortium.org/fhir/profile/patient&quot;],</code><br><code>&quot;security&quot; : [{</code><br><code>&quot;system&quot; : &quot;http://hl7.org/fhir/v3/ActCode&quot;,</code><br><code>&quot;code&quot; : &quot;EMP&quot;</code><br><code>}],</code><br><code>&quot;tag&quot; : [{</code><br><code>&quot;system&quot; : &quot;http://example.com/codes/workflow&quot;,</code><br><code>&quot;code&quot; : &quot;needs-review&quot;</code><br><code>}]</code><br><code>},</code><br><code>&quot;implicitRules&quot; : &quot;http://example-consortium.org/fhir/ehr-plugins&quot;,</code><br><code>&quot;language&quot; : &quot;X&quot;</code><br><code>}</code><br></pre><br></div>
 
 <p>Implementers notes:  </p>
 <ul>
-<li><strong>resourceType</strong> (line 2) - always found in every resource. In XML, this is the name of the root element for the resource</li>
-<li><strong>id</strong> (line 3) - defined when the resource is created, and never changed. Only missing when the resource is first created</li>
-<li><strong>meta.versionId</strong> (line 5) - changes each time any resource contents change (except for the last 3 elements in meta)</li>
-<li><strong>meta.lastUpdated</strong> (line 6) - Changes when the versionId changes. Systems that don’t support versions usually don’t track lastUpdated either</li>
-<li><strong>meta.profile</strong> (line 7) - An assertion that the content conforms to a profile. See <a href="profiling.html#resources">Extending and Restricting Resources</a> for further discussion. Can be changed as profiles and value sets change or the system rechecks conformance</li>
-<li><strong>meta.security</strong> (lines 8 - 11) - <a href="securitylabels.html">Security labels</a> applied to this resource. These tags connect resources in specific ways to the overall security policy and infrastructure. Security tags can be updated when the resource changes, or whenever the security sub-system chooses to</li>
-<li><strong>meta.tag</strong> (lines 12 - 15) - <a href="extras.html">Tags</a> applied to this resource. Tags are used to relate resources to process and workflow. Applications are not required to consider the tags when interpreting the meaning of a resource. Tags can be <a href="http.html#tags">updated</a> without changing the resource version</li>
-<li><strong>implicitRules</strong> (lines 16) - indicates that there is a <a href="profiling.html#agreement">custom agreement</a> about how the resources are used that must be understood in order to safely process the resource. Use of this is discouraged because it restricts sharing, but sometimes necessary</li>
-<li><strong>language</strong> (lines 17) - The <a href="narrative.html#language">base language of the resource</a>. The resource is allowed to have content from other languages; this is just the base, but should be the main language of the resource</li>
+<li><strong>resourceType</strong> (line 2) - 每个资源都会资源类型的字段. XML的话也就是根节点</li>
+<li><strong>id</strong> (line 3) - 在资源新建之时分配后不再变化.只有在初次创建该资源时才没有该字段</li>
+<li><strong>meta.versionId</strong> (line 5) - 当资源内容(除了meta.security、meta.profile、meta.tag三个之外)发生变更时该值随之变化 </li>
+<li><strong>meta.lastUpdated</strong> (line 6) - 随versionId的变化而变化. 如果服务器不维护版本信息，则不用记录该字段</li>
+<li><strong>meta.profile</strong> (line 7) - 表示资源的内容是否遵循某个规范(比方说满足阿里健康的开放API的要求或者说满足卫计委共享文档中的要求). 更多信息请参考 <a href="profiling.html#resources">Extending and Restricting Resources</a>. 当规范、值集本身发生变动时可以更改该字段的值</li>
+<li><strong>meta.security</strong> (lines 8 - 11) - <a href="securitylabels.html">安全类标签</a>. 该标签将资源与某些安全策略、基础架构策略联系起来。该字段的值可随资源内容的变动而变动,或者随安全体系的控制。</li>
+<li><strong>meta.tag</strong> (lines 12 - 15) - <a href="extras.html">其他类型的标签</a>. 如需将资源与特定的工作流程关联起来可以使用此类标签.在解读资源内容时无需考虑此类标签的值 。对此类标签值的更新不会影响资源内容版本的变化 <a href="http.html#tags">updated</a> (这里好像是说 可以不变更资源的版本就修改tag标签的值 还是说tag值的修改压根就不影响资源版本 其他的security和profile tag三个字段是否都适用呢？待考证)</li>
+<li><strong>implicitRules</strong> (lines 16) - 如何准确安全的处理资源内容而在发送接收双方达成的<a href="profiling.html#agreement">协议</a>. 由于使用了该字段就意味着其他系统要使用其中的数据可能会出现解读错误的情况，限制了数据的重复利用，故不推荐适用该字段</li>
+<li><strong>language</strong> (lines 17) -  <a href="narrative.html#language">资源内容所采用的表达语言</a>. 当前，资源内容中亦可包含其他语言的内容; 该字段表示的是资源的主要语言。</li>
 </ul>
 <p>&copy; HL7.org 2011+. FHIR DSTU (v0.4.0-3900) 构建于2014  12月20号 2014 22:38+0000 星期六 .<br>  链接：<a href="http://hl7.org/implement/standards/fhir/dstu.htmll" target="_blank" rel="external">试行版是什么</a> |<a href="http://hl7.org/implement/standards/fhir/history.htmll" target="_blank" rel="external">版本更新情况</a> | <a href="http://hl7.org/implement/standards/fhir/license.htmll" target="_blank" rel="external">许可协议</a> |<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank" rel="external">提交变更建议</a></p>
 
