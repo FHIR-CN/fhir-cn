@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>FHIR 中文版</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="首页 &gt;文档 &gt; 版本更新记录    
+See below for version history details.
+ 
+1.5 Version History
+This is the developmental version of FHIR. The only changes tracked here arechanges from after the publication">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FHIR 中文版">
+<meta property="og:url" content="http://wanghaisheng.github.io/fhir-cn/home/index.html/doc/history.html">
+<meta property="og:site_name" content="FHIR 中文版">
+<meta property="og:description" content="首页 &gt;文档 &gt; 版本更新记录    
+See below for version history details.
+ 
+1.5 Version History
+This is the developmental version of FHIR. The only changes tracked here arechanges from after the publication">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FHIR 中文版">
+<meta name="twitter:description" content="首页 &gt;文档 &gt; 版本更新记录    
+See below for version history details.
+ 
+1.5 Version History
+This is the developmental version of FHIR. The only changes tracked here arechanges from after the publication">
+
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600&subset=latin,latin-ext' rel='stylesheet'>  <link rel="stylesheet" href="../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50564678-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class='navbar menu'>
+    
+        <a href="/fhir-cn/home/index.html" title="首页">
+            <div class="menu-action"><img src="../images/icon-home.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/doc/documentation.html" title="文档">
+            <div class="menu-action"><img src="../images/icon-documentation.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/impl/implementation.html" title="实现">
+            <div class="menu-action"><img src="../images/icon-implementation.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/res/resourcelist.html" title="资源">
+            <div class="menu-action"><img src="../images/icon-res.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/clin/clinical.html" title="临床类资源">
+            <div class="menu-action"><img src="../images/icon-clinical.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/admin/administration.html" title="行政管理类资源">
+            <div class="menu-action"><img src="../images/icon-administration.png"></div>
+        </a>
+    
+        <a href="/fhir-cn/infra/infrastructure.html" title="基础架构类资源">
+            <div class="menu-action"><img src="../images/icon-infrastructure.png"></div>
+        </a>
+    
+        <a href="https://github.com/hl7-fhir/hl7-fhir.github.io" title="github">
+            <div class="menu-action"><img src="../images/github.png"></div>
+        </a>
+    
+</div>
+
+    <div id="wrap">
+      <div class='header'>
+    
+        <h1> FHIR 中文版 </h1>
+    
+</div>
+
+      <div class="outer">
+        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <footer class="article-footer">
+        
+        
+
+      </footer>
+      <div class="article-entry" itemprop="articleBody">
+        
+          <p>  <a href="../home/index.html">首页</a> &gt;<a href="documentation.html">文档</a> &gt; <strong>版本更新记录</strong>    </p>
+<p>See <a href="#history">below</a> for version history details.</p>
+<p><a name="history"> </a></p>
+<h2 id="1-5_Version_History">1.5 Version History</h2>
+<p>This is the developmental version of FHIR. The only changes tracked here are<br>changes from after the publication of the DSTU. For changes from before this,<br>see the <a href="http://hl7.org/implement/standards/fhir/history.html" target="_blank" rel="external">DSTU Version History</a>.<br>Note that a full archive history of everything is available<br><a href="http://wiki.hl7.org/index.php?title=FHIR" title="FHIR" target="_blank" rel="external">through the HL7 gForge SVN archives</a>.</p>
+<p><a name="rules"> </a></p>
+<h3 id="1-5-1_How_FHIR_Versioning_works">1.5.1 How FHIR Versioning works</h3>
+<p><em>This section is draft</em></p>
+<p>The FHIR version policy is based on <a href="http://semver.org/" target="_blank" rel="external">Semantic versioning</a>, but with<br>some differences due to fact that FHIR is a specification, not a software API.</p>
+<p>There is a single development version of FHIR. This undergoes cycles of development as<br>managed by HL7. Each major cycle of development is concluded by a formal ballot, and then<br>a new specification is published. In version control terms, each published specification is a<br>branch off the development trunk, which may then itself undergo further change as<br>HL7 maintains the published specification. </p>
+<p>The following kinds of changes may be made to the specification:</p>
+<ul>
+<li>Non-substantiative changes do not cause changes in any conformant application. For example, section renumbering,   broken links, style corrections, typos, and clarifications that do not change the meaning. Some corrections may   be judged not to create any expectation of change to a conformant application</li>
+<li>Substantiative changes that are not breaking. These introduce new functionality - changes to the specification that create new capabilities, but would not render existing applications non-conformant if they do not change</li>
+<li>Breaking changes would mean that previously conformant applications are not longer conformant</li>
+</ul>
+<p>Note that the following are, by definition, considered non-breaking changes, even though some implementations (including the reference implementations) may not be able to handle these changes without error:</p>
+<ul>
+<li>creation of new resources</li>
+<li>adding new elements in an existing resource</li>
+<li>defining new datatypes</li>
+<li>Adding new API operations</li>
+</ul>
+<p>Also, the examples are never substantiative - every effort is made to ensure that they are correct, but changes to the examples in the specification are not considered substantiative.</p>
+<p>Each FHIR version is identified by a string composed from 4 parts: publication.major.minor.revision. </p>
+<table class="lines"><br>  <tr><br>   <td valign="top">publication</td><br>   <td><br><br><em>   Incremented when HL7 publishes FHIR as an updated specification, e.g. a DSTU or normative version of FHIR
+</em>   HL7 plans to do this every 1 to 2 years<br><em>   The first DSTU was version 0<br>   </em></td><br>  </tr><br>  <tr><br>   <td valign="top">major</td><br>   <td>
+
+   Increments every time a breaking change is made<br><em>   When a new publication is made, this is reset to 0 in the publication, and 1 in the development branch
+</em>   Since HL7 does not make breaking changes as technical corrections to a published specification, these versions of FHIR always have a version number X.0.n.r<br><em>   Because the development version is the subject of ongoing analysis, debate, ballot and repeated alterations, breaking changes are to be expected<br>   </em></td><br>  </tr><br>  <tr><br>   <td valign="top">minor</td><br>   <td>
+
+   Increments every time a substantive change is made<br><em>   Resets to 0 any time the major version changes<br>   </em></td><br>  </tr><br>  <tr><br>   <td valign="top">revision</td><br>   <td>
+
+   Incremented any time a change is made to the specification<br>*   At present, this is the SVN version number (this allows anyone to reconstruct the source from which the version was built from)<br>   </td><br>  </tr><br></table>
+
+<p>Additional notes:</p>
+<ul>
+<li>Changes to a formally published specification (except for minor publishing corrections, such as correcting broken links) are only made via announced technical corrections</li>
+<li>The reference implementations have 2 versions - the version of the specification that they implement, and their own version. Consult the reference implementation documentation for policy regarding this version number</li>
+<li>The specification published by the continuous integration service (<a href="http://hl7-fhir.github.io/" target="_blank" rel="external">http://hl7-fhir.github.io/</a>) build may not conform to this version policy,   but the versions published on the HL7 web site will (Current published specification at <a href="http://hl7.org/implement/standards/FHIR/" target="_blank" rel="external">http://hl7.org/implement/standards/FHIR/</a>)     and current development version at <a href="http://hl7.org/implement/standards/FHIR-Develop/" target="_blank" rel="external">http://hl7.org/implement/standards/FHIR-Develop/</a>)</li>
+<li>The first DSTU was published prior to these rules being agreed as v0.80-2286. This has been updated to 0.0.81.2382 as a technical correction to align with this policy on 9-May 2014</li>
+</ul>
+<p><a name="history"> </a></p>
+<h3 id="1-5-2_Version_History_since_DSTU_#1"><span class="sectioncount">1.5.2<a name="1.5.2"> </a></span> Version History since DSTU #1</h3>
+<p>This table lists substantiative changes only.</p>
+<table class="grid"><br> <tr><br>   <td><strong>Version</strong></td><br>   <td><strong>Changes</strong></td><br> </tr><br>  <!-- template:
+ <tr>
+   <td>0.major.minor</td>
+   <td>
+
+*
+   </td>
+ </tr>
+
+notes: do not list revision in the version --><br><br>    <tr><br>        <td>0.4.0</td><br>        <td><br><br><strong>Draft For Comment, January 2015 Ballot</strong><br><br>Breaking Changes (full list):<br><br><em>   Replace atom and taglist with a native <a href="bundle.html">Bundle</a> format (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3728" target="_blank" rel="external">3728</a>, <a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3558" target="_blank" rel="external">3558</a>, <a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=2889" target="_blank" rel="external">2889</a>) (and also <a href="binary.html">Binary</a>)
+</em>   JSON: change how extensions are represented (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3471" target="_blank" rel="external">3471</a>)<br><em>   RESTful API: change how version specific upgrades work (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3451" target="_blank" rel="external">3451</a>)
+</em>   DataTypes:          <li>Rename Schedule to <a href="datatypes.html#Timing">Timing</a> (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3536" target="_blank" rel="external">3536</a>, <a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3236" target="_blank" rel="external">3236</a>)<em>   Rename Contact to <a href="datatypes.html#ContactPoint">ContactPoint</a> (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3533" target="_blank" rel="external">3533</a>) and swap order of elements (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3108" target="_blank" rel="external">3108</a>))
+</em>   <a href="datatypes.html#Address">Address</a> - change zip to postCode (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=2888" target="_blank" rel="external">2888</a>)<br><em>   <a href="datatypes.html#Quantity">Quantity</a>: Correct schema spelling for &quot;QuantityCompararator&quot; (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3531" target="_blank" rel="external">3531</a>)
+</em>   Change allowable values for the <a href="datatypes.html#id">id</a> type to include capital letters, and allow up to 64 chars (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3750" target="_blank" rel="external">3750</a>)<br><br><em>   Restructure <a href="profile.html">Profile</a> - only one structure, and pull <a href="extensiondefinition.html">ExtensionDefinition</a> out of Profile (3647, 3498), and pull <a href="searchparameter.html">SearchParameter</a> out (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3626" target="_blank" rel="external">3626</a>)
+</em>   <a href="profile.html">Profile</a>: allow 0..<em> discriminator (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3131" target="_blank" rel="external">3131</a>), and change the way discriminators work across resource boundaries (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3124" target="_blank" rel="external">3124</a>) + generate multiple types properly (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=2856" target="_blank" rel="external">2856</a>)
+</em>   remove _validate interaction, and replace with $validate operation (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3686" target="_blank" rel="external">3686</a>)<br><em>   <a href="patient.html">Patient</a>: separate birth time from birthDate (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3731" target="_blank" rel="external">3731</a>), Change Administrative Gender from a CodableConcept to a Code. Also fixed the values as male|female|other|unknown with mappings to v2 and v3 (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3070" target="_blank" rel="external">3070</a>)
+</em>   <a href="supply.html">Supply</a>: Change Name of supply.kind binding (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3412" target="_blank" rel="external">3412</a>)<br><em>   <a href="documentreference.html">DocumentReference</a>: change encoding of Hash to Base64 (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3291" target="_blank" rel="external">3291</a>)
+</em>   <a href="group.html">Group</a>: rename header to title (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3126" target="_blank" rel="external">3126</a>)<br><em>   <a href="condition.html">Condition</a>: split relatedItem into two (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3111" target="_blank" rel="external">3111</a>)
+</em>   <a href="questionnaire.html">Questionnaire</a>: drop questionnaire.group.question.remarks (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3255" target="_blank" rel="external">3255</a>) and move omitReason from extension to base resource (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3260" target="_blank" rel="external">3260</a>)<br><em>   <a href="questionnaireanswers.html">QuestionnaireAnswers</a>: allow multiple answers (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3146" target="_blank" rel="external">3146</a>)</em>   <a href="valueset.html">ValueSet</a>: replace  ValueSet.compose.include.code with ValueSet.compose.include.concept (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3258" target="_blank" rel="external">3258</a>), added new rules about expansion content (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3138" target="_blank" rel="external">3138</a>)<br><em>   <a href="media.html">Media</a>: Rename element ‘dateTime’ to ‘created’ (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=3174" target="_blank" rel="external">3174</a>) and length to duration (<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=2866" target="_blank" rel="external">2866</a>)
+</em>   Remove DeviceObservationReport and Query<br><em>   Collapse AdverseReaction into <a href="allergyintolerance.html">AllergyIntolerance</a>
+</em>   <a href="appointment.html">Appointment</a> changes - individual field renamed to actor, and added mappings to v2 and v3<br><br>New Resources:<br><br><em>   <a href="appointment.html">Appointment</a>
+</em>   <a href="appointmentresponse.html">AppointmentResponse</a><br><em>   <a href="basic.html">Basic</a>
+</em>   <a href="careplan2.html">CarePlan2</a><em>   <a href="claimresponse.html">ClaimResponse</a>
+</em>   <a href="clinicalassessment.html">ClinicalAssessment</a><br><em>   <a href="communication.html">Communication</a>
+</em>   <a href="communicationrequest.html">CommunicationRequest</a><br><em>   <a href="contract.html">Contract</a>
+</em>   <a href="contraindication.html">Contraindication</a><br><em>   <a href="coverage.html">Coverage</a>
+</em>   <a href="dataelement.html">DataElement</a><br><em>   <a href="devicecomponent.html">DeviceComponent</a>
+</em>   <a href="devicemetric.html">DeviceMetric</a><br><em>   <a href="deviceobservationreport.html">DeviceObservationReport</a>
+</em>   <a href="deviceuserequest.html">DeviceUseRequest</a><em>   <a href="deviceusestatement.html">DeviceUseStatement</a>
+</em>   <a href="eligibilityrequest.html">EligibilityRequest</a><br><em>   <a href="eligibilityresponse.html">EligibilityResponse</a>
+</em>   <a href="enrollmentrequest.html">EnrollmentRequest</a><br><em>   <a href="enrollmentresponse.html">EnrollmentResponse</a>
+</em>   <a href="episodeofcare.html">EpisodeOfCare</a><br><em>   <a href="explanationofbenefit.html">ExplanationOfBenefit</a>
+</em>   <a href="extensiondefinition.html">ExtensionDefinition</a><br><em>   <a href="goal.html">Goal</a></em>   <a href="healthcareservice.html">HealthcareService</a><br><em>   <a href="imagingobjectselection.html">ImagingObjectSelection</a>
+</em>   <a href="institutionalclaim.html">InstitutionalClaim</a><br><em>   <a href="namingsystem.html">NamingSystem</a>
+</em>   <a href="nutritionorder.html">NutritionOrder</a><br><em>   <a href="operationdefinition.html">OperationDefinition</a>
+</em>   <a href="oralhealthclaim.html">OralHealthClaim</a><br><em>   <a href="paymentnotice.html">PaymentNotice</a>
+</em>   <a href="paymentreconciliation.html">PaymentReconciliation</a><br><em>   <a href="pendedrequest.html">PendedRequest</a>
+</em>   <a href="person.html">Person</a><br><em>   <a href="pharmacyclaim.html">PharmacyClaim</a>
+</em>   <a href="procedurerequest.html">ProcedureRequest</a><em>   <a href="professionalclaim.html">ProfessionalClaim</a>
+</em>   <a href="questionnaireanswers.html">QuestionnaireAnswers</a><br><em>   <a href="readjudicate.html">Readjudicate</a>
+</em>   <a href="referralrequest.html">ReferralRequest</a><br><em>   <a href="reversal.html">Reversal</a>
+</em>   <a href="riskassessment.html">RiskAssessment</a><br><em>   <a href="searchparameter.html">SearchParameter</a>
+</em>   <a href="schedule.html">Schedule</a><br><em>   <a href="slot.html">Slot</a>
+</em>   <a href="statusrequest.html">StatusRequest</a><br><em>   <a href="statusresponse.html">StatusResponse</a>
+</em>   <a href="subscription.html">Subscription</a><br><em>   <a href="supportingdocumentation.html">SupportingDocumentation</a>
+</em>   <a href="visionclaim.html">VisionClaim</a><br><em>   <a href="visionprescription.html">VisionPrescription</a><br><br>New Implementation Guides
+
+</em>   <a href="argonauts.html">Argonaut Project</a><br><em>   <a href="daf.html">Data Access Framework</a>
+</em>   <a href="sdc.html">Structured Data Capture</a> &amp; <a href="sdc-de.html">Structured Data Capture - Data Element Exchange</a><br><em>   US Laboratory <a href="uslaborder.html">Order</a>, <a href="uslabreport.html">Report</a> &amp; <a href="uslabphreport.html">Report to Public Health</a>
+</em>   <a href="ehrs-rle.html">EHRS Functional model - Record Lifecycle Events</a><br>        </li></td><br>    </tr> <tr><br>   <td>0.3.0</td><br>   <td><br><br><em>   Renamed Namespace to NamingSystem
+</em>   Split <a href="questionnaireanswers.html">QuestionnaireAnswers</a> from <a href="questionnaire.html">Questionnaire</a> and significantly revamped the       <a href="questionnaire.html">Questionnaire</a> in response to feedback from the Connectathon.<br><em>   Added <a href="dataelement.html">DataElement</a> resource (has been previously discussed as ObservationDefinition)
+</em>   Defined <a href="subscription.html">Subscription</a> resource for evaluation<br><em>   Add <a href="datatypes.html#time">time</a> data type
+</em>   Define RPC-type <a href="operations.html">operations</a> on the RESTful interface, and add <a href="operationdefinition.html">Operation Definition</a><br><em>   Defined operations on several resources including <a href="conceptmap.html">ConceptMap</a>, <a href="questionnaire.html">Questionnaire</a> and <a href="valueset.html">ValueSet</a>
+</em>   <a href="conformance.html">Conformance</a>: Change Conformance.rest.operation to Conformance.rest.interaction and Conformance.rest.resource.operation to Conformance.rest.resource.interaction, and add Conformance.rest.operation to point to <a href="operationdefinition.html">Operation Definition</a><br><em>   <a href="profile.html">Profile</a>: add Profile.url, Profile.structure.snapshot and Profile.structure.differential, and remove query definition (now in OperationDefinition)
+</em>   Add pages for <a href="loinc.html">LOINC</a>, <a href="rxnorm.html">RxNorm</a>, and <a href="snomedct.html">SNOMED CT</a><br><em>   Significant rework for <a href="conceptmap.html">ConceptMap</a> so it can be used to map between structures as well as value sets
+</em>   Add <a href="contraindication.html">Contraindication</a> and <a href="riskassessment.html">Risk Assessment</a> and added examples to other resources in support of these<br><em>   Add <a href="referralrequest.html">Referral Request</a>
+</em>   Add supportingInformation to <a href="diagnosticorder.html">DiagnosticOrder</a><br><em>   Add fulfills to <a href="encounter.html">Encounter</a>
+</em>   Add date and age[x] to <a href="familyhistory.html">FamilyHistory</a><br><em>   Change cardinality of <a href="location.html">Location</a>.identifier to 0..</em><br><em>   Change cardinality of <a href="practitioner.html">Practitioner</a>.address to 0..</em><br><em>   Add <a href="observation.html">Observation</a>.encounter to 0..</em><br><em>   Temporarily added content for the <a href="sdc.html">Structured Data Capture implementation guide</a>, including profiles on several resources, conformance instances, etc.<br>       This content will be moved to an external specification once the necessary tooling is in place to support that form of publication.<br>   </em></td><br> </tr><br> <tr><br>   <td>0.2.1</td><br>   <td>
+
+   Minor new optional elements on value set for metadata, new extensions for all the rest of the VSD project metadata, formal profile to express basic minimum metadata for value set<br>   </td><br> </tr><br> <tr><br>   <td><strong>0.2.0</strong></td><br>   <td><br><br><em>   Namespace:  adjustments based on Grahame’s feedback<br>   </em></td><br> </tr><br> <tr><br>   <td>0.1.0</td><br>   <td>
+
+   Add <a href="appointment.html">Appointment</a>, <a href="appointmentresponse.html">Appointment Response</a>, <a href="schedule.html">Schedule</a> and <a href="slot.html">Slot</a><br>*   Add <a href="namespace.html">Namespace</a><br>   </td><br> </tr><br></table>
+
+<p>Note: a useful tool for displaying the differences between pages is the <a href="http://services.w3.org/htmldiff" target="_blank" rel="external">W3C HTML Diff engine</a>.</p>
+<p>&copy; HL7.org 2011+. FHIR DSTU (v0.4.0-3900) 构建于2014  12月20号 2014 22:38+0000 星期六 .<br>链接：<a href="http://hl7.org/implement/standards/fhir/dstu.htmll" target="_blank" rel="external">试行版是什么</a> |<a href="http://hl7.org/implement/standards/fhir/history.htmll" target="_blank" rel="external">版本更新情况</a> | <a href="http://hl7.org/implement/standards/fhir/license.htmll" target="_blank" rel="external">许可协议</a> |<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank" rel="external">提交变更建议</a>     </p>
+
+        
+      </div>
+    
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+
+
+      </div>
+      <footer id="footer">
+  <div class="footer-desc">
+      
+  </div>
+  <div class="footer-info">
+    <div class="copyright">
+      &copy; 2015 wanghaisheng<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    
+
+<script type='text/javascript' src='http://ajax.useso.com/ajax/libs/jquery/1.7.2/jquery.min.js?ver=3.4.2'></script>
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
