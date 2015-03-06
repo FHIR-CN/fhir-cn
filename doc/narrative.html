@@ -6,24 +6,43 @@
   <title>FHIR 中文版</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="首页 &gt;文档 &gt;资源定义 &gt; 叙述性文本
-1.12.4.0 叙述性文本
+
+叙述性文本
+示例
+详细描述
+
+1.17.0 叙述性文本
 每个资源可包含一个供人可读的叙述性文本，其中包含了对资源的总结摘要，可用作把资源的内容展示给人看。如果存在叙述性文本,除了资源内的结构化数据，叙述性文本应该包含全部的内容，所必须的临床和业务信息. 资源定义可能会定义在叙述性文本中应该表达那些内容以确保临床安全。     
-资源总是宜包含叙述性文本,作为供人使">
+资源的叙">
 <meta property="og:type" content="website">
 <meta property="og:title" content="FHIR 中文版">
 <meta property="og:url" content="http://wanghaisheng.github.io/fhir-cn/home/index.html/doc/narrative.html">
 <meta property="og:site_name" content="FHIR 中文版">
 <meta property="og:description" content="首页 &gt;文档 &gt;资源定义 &gt; 叙述性文本
-1.12.4.0 叙述性文本
+
+叙述性文本
+示例
+详细描述
+
+1.17.0 叙述性文本
 每个资源可包含一个供人可读的叙述性文本，其中包含了对资源的总结摘要，可用作把资源的内容展示给人看。如果存在叙述性文本,除了资源内的结构化数据，叙述性文本应该包含全部的内容，所必须的临床和业务信息. 资源定义可能会定义在叙述性文本中应该表达那些内容以确保临床安全。     
-资源总是宜包含叙述性文本,作为供人使">
-<meta property="og:image" content="../material/narrative.png">
+资源的叙">
+<meta property="og:image" content="../material/narrative-structure.png">
+<meta property="og:image" content="../material/narrative-uml.png">
+<meta property="og:image" content="../material/narrative-xml.png">
+<meta property="og:image" content="../material/narrative-json.png">
+<meta property="og:image" content="../material/narrative-illegal-div.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FHIR 中文版">
 <meta name="twitter:description" content="首页 &gt;文档 &gt;资源定义 &gt; 叙述性文本
-1.12.4.0 叙述性文本
+
+叙述性文本
+示例
+详细描述
+
+1.17.0 叙述性文本
 每个资源可包含一个供人可读的叙述性文本，其中包含了对资源的总结摘要，可用作把资源的内容展示给人看。如果存在叙述性文本,除了资源内的结构化数据，叙述性文本应该包含全部的内容，所必须的临床和业务信息. 资源定义可能会定义在叙述性文本中应该表达那些内容以确保临床安全。     
-资源总是宜包含叙述性文本,作为供人使">
+资源的叙">
 
   
   
@@ -104,28 +123,23 @@
       <div class="article-entry" itemprop="articleBody">
         
           <p><a href="../home/index.html">首页</a> &gt;<a href="documentation.html">文档</a> &gt;<a href="resources.html">资源定义</a> &gt; <strong>叙述性文本</strong></p>
-<h4 id="1-12-4-0_叙述性文本">1.12.4.0 叙述性文本</h4>
+<ul>
+<li><a href="#">叙述性文本</a></li>
+<li><a href="narrative-examples.html">示例</a></li>
+<li><a href="narrative-definitions.html">详细描述</a></li>
+</ul>
+<h3 id="1-17-0_叙述性文本">1.17.0 叙述性文本</h3>
 <p>每个资源可包含一个供人可读的叙述性文本，其中包含了对资源的总结摘要，可用作把资源的内容展示给人看。如果存在叙述性文本,除了资源内的结构化数据，叙述性文本应该包含全部的内容，所必须的临床和业务信息. 资源定义可能会定义在叙述性文本中应该表达那些内容以确保临床安全。     </p>
+<p>资源的叙述性文本上允许包含一些结构化数据中所没有的额外信息，包括人为编辑的内容。这些信息应该在资源定义的范畴之内，叙述性文本中包含从其他所引用的资源中抽取部分额外的描述性信息是很正常的。</p>
 <p>资源总是宜包含叙述性文本,作为供人使用的备用. 然而,在一个严格管控的交换体系中,所有系统都共用一个数据模型, 额外的文字是不必要的,甚至会产生一些临床安全风险,叙述性文本可能会被省略. 开发人员在这样做之前应该谨慎考虑,因为这样做意味着这些资源只能够在有限的交换环境下才能被理解.在资源所定义的生命周期里面,封闭式的交换对象环境很可能就会变得开放. 另外,很多工作流步骤涉及了查找和组合资源,如果所涉及的资源没有自己的文本描述,这将变得更加困难或者繁琐.<br>注意,内嵌资源不应该包含自己的叙述性文本.</p>
 <p>叙述性文本是一个xhtml的片段，有一个flag来标记它和数据之间的关系:</p>
-<pre class="spec">
-<<a title="A human-readable formatted text, including images." class="dict" href="base-definitions.html#Narrative"><b>[name]</b></a> xmlns=&quot;http://hl7.org/fhir&quot;> <span style="float: right"><a title="Documentation for this format" href="formats.html"></a></span>
- <!-- from Element: <a href="extensibility.html">extension</a> -->
- <<a title="The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data." class="dict" href="base-definitions.html#Narrative.status"><b>status</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/><span style="color: Gray"><!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="narrative-status.html">generated | extensions | additional</a></span><span style="color: Gray"> --></span>
- <<a title="The actual narrative content, a stripped down version of XHTML." class="dict" href="base-definitions.html#Narrative.div"><b title="The actual narrative content, a stripped down version of XHTML.">div</b></a> xmlns=&quot;http://www.w3.org/1999/xhtml&quot;> <span style="color: Gray"><!--</span> <span style="color: navy">Limited xhtml content</span><span style="color: Gray">< --></span> 
-
-</pre>
-
-<p><img src="../material/narrative.png" alt=""></p>
-<p>另一种定义:资源规范(<a href="Narrative.profile.xml.html">XML</a>,<a href="Narrative.profile.json.html">JSON</a>)      </p>
-<h5 id="1-12-4-0-1_术语绑定">1.12.4.0.1 术语绑定</h5>
-<table class="grid"><br> <tr><th>路径</th><th>定义</th><th>类型</th><th>参考</th></tr><br> <tr><td title="NarrativeStatus" valign="top">Narrative.status </td><td valign="top">资源叙述性文本的状态 </td><td><a href="terminologies.html#code"><a href="terminologies.html#code">Fixed/固定的</a></a></td><td valign="top"><a href="narrative-status.html">http://hl7.org/fhir/narrative-status</a></td> </tr><br></table>
-
-
-
+<p>Structure<br><img src="../material/narrative-structure.png" alt=""></p>
+<p>UML<br><img src="../material/narrative-uml.png" alt=""></p>
+<p>XML<br><img src="../material/narrative-xml.png" alt=""></p>
+<p>JSON<br><img src="../material/narrative-json.png" alt=""></p>
 <p>div元素的内容是XHTML片段，应该只包含HTML4.0标准中第7-11(除了第9章第4部分)章和第15章所介绍的基本html元素,    <a>   元素(要么是name,要么是href)、  images和内部包含的style属性。XHTML内容不应包含head、body元素和外部的stylesheet引用、废弃的元素、script、form、base/link/xlink、frame、iframe和object或事件event相关的属性(如onCLick).这是为了保证叙述性文本的内容能够包含在资源内部,不会存在处于激活状态的内容-因为这会引入一些安全问题和在从XHTML中抽取文本时潜在的安全问题.。</a></p>
 <p>div元素必须包含一些非空格内容。    </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">narrative</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">xmlns</span>=<span class="value">&quot;http:</span>//<span class="attribute">www.w3.org</span>/<span class="attribute">1999</span>/<span class="attribute">xhtml</span>&<span class="attribute">quot</span>;&gt;</span>This is a simple </div><div class="line">         example with only plain text<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="title">narrative</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="title">narrative</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">xmlns</span>=<span class="value">&quot;http:</span>//<span class="attribute">www.w3.org</span>/<span class="attribute">1999</span>/<span class="attribute">xhtml</span>&<span class="attribute">quot</span>;&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span></div><div class="line">      This is an <span class="tag">&lt;<span class="title">i</span>&gt;</span>example<span class="tag">&lt;/<span class="title">i</span>&gt;</span> with some <span class="tag">&lt;<span class="title">b</span>&gt;</span>xhtml<span class="tag">&lt;/<span class="title">b</span>&gt;</span> formatting.</div><div class="line">    <span class="tag">&lt;/<span class="title">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="title">narrative</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">narrative</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">xmlns</span>=<span class="value">&quot;http:</span>//<span class="attribute">www.w3.org</span>/<span class="attribute">1999</span>/<span class="attribute">xhtml</span>&<span class="attribute">quot</span>;&gt;</span>This is a simple </div><div class="line">         example with only plain text<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="title">narrative</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">narrative</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">xmlns</span>=<span class="value">&quot;http:</span>//<span class="attribute">www.w3.org</span>/<span class="attribute">1999</span>/<span class="attribute">xhtml</span>&<span class="attribute">quot</span>;&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span></div><div class="line">      This is an <span class="tag">&lt;<span class="title">i</span>&gt;</span>example<span class="tag">&lt;/<span class="title">i</span>&gt;</span> with some <span class="tag">&lt;<span class="title">b</span>&gt;</span>xhtml<span class="tag">&lt;/<span class="title">b</span>&gt;</span> formatting.</div><div class="line">    <span class="tag">&lt;/<span class="title">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="title">narrative</span>&gt;</span></div></pre></td></tr></table></figure>
 
 
 
@@ -133,22 +147,21 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"div"</span>: <span class="string">"&lt;div&gt;text&lt;/div&gt;"</span></div></pre></td></tr></table></figure>
 
 
-<p>上述例子是有效的,但下面这个则不是:     </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"div"</span>: <span class="string">"&lt;?xml ...&gt;&lt;div&gt;text&lt;/div&gt;"</span></div></pre></td></tr></table></figure>
-
-
-
-
+<p>上述例子是有效的,但下面这个则不是:<br><img src="../material/narrative-illegal-div.png" alt=""></p>
 <p>注意:XHTML是嵌在一般的XML中的，因此不支持如<em>&amp;nbsp;</em> or <em>&amp;copy;</em>等HTML entity。应该使用Unicode字符来代替。用<em>&amp;#160;</em> 替换_&amp;nbsp;.     </p>
 <p>叙述性文本的内容应采用<a href="base-definitions.htm#Resource.language">资源所使用的语言</a>，但并强求HTML 类型的工具能理解资源中的language 元素。 鉴于此，<br>&lt;div&gt;元素中宜使用lang属性(<a href="http://www.w3.org/html/wg/drafts/html/master/dom.html#the-lang-and-xml:lang-attributes" target="_blank" rel="external">参考HTML5标准中使用语言的注意事项</a>)       </p>
+<h4 id="1-17-0-1_图片引用">1.17.0.1 图片引用</h4>
 <p>image源引用可能是资源内的一个局部/本地引用：      </p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"#a5"</span>/&gt;</span></div></pre></td></tr></table></figure>
 
 <p>这是对同一资源中某个元素的id属性的<a href="references.htm#idref">内部引用</a> 。这个元素的类型要么是&quot;<a href="datatypes.htm#Attachment">Attachment</a>&quot;类型,要么是内嵌的<a href="http.htm#binary">Binary</a>资源。      </p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">Patient</span> <span class="attribute">xmlns</span>=<span class="value">"http://hl7.org/fhir"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">text</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">status</span> <span class="attribute">value</span>=<span class="value">"generated"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">xmlns</span>=<span class="value">"http://www.w3.org/1999/xhtml"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">p</span>&gt;</span>... <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"#pic1"</span>/&gt;</span>. ....<span class="tag">&lt;/<span class="title">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">text</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">contained</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">Binary</span> <span class="attribute">id</span>=<span class="value">"pic1"</span> <span class="attribute">contentType</span>=<span class="value">"image/gif"</span>&gt;</span>MEKH....SD/Z<span class="tag">&lt;/<span class="title">Binary</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">contained</span>&gt;</span></div></pre></td></tr></table></figure>
 
-<p>由于不能保证未内嵌在资源内的图片的可及性，当将资源展现给用户时，图片的来源作为叙述性文本必要的一部分，应始终嵌套在attachment里面或者是一个内嵌资源。     </p>
-<h5 id="1-12-4-0-2_XHTML样式化">1.12.4.0.2  XHTML样式化</h5>
+<p>叙述性文本和资源数据之间的引用都是通过XML 的id/idref属性来实现的。在JSON之中，id属性和XML的id属性用法一样。</p>
+<p>The “id” attribute SHALL have a unique value within the resource with regard to any other id attributes: the uniqueness and resolution scope of these id references is within the resource that contains them. Contained resources are included in the id uniqueness scope of the resource that contains them. </p>
+<p>If multiple resources are combined into a single piece document, such as an bundle, duplicate values of the id attribute may occur between resources. This SHALL be managed by applications reading the resources.</p>
+<p>Since that are not contained in the resource cannot be guaranteed to be be available when the resource is presented to a user, the source for any images that are an essential part of the narrative SHOULD always be embedded as a data: url, in an attachment or a contained resource.  </p>
+<h4 id="1-17-0-2_XHTML样式化">1.17.0.2  XHTML样式化</h4>
 <p>叙述性文本中的XHTML片段可能使用css来样式化,要么是内部的CSS,要么是外部的css。当使用外部css时,利用XHTML元素的class和id属性.当使用内部css时,直接利用XHTML元素的style属性.  为了最小化安全问题和可管理性,编辑系统不会直接指定CSS样式表.反而由展示资源的应用程序提供CSS样式表.这意味着渲染系统选择能够使用那种样式,编辑系统应提前使用. 编辑系统能改使用这些类,也就是说所有渲染系统都要支持:     </p>
 <p><table> <tr> <td>bold</td> <td>Bold</td> <td>{ font-weight: bold }</td> </tr> <tr> <td>italics</td> <td>Italics Text</td> <td>{ font-style: italic }</td> </tr> <tr> <td>underline</td> <td>Underlined Text</td> <td>{ text-decoration: underline }</td> </tr> <tr> <td>strikethrough</td> <td>Strikethrough Text</td> <td>{ text-decoration: line-through }</td> </tr> <tr> <td>left</td> <td>Left Aligned</td> <td>{ text-align : left }</td> </tr> <tr> <td>right</td> <td>Right Aligned</td> <td>{ text-align : right }</td> </tr> <tr> <td>center</td> <td>Center Aligned</td> <td>{ text-align : center }</td> </tr> <tr> <td>justify</td> <td>Justified</td> <td>{ text-align : justify }</td> </tr> <tr> <td>border-left</td> <td>Border on the left</td> <td>{ border-left: 1px solid grey }</td> </tr> <tr> <td>border-right</td> <td>Border on the right</td> <td>{ border-right: 1px solid grey }</td> </tr> <tr> <td>border-top</td> <td>Border on the top</td> <td>{ border-top: 1px solid grey }</td> </tr> <tr> <td>border-bottom</td> <td>Border on the bottom</td> <td>{ border-bottom: 1px solid grey }</td> </tr> <tr> <td>arabic</td> <td>List is ordered using Arabic numerals: 1, 2, 3</td> <td>{ list-style-type: decimal }</td> </tr> <tr> <td>little-roman</td> <td>List is ordered using little Roman numerals: i, ii, iii</td> <td>{ list-style-type: lower-roman }</td> </tr> <tr> <td>big-roman</td> <td>List is ordered using big Roman numerals: I, II, III</td> <td>{ list-style-type: upper-roman }</td> </tr> <tr> <td>little-alpha</td> <td>List is ordered using little alpha characters: a, b, c</td> <td>{ list-style-type: lower-alpha }</td> </tr> <tr> <td>big-alpha</td> <td>List is ordered using big alpha characters: A, B, C</td> <td>{ list-style-type: upper-alpha }</td> </tr> <tr> <td>disc</td> <td>List bullets are simple solid discs</td> <td>{ list-style-type: disc }</td> </tr> <tr> <td>circle</td> <td>List bullets are hollow discs</td> <td>{ list-style-type : circle }</td> </tr> <tr> <td>square</td> <td>List bullets are solid squares</td> <td>{ list-style-type: square }</td> </tr></table><br>注意:出于测试目的,这里有一个包含所有这些样式的<a href="../iinfra/other-example-narrative.xml.html">资源实例</a>.同时也有一个<a href="narrative-example.html">XHTML格式的</a>和包含了所有这些样式的对应<a href="fhir-runtime.css">标准样式表</a>      </p>
 <p>编辑系统可能会参考其他的类型,但不能奢望它们总是可以支持的, 如果额外的类型对应安全的渲染很重要的话,交换双方的协议中应该作出要求.    </p>
@@ -162,7 +175,7 @@
 </ul>
 <p>注意:允许渲染系统忽略或覆盖上面所述的任意内部/外部样式,但是宜小心谨慎以确保只能在合理的交易双方协议的情况下这么做,因为改变文本的展现方式可能会带来临床安全问题.    </p>
 <p>编辑人员可能会指定CSS标准中所规定的额外的样式或样式的属性, 但是这些都是对该标准的扩展,渲染人员毋须遵循.在没有这些额外的样式特征的情况下宜保证查看叙述性文本是安全的.<br>注意:对于<a href="../impl/documents.html#css">文档</a>的展现有一些额外的规则.        </p>
-<h5 id="1-12-4-0-3_临床安全考虑">1.12.4.0.3  临床安全考虑</h5>
+<h4 id="1-17-0-3_临床安全考虑">1.17.0.3  临床安全考虑</h4>
 <p>卫生保健记录常常有着长时间保留的法律和业务需求(甚至于一个世纪).  跨设备之间不一致的展现方式会带来很高的风险.尽管叙述性文本中允许使用如上所述的标准XHTML和CSS,鼓励在开发中尽量保持简单.即使交换双方协议限制了某个系统的现行需求.经验显式这些协议总归会随着时间而越来越宽泛.<br>特别是:    </p>
 <ul>
 <li>多层的复杂展现要求精心测试xhtml div和span元素以及样式的对应,其中包括了嵌套的表格,可能有一些图片,也会导致很难保持渲染一致性.开发中宜避免这些问题.     </li>

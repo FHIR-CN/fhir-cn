@@ -6,19 +6,19 @@
   <title>FHIR 中文版</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="首页 &gt;文档 &gt;资源定义 &gt; JSON
-1.12.5.2 用JSON格式表示资源 　　　
+1.18.2 用JSON格式表示资源 　　　
 尽管在描述FHIR资源时使用的XML语言，但是该标准也定义了资源的JSON表达方式．JSON格式与标准XML格式很相近，互相转换很容易，因此Xpath的查询可以很容易的映射到对JSON结构的查询，这种格式的正式的mime-type是 application/json+fhir.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="FHIR 中文版">
 <meta property="og:url" content="http://wanghaisheng.github.io/fhir-cn/home/index.html/doc/json.html">
 <meta property="og:site_name" content="FHIR 中文版">
 <meta property="og:description" content="首页 &gt;文档 &gt;资源定义 &gt; JSON
-1.12.5.2 用JSON格式表示资源 　　　
+1.18.2 用JSON格式表示资源 　　　
 尽管在描述FHIR资源时使用的XML语言，但是该标准也定义了资源的JSON表达方式．JSON格式与标准XML格式很相近，互相转换很容易，因此Xpath的查询可以很容易的映射到对JSON结构的查询，这种格式的正式的mime-type是 application/json+fhir.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FHIR 中文版">
 <meta name="twitter:description" content="首页 &gt;文档 &gt;资源定义 &gt; JSON
-1.12.5.2 用JSON格式表示资源 　　　
+1.18.2 用JSON格式表示资源 　　　
 尽管在描述FHIR资源时使用的XML语言，但是该标准也定义了资源的JSON表达方式．JSON格式与标准XML格式很相近，互相转换很容易，因此Xpath的查询可以很容易的映射到对JSON结构的查询，这种格式的正式的mime-type是 application/json+fhir.">
 
   
@@ -100,7 +100,7 @@
       <div class="article-entry" itemprop="articleBody">
         
           <p><a href="../home/index.html">首页</a> &gt;<a href="documentation.html">文档</a> &gt;<a href="resources.html">资源定义</a> &gt; <strong>JSON</strong></p>
-<h4 id="1-12-5-2_用JSON格式表示资源_">1.12.5.2 用JSON格式表示资源 　　　</h4>
+<h4 id="1-18-2_用JSON格式表示资源_">1.18.2 用JSON格式表示资源 　　　</h4>
 <p>尽管在描述FHIR资源时使用的XML语言，但是该标准也定义了资源的JSON表达方式．<br>JSON格式与标准XML格式很相近，互相转换很容易，因此Xpath的查询可以很容易的映射到对JSON结构的查询，这种格式的正式的mime-type是 application/json+fhir.           </p>
 <p>允许客户端自由选择是实现XML还是JSON格式。服务器应该支持XML，可以选择是否支持JSON。注意如果支持的话应该在 <a href="conformance.html">Conformance Statement</a>中声明它们所支持的格式有哪些.<br>JSON表达方式与XML表达方式的关系：        </p>
 <ul>
@@ -113,9 +113,10 @@
 <li>JSON中没有属性VS元素的标记，因此属性是以完全不同的方式来处理的  (xml:id, value)     </li>
 <li>JSON中有数组array，可以用来表示重复元素。注意当某个项可能会重复时使用array数组，即使在某个数据实例中并没有重复出现。        </li>
 <li><a href="narrative.html">Narrative</a>数据类型中的 XHTML &lt;div&gt; 元素用XHTML的 单个转移字符串来表示，这样做是为了避免JSON中混合内容的问题等等，XHTML 仍然遵循 <a href="narrative.html">the Narrative</a>中所描述的规则。       </li>
+<li>There is no inherent support in JSON for a comment syntax. As a convention, content that would be comments in an XML representation is represented in a property with the name “fhir_comments”, which is an array of strings, which can appear on any JSON object. This is heavily used in example instances, e.g. in this specification, but not usually used in production systems (and production systems may choose to reject resources with comments in them)</li>
 </ul>
-<p>这些差异，尤其是重复元素的整个，都是不可避免的，也就是说通用的XML到JSON的转换不能正确的处理这些。 <a href="downloads.html#refimpl">reference platforms</a>中提供了 XML &lt;—&gt; JSON的转换功能，其中整合了一些FHIR相关的特性。       </p>
-<h5 id="1-12-5-2-1重复元素的JSON表达方式">1.12.5.2.1重复元素的JSON表达方式</h5>
+<p>这些差异，尤其是重复元素的整个，都是不可避免的，也就是说通用的XML到JSON的转换不能正确的处理这些。 <a href="downloads.html#refimpl">reference platforms</a>中提供了 XML &lt;—&gt; JSON的转换功能，其中整合了一些FHIR相关的特性。<br> The formal mime type for this format is application/json+fhir. </p>
+<h5 id="1-18-2-1重复元素的JSON表达方式">1.18.2.1重复元素的JSON表达方式</h5>
 <p>一个元素的最大基数为x..*,则该元素在实例中可能会出现不止一次。在XML中只需要重复XML元素多次即可。JSON中，我们是通过array数组来实现的。注意：             </p>
 <ul>
 <li>数组的名称是单一的——这点和XML一样。      </li>
@@ -146,7 +147,7 @@
  ]
 </pre>
 
-<h5 id="1-12-5-2-2_基本数据类型元素的JSON表达">1.12.5.2.2 基本数据类型元素的JSON表达</h5>
+<h5 id="1-18-2-2_基本数据类型元素的JSON表达">1.18.2.2 基本数据类型元素的JSON表达</h5>
 <p>FHIR元素值为基本数据类型的表达分为两类：      </p>
 <ul>
 <li>元素名称为 JSON属性名称，数据类型是JSON的number、boolean和string类型。        </li>
@@ -163,7 +164,7 @@
 <p>对应的JSON格式：    </p>
 <pre class="json">
  &quot;code&quot; : &quot;abc&quot;,
- &quot;date&quot; : &quot;1972-11-30&quot;,JavaScript
+ &quot;date&quot; : &quot;1972-11-30&quot;,
  &quot;deceased&quot; : false,
  &quot;count&quot; : 23
 </pre>
@@ -202,7 +203,7 @@
  &lt;/<b>code</b>&gt;
 </pre>
 
-<p>对应的JSON格式为：     </p>
+<p>对应的JSON格式为： </p>
 <pre class="json">
  &quot;code&quot;: [ &quot;au&quot;, &quot;nz&quot; ],
  &quot;_code&quot;: [ 
@@ -217,9 +218,9 @@
 
 <p>注意: 当某个重复元素没有value时，在第一个数组中用null来表示。当一个元素有value，但是没有id或扩展时，第二个数组的该元素位置为null。     </p>
 <blockquote>
-<p>设计上的考虑: 基本数据类型的表达被这样分为两类是为了简化没有id和扩展的简单基本数据类型的表达。这样做使得id属性和扩展的表达显得特别丑陋，但这两种情况在基本数据类型中其实是很少用到的。       </p>
+<p>设计上的考虑: 基本数据类型的表达被这样分为两类是为了简化没有id和扩展的简单基本数据类型的表达。这样做使得id属性和扩展的表达显得特别丑陋，但这两种情况在基本数据类型中其实是很少用到的。          </p>
 </blockquote>
-<h5 id="1-12-5-2-3_元素、复杂数据类型的JSON表达">1.12.5.2.3 元素、复杂数据类型的JSON表达</h5>
+<h5 id="1-18-2-3_元素、复杂数据类型的JSON表达">1.18.2.3 元素、复杂数据类型的JSON表达</h5>
 <p>用JSON对象来表示元素和<a href="datatypes.html">复杂的数据类型</a> ，包含了不同数据类型的每个元素的member。composite有id属性，将其以处理基础数据类型中所描述的方式转换为JSON的member值。如下：     </p>
  <pre class="xml">
 &lt;person&gt;
@@ -258,7 +259,7 @@
 <li>在’name’的family部分中,  如上所述，在_family表达了’id’      </li>
 <li>‘div’ 元素中的XHTML内容，也就是Narrative  ‘text’ 元素，是在value属性中用转义字符来表示的。 xhtml根元素必须是xhtml命名空间的 &lt;div&gt;   </li>
 </ul>
-<h5 id="1-12-5-2-4_资源的JSON表达">1.12.5.2.4  资源的JSON表达</h5>
+<h5 id="1-18-2-4_资源的JSON表达">1.18.2.4  资源的JSON表达</h5>
 <p>资源就是一个JSON对象，其中&quot;resourceType&quot; 属性告诉解析器该资源的类型：     </p>
 <pre class="json">
 {
@@ -276,63 +277,8 @@
 <p><strong>设计时的考虑</strong>: 对于很多JSON-&gt;对象序列化工具 都存在这个问题，设定resourceType总是第一个出现，包括了 <a href="http://james.newtonking.com/json" target="_blank" rel="external">Json.NET</a>. 然而，一些JSON生成器并不能让编辑应用程序控制属性值的顺序，因此这些实现就不能互相操作，鉴于此，JSON中指出属性值是一组无序的name/value对，标准中也不能对属性的出现次序作出要求，尽管开发任意可能会选择固定属性的顺序，如果能够实现的话。</p>
 </blockquote>
 <p>这里有一个 <a href="json-edge-cases.json">示例文件</a> ，包含了多种边缘情况，用以测试JSON解析器。           </p>
-<h5 id="1-12-5-2-5_Bundle_的JSON表达">1.12.5.2.5  Bundle 的JSON表达</h5>
-<p> JSON中， <a href="extras.html#bundle">bundles</a>是用一种专门针对bundle的需求所裁剪而成的JSON格式来表示的。XML feed定义中的每个元素都有同样名称的一个JSON对象member。方便起见，bundle也有一个<br>&quot;resourceType&quot;属性，值为&quot;Bundle&quot; (&quot;resourceType&quot;用作资源的一致性，尽管 bundle不是资源，它是资源的容器). 如下是一个返回某个人查询结果的feed实例。    </p>
-<pre class="json">
-{
-  &quot;resourceType&quot; : &quot;Bundle&quot;,
-  &quot;title&quot; : &quot;Search result&quot;,
-  &quot;updated&quot; : &quot;2012-09-20T12:04:45.6787909+00:00&quot;,
-  &quot;id&quot; : &quot;urn:uuid:50ea3e5e-b6a7-4f55-956c-caef491bbc08&quot;,
-  &quot;link&quot; : [{
-    &quot;rel&quot; : &quot;self&quot;,
-  &quot;href&quot; : &quot;http://ip-0a7a5abe:16287/fhir/person?format=json&quot;
-  }],
- <a name="tags"> </a>&quot;category&quot; : [{
-    &quot;term&quot; : &quot;[Tag Term]&quot;,
-    &quot;label&quot; : &quot;[Tag Label]&quot;,
-    &quot;scheme&quot; : &quot;[Tag Scheme]&quot;
-  }],
-  &quot;totalResults&quot; : 12,
-  &quot;entry&quot; : [{
-    &quot;title&quot; : &quot;Resource of type Person, with id = 1 and version = 1&quot;,
-    &quot;link&quot; : [{
-      &quot;rel&quot; : &quot;self&quot;,
-      &quot;href&quot; : &quot;http://fhir.furore.com/fhir/person/@1/history/1&quot;
-    }],
-    &quot;id&quot; : &quot;http://fhir.furore.com/fhir/person/@1&quot;,
-    &quot;updated&quot; : &quot;2012-05-29T23:45:32+00:00&quot;,
-    &quot;published&quot; : &quot;2012-09-20T12:04:47.3012429+00:00&quot;,
-    &quot;author&quot; : [{
-      &quot;name&quot; : &quot;Grahame Grieve / HL7 publishing committee&quot;
-    }],
-    &quot;category&quot; : [{
-      &quot;term&quot; : &quot;[Tag Uri]&quot;,
-      &quot;label&quot; : &quot;[Tag Label]&quot;,
-      &quot;scheme&quot; : &quot;[Tag Type]&quot;
-    }],
-    &quot;content&quot; : {
-      &quot;resourceType&quot; : &quot;Patient&quot;,
-      ...other Patient elements...
-    },
-    &quot;summary&quot; : &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;(text summary)&lt;/div&gt;&quot;,
-  },
-  ... other entries ....
-  ],
-  &quot;signature&quot; : &quot;&lt;signature xmlns=\&quot;http://www.w3.org/2000/09/xmldsig\&quot;&gt;...&lt;/signature&gt;&quot;
-}
-</pre>
-
-<p>注意 可重复元素的属性名称与整体方法间是一致的。<br>JSON bundle的mime  type是 application/json+fhir.    </p>
-<h6 id="1-12-5-2-5-1_Bundling_versions_-_deletion">1.12.5.2.5.1  Bundling versions - deletion</h6>
-<p>当返回某个资源的版本集时，其中某个版本可能标记为已删除，尽管XML格式的话是遵循<a href="http://www.rfc-editor.org/rfc/rfc6721.txt" target="_blank" rel="external">RFC 6721</a>,JSON格式必须使用一个entry项目来维护entry的逻辑顺序     </p>
-<p><pre class="json"><br>   .. feed ..<br>   &quot;entry&quot; : [<br>    … other entries ….,<br>    {<br>      &quot;deleted&quot; : &quot;2012-05-29T23:45:32+00:00&quot;,<br>      &quot;id&quot; : &quot;<a href="http://fhir.furore.com/fhir/person/@1&amp;quot" target="_blank" rel="external">http://fhir.furore.com/fhir/person/@1&amp;quot</a>;,<br>      &quot;link&quot; : [{<br>          &quot;rel&quot; : &quot;self&quot;,<br>          &quot;href&quot; : &quot;<a href="http://fhir.furore.com/fhir/person/@1/history/1&amp;quot" target="_blank" rel="external">http://fhir.furore.com/fhir/person/@1/history/1&amp;quot</a>;<br>        }],<br>    }, … other entries ….<br>  ]<br>  … feed …<br></pre><br>之所以知道这条entry已经被删除是因为给出了删除日期。应该包含 一个id，可能会提供link     </p>
-<h6 id="1-12-5-2-5-2_Binary_Resources">1.12.5.2.5.2   Binary Resources</h6>
-<p>当在JSON bundle中表示<a href="extras.html#binary">binary resource</a> 时,是用base64编码的content和一个content-type来表示的,content-type中的的值为mime-type,如同在HTTP中规定的那样,如下所示:    </p>
-<p><pre class="json"><br>{<br>  &quot;resourceType&quot; : &quot;Binary&quot;,<br>  &quot;contentType&quot; : &quot;[mime type]&quot;,<br>  &quot;content&quot; : &quot;[base64 of data]&quot;<br>}<br></pre>       </p>
-<h6 id="1-12-5-2-5-3_签名">1.12.5.2.5.3 签名</h6>
-<p>如果bundle存在签名的话,签名应该包含一个属性&quot;signature&quot;, 属性值为一个有效的<a href="http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/#sec-Signature" target="_blank" rel="external">XML signature</a>的XML字符串,     </p>
-<p><pre class="json"><br>{<br>  &quot;resourceType&quot; : &quot;Bundle&quot;,<br>  … metadata and entries as described above….<br>  &quot;signature&quot; : &quot;&lt;signature xmlns=\&quot;<a href="http://www.w3.org/2000/09/xmldsig\&quot;&gt;...&lt;/signature&gt;&amp;quot" target="_blank" rel="external">http://www.w3.org/2000/09/xmldsig\&quot;&gt;...&lt;/signature&gt;&amp;quot</a>;<br>}</pre></p>
+<h6 id="1-18-2-5-3_签名">1.18.2.5.3 签名</h6>
+<p>todo</p>
 <p> &copy; HL7.org 2011 - 2014. FHIR DSTU (v0.2.1-2606)构建于2014  7月2号 16:29+0800 星期三 .<br>链接：<a href="http://hl7.org/implement/standards/fhir/dstu.html" target="_blank" rel="external">试行版是什么</a> |<a href="http://hl7.org/implement/standards/fhir/history.html" target="_blank" rel="external">版本更新情况</a> | <a href="http://hl7.org/implement/standards/fhir/license.html" target="_blank" rel="external">许可协议</a> |<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank" rel="external">提交变更建议</a>      </p>
 
         
