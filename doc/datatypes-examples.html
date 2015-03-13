@@ -18,12 +18,11 @@
 布尔值：
 1&lt;active value='true' /&gt;
 
-
 负整数：  
 1&lt;score value='-14' /&gt;
 
 高精度的小数：
-1&lt;pi value='3.141">
+1&lt;pi value='3.1415">
 <meta property="og:type" content="website">
 <meta property="og:title" content="FHIR 中文版">
 <meta property="og:url" content="http://wanghaisheng.github.io/fhir-cn/home/index.html/doc/datatypes-examples.html">
@@ -41,12 +40,11 @@
 布尔值：
 1&lt;active value='true' /&gt;
 
-
 负整数：  
 1&lt;score value='-14' /&gt;
 
 高精度的小数：
-1&lt;pi value='3.141">
+1&lt;pi value='3.1415">
 <meta property="og:image" content="../material/datatypes.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FHIR 中文版">
@@ -63,12 +61,11 @@
 布尔值：
 1&lt;active value='true' /&gt;
 
-
 负整数：  
 1&lt;score value='-14' /&gt;
 
 高精度的小数：
-1&lt;pi value='3.141">
+1&lt;pi value='3.1415">
 
   
   
@@ -161,7 +158,6 @@
 <p>布尔值：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;active <span class="keyword">value</span>=<span class="string">"true"</span> /&gt;</div></pre></td></tr></table></figure>
 
-
 <p>负整数：  </p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;score <span class="keyword">value</span>=<span class="string">"-14"</span> /&gt;</div></pre></td></tr></table></figure>
 
@@ -174,529 +170,189 @@
 <p>unicode编码的字符串：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;caption <span class="keyword">value</span>=<span class="string">"Noodles are called ?? in Chinese"</span> /&gt;</div></pre></td></tr></table></figure>
 
-<p>A uri that points to a website:</p>
-<pre class="xml" fragment="uri">&lt;reference value=&quot;http://hl7.org/fhir&quot; /&gt;</pre>
+<p>表示网站地址的uri:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;reference <span class="keyword">value</span>=<span class="string">"http://hl7.org/fhir"</span> /&gt;</div></pre></td></tr></table></figure>
 
-<p>A uri that is a urn:</p>
-<pre class="xml" fragment="uri">&lt;id value=&quot;urn:isbn:0451450523&quot; /&gt;</pre>
+<p>urn格式的uri:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;id <span class="keyword">value</span>=<span class="string">"urn:isbn:0451450523"</span> /&gt;</div></pre></td></tr></table></figure>
 
-<p>A date of birth:</p>
-<pre class="xml" fragment="date">&lt;date value=&quot;1951-06-04&quot; /&gt;</pre>
+<p>出生日期:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;<span class="built_in">date</span> <span class="built_in">value</span>=<span class="string">"1951-06-04"</span> /&gt;</div></pre></td></tr></table></figure>
 
-<p>An approximate date of birth:</p>
-<pre class="xml" fragment="date">&lt;date value=&quot;1951-06&quot; /&gt;</pre>
+<p>出生年月:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;<span class="built_in">date</span> <span class="built_in">value</span>=<span class="string">"1951-06"</span> /&gt;</div></pre></td></tr></table></figure>
 
-<p>The instant a document was created, including time zone:</p>
-<pre class="xml" fragment="instant">&lt;instant value=&quot;2013-06-08T10:57:34+01:00&quot; /&gt;</pre>
+<p>临床文档创建的时间，包括时区:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;instant <span class="keyword">value</span>=<span class="string">"2013-06-08T10:57:34+01:00"</span> /&gt;</div></pre></td></tr></table></figure>
 
-<p>The instant a document was created, expressed in UTC, with milliseconds:</p>
-<pre class="xml" fragment="instant">&lt;instant value=&quot;2013-06-08T09:57:34.2112Z&quot; /&gt;</pre>
+<p>精确到毫秒的UTC格式的临床文档创建时间:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;instant <span class="keyword">value</span>=<span class="string">"2013-06-08T09:57:34.2112Z"</span> /&gt;</div></pre></td></tr></table></figure>
 
-<p>2:35pm in the afternoon:</p>
-<pre class="xml" fragment="time">&lt;time value=&quot;14:35&quot; /&gt;</pre>
+<p>下午2点35分:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;<span class="built_in">time</span> <span class="built_in">value</span>=<span class="string">"14:35"</span> /&gt;</div></pre></td></tr></table></figure>
 
+<h4 id="1-17-1-2_String_Patterns">1.17.1.2  String Patterns</h4>
+<p>表示HL7的根oid的uri：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;root <span class="keyword">value</span>=<span class="string">"urn:oid:2.16.840.1.113883"</span> /&gt;</div></pre></td></tr></table></figure>
 
-<a name="strings">
-
-
-### <span class="sectioncount">1.17.1.2<a name="1.17.1.2"> </a></span> String Patterns
-
-<div class="example">
-
-A uri that is the root oid of HL7:
-<pre class="xml" fragment="oid">&lt;root value=&quot;urn:oid:2.16.840.1.113883&quot; /&gt;</pre>
-
-<p>A uri that is a uuid:</p>
-<pre class="xml" fragment="uuid">&lt;id value=&quot;urn:uuid:a5afddf4-e880-459b-876e-e4591b0acc11&quot; /&gt;</pre>
+<p>uuid格式的uri:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;id <span class="keyword">value</span>=<span class="string">"urn:uuid:a5afddf4-e880-459b-876e-e4591b0acc11"</span> /&gt;</div></pre></td></tr></table></figure>
 
 <p>A code:</p>
-<pre class="xml" fragment="code">&lt;code value=&quot;acq4+acq5&quot; /&gt;</pre>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;code <span class="keyword">value</span>=<span class="string">"acq4+acq5"</span> /&gt;</div></pre></td></tr></table></figure>
 
-<p>A code with single internal space:</p>
-<pre class="xml" fragment="code">&lt;code value=&quot;Question 4b&quot; /&gt;</pre>
+<p>带单空格的code:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;code <span class="keyword">value</span>=<span class="string">"Question 4b"</span> /&gt;</div></pre></td></tr></table></figure>
 
-<p>A numeric id:</p>
-<pre class="xml" fragment="code">&lt;id value=&quot;314&quot; /&gt;</pre>
+<p>数字型id:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;id <span class="keyword">value</span>=<span class="string">"314"</span> /&gt;</div></pre></td></tr></table></figure>
 
-<p>An alphanumeric id:</p>
-<pre class="xml" fragment="code">&lt;id value=&quot;alpha-gamma-14&quot; /&gt;</pre>
-</div>
+<p>字母型id:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;id <span class="keyword">value</span>=<span class="string">"alpha-gamma-14"</span> /&gt;</div></pre></td></tr></table></figure>
 
-<a name="Attachment">
-<a name="attachment">
+<h4 id="1-17-1-3_Attachment">1.17.1.3 Attachment</h4>
+<p>See also <a href="datatypes.html#Attachment">Base Definition</a>, <a href="datatypes-definitions.html#Attachment">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Attachment">Mappings</a>.</p>
+<p>PDF文档:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">document</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">contentType</span> <span class="attribute">value</span>=<span class="value">"application/pdf"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">language</span> <span class="attribute">value</span>=<span class="value">"en"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">data</span> <span class="attribute">value</span>=<span class="value">"/9j/4...KAP//Z"</span> /&gt;</span> <span class="comment">&lt;!-- covers many lines --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">title</span> <span class="attribute">value</span>=<span class="value">"Definition of Procedure"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">document</span>&gt;</span></div></pre></td></tr></table></figure>
 
-### <span class="sectioncount">1.17.1.3<a name="1.17.1.3"> </a></span> 
-Attachment
 
-See also [Base Definition](datatypes.html#Attachment), [Detailed Descriptions](datatypes-definitions.html#Attachment) and [Mappings](datatypes-mappings.html#Attachment).
 
-<div class="example">
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">document</span> : <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">contentType </span>:<span class="value">  { value : <span class="string">"application/pdf"</span> </span></span>},</div><div class="line">  <span class="tag">language</span> : <span class="rules">{ <span class="rule"><span class="attribute">value </span>:<span class="value"> <span class="string">"en"</span> </span></span></span>},</div><div class="line">  <span class="tag">data</span> :  <span class="rules">{ <span class="rule"><span class="attribute">value </span>:<span class="value"> <span class="string">"/9j/4...KAP//Z"</span></span></span></span>},</div><div class="line">  <span class="tag">title</span> :  <span class="rules">{ <span class="rule"><span class="attribute">value </span>:<span class="value"> <span class="string">"Definition of Procedure"</span> </span></span></span>}</div><div class="line">}</div></pre></td></tr></table></figure>
 
-A PDF document:
+<p>WADO协议的DICOM图像:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">image</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">contentType</span> <span class="attribute">value</span>=<span class="value">"application/dicom"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">url</span> <span class="attribute">value</span>=<span class="value">"http://10.1.2.3:1000/wado?requestType=WADO&amp;wado_details..."</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">hash</span> <span class="attribute">value</span>=<span class="value">"EQH/..AgME"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">image</span>&gt;</span></div></pre></td></tr></table></figure>
 
-<pre class="xml" fragment="Attachment">
-  &lt;document&gt;
-    &lt;contentType value=&quot;application/pdf&quot; /&gt;
-    &lt;language value=&quot;en&quot; /&gt;
-    &lt;data value=&quot;/9j/4...KAP//Z&quot; /&gt; &lt;!-- covers many lines --&gt;
-    &lt;title value=&quot;Definition of Procedure&quot; /&gt;
-  &lt;/document&gt;
-</pre>
-<pre class="json">
-  document : {
-    contentType :  { value : &quot;application/pdf&quot; },
-    language : { value : &quot;en&quot; },
-    data :  { value : &quot;/9j/4...KAP//Z&quot;},
-    title :  { value : &quot;Definition of Procedure&quot; }
-  }
-</pre>
+<p><a name="Identifier"><br><a name="identifier"></a></a></p>
+<h4 id="1-17-1-4_Identifier">1.17.1.4 Identifier</h4>
+<p>See also <a href="datatypes.html#Identifier">Base Definition</a>, <a href="datatypes-definitions.html#Identifier">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Identifier">Mappings</a>.</p>
+<p><strong>Examples</strong></p>
+<p>系统主键:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">identifier</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">use</span> <span class="attribute">value</span>=<span class="value">"official"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"urn:oid:2.16.840.1.113883.16.4.3.2.5"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">value</span> <span class="attribute">value</span>=<span class="value">"123"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">identifier</span>&gt;</span></div></pre></td></tr></table></figure>
 
-<p>Since the JSON examples have the same structure as the XML, only XML is shown for the rest of the examples.</p>
-<p>A reference to a DICOM image via WADO:</p>
-<pre class="xml" fragment="Attachment">
-  &lt;image&gt;
-    &lt;contentType value=&quot;application/dicom&quot; /&gt;
-    &lt;url value=&quot;http://10.1.2.3:1000/wado?requestType=WADO&amp;amp;wado_details...&quot; /&gt;
-    &lt;hash value=&quot;EQH/..AgME&quot; /&gt;
-  &lt;/image&gt;
-</pre>
-</div>
+<p>`</p>
+<p>院内的病人编号:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">identifier</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">use</span> <span class="attribute">value</span>=<span class="value">"official"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"http://www.acmehosp.com/patients"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">value</span> <span class="attribute">value</span>=<span class="value">"44552"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">period</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">start</span> <span class="attribute">value</span>=<span class="value">"2003-05-03"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">period</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">identifier</span>&gt;</span></div></pre></td></tr></table></figure>
 
-<a name="Identifier">
-<a name="identifier">
-
-### <span class="sectioncount">1.17.1.4<a name="1.17.1.4"> </a></span> 
-Identifier
-
-See also [Base Definition](datatypes.html#Identifier), [Detailed Descriptions](datatypes-definitions.html#Identifier) and [Mappings](datatypes-mappings.html#Identifier).
-
-<div class="example">
-
-**Examples**
-
-A primary key from an application table (an OID in the space allocated by HL7
-to some organization to further sub-allocate):
-
-<pre class="xml" fragment="Identifier">
-  &lt;identifier&gt;
-    &lt;use value=&quot;official&quot; /&gt;
-    &lt;system value=&quot;urn:oid:2.16.840.1.113883.16.4.3.2.5&quot; /&gt;
-    &lt;value value=&quot;123&quot; /&gt;
-  &lt;/identifier&gt;
-</pre>
-
-<p>A patient identifier defined by a hospital:</p>
-<pre class="xml" fragment="Identifier">
-  &lt;identifier&gt;
-    &lt;use value=&quot;official&quot; /&gt;
-    &lt;system value=&quot;http://www.acmehosp.com/patients&quot; /&gt;
-    &lt;value value=&quot;44552&quot; /&gt;
-    &lt;period&gt;
-      &lt;start value=&quot;2003-05-03&quot; /&gt;
-    &lt;/period&gt;
-  &lt;/identifier&gt;
-</pre>
-
+<p>`</p>
 <p>In this case, the period is used to track when the identifier was first assigned to the patient.</p>
-<p>An identifier that refers to a patient FHIR resource on a particular system:</p>
-<pre class="xml" fragment="Identifier">
-  &lt;identifier&gt;
-   &lt;system value=&quot;urn:ietf:rfc:3986&quot; /&gt;
-   &lt;value value=&quot;http://pas-server/xxx/Patient/443556&quot; /&gt;
-  &lt;/identifier&gt;
-</pre>
+<p>FHIR服务器中的患者标识:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">identifier</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"urn:ietf:rfc:3986"</span> /&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="title">value</span> <span class="attribute">value</span>=<span class="value">"http://pas-server/xxx/Patient/443556"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">identifier</span>&gt;</span></div></pre></td></tr></table></figure>
 
 <p>This is not a resource reference - it’s a logical reference by the patient identifier.</p>
 <p>A UUID:</p>
-<pre class="xml" fragment="Identifier">
-  &lt;identifier&gt;
-    &lt;use value=&quot;temp&quot; /&gt;
-    &lt;system value=&quot;urn:ietf:rfc:3986&quot; /&gt;
-    &lt;value value=&quot;urn:uuid:a76d9bbf-f293-4fb7-ad4c-2851cac77162&quot; /&gt;
-  &lt;/identifier&gt;
-</pre>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">identifier</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">use</span> <span class="attribute">value</span>=<span class="value">"temp"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"urn:ietf:rfc:3986"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">value</span> <span class="attribute">value</span>=<span class="value">"urn:uuid:a76d9bbf-f293-4fb7-ad4c-2851cac77162"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">identifier</span>&gt;</span></div></pre></td></tr></table></figure>
 
+<p>`</p>
 <p>UUIDs are often used for temporary identifiers, though this is not necessary.</p>
 <p>A US SSN:</p>
-<pre class="xml" fragment="Identifier">
-  &lt;identifier&gt;
-    &lt;use value=&quot;usual&quot; /&gt;
-    &lt;label value=&quot;SSN&quot; /&gt;
-    &lt;system value=&quot;http://hl7.org/fhir/sid/us-ssn&quot; /&gt;
-    &lt;value value=&quot;000111111&quot; /&gt;
-  &lt;/identifier&gt;
-</pre>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">identifier</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">use</span> <span class="attribute">value</span>=<span class="value">"usual"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">value</span>=<span class="value">"SSN"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"http://hl7.org/fhir/sid/us-ssn"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">value</span> <span class="attribute">value</span>=<span class="value">"000111111"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">identifier</span>&gt;</span></div></pre></td></tr></table></figure>
 
+<p>`</p>
 <p>Notes:</p>
 <ul>
 <li>US SSNs are often presented like this: 000-11-1111, the dashes are for presentation and should be removed, as specified in the <a href="terminologies-systems.html#identifiersystems">definition of ssn-us</a></li>
-<li>The use of &quot;usual&quot; means that this institution prefers to use SSN when identifying the patient</li>
+<li>The use of &quot;usual&quot; means that this institution prefers to use SSN when identifying the patient<br>(如果医院使用身份证号来标识患者 是否也是usual;如果院内有自己唯一的主索引，身份证号是用usual还是official)</li>
 </ul>
-<p>A medical record number assigned on 5-July 2009:</p>
-<pre class="xml" fragment="Identifier">
-  &lt;identifier&gt;
-    &lt;use value=&quot;usual&quot; /&gt;
-    &lt;label value=&quot;MRN&quot; /&gt;
-    &lt;system value=&quot;urn:oid:0.1.2.3.4.5.6.7&quot; /&gt;
-    &lt;value value=&quot;2356&quot; /&gt;
-    &lt;period&gt;
-      &lt;start value=&quot;2009-07-05&quot; /&gt;
-    &lt;/period&gt;
-  &lt;/identifier&gt;
-</pre>
-</div>
+<p>表单编号或病案号:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">identifier</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">use</span> <span class="attribute">value</span>=<span class="value">"usual"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">value</span>=<span class="value">"MRN"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"urn:oid:0.1.2.3.4.5.6.7"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">value</span> <span class="attribute">value</span>=<span class="value">"2356"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">period</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">start</span> <span class="attribute">value</span>=<span class="value">"2009-07-05"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">period</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">identifier</span>&gt;</span></div></pre></td></tr></table></figure>
 
-<a name="Coding">
-<a name="coding">
+<p>`<br><a name="Coding"><br><a name="coding"></a></a></p>
+<h4 id="1-17-1-5_Coding">1.17.1.5 Coding</h4>
+<p>See also <a href="datatypes.html#Coding">Base Definition</a>, <a href="datatypes-definitions.html#Coding">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Coding">Mappings</a>.</p>
+<p><strong>Examples</strong></p>
+<p>头痛的ICD-10编码:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">code</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"http://hl7.org/fhir/sid/icd-10"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"G44.1"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">code</span>&gt;</span></div></pre></td></tr></table></figure>
 
-### <span class="sectioncount">1.17.1.5<a name="1.17.1.5"> </a></span> Coding
-
-See also [Base Definition](datatypes.html#Coding), [Detailed Descriptions](datatypes-definitions.html#Coding) and [Mappings](datatypes-mappings.html#Coding).
-
-<div class="example">
-
-**Examples**
-
-A simple code for headache, in ICD-10:
-
-<pre class="xml" fragment="Coding">
-  &lt;code&gt;
-    &lt;system value=&quot;http://hl7.org/fhir/sid/icd-10&quot; /&gt;
-    &lt;code value=&quot;G44.1&quot; /&gt;
-  &lt;/code&gt;
-</pre>
-
+<p>`</p>
 <p>A SNOMED CT expression:</p>
-<pre class="xml" fragment="Coding">
-  &lt;problem&gt;
-    &lt;system value=&quot;http://snomed.info/sct&quot; /&gt;
-    &lt;code value=&quot;128045006:{363698007=56459004}&quot; /&gt;
-  &lt;/problem&gt;
-</pre>
-</div>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">problem</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"http://snomed.info/sct"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"128045006:{363698007=56459004}"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">problem</span>&gt;</span></div></pre></td></tr></table></figure>
 
-<a name="CodeableConcept">
-<a name="codeableconcept">
+<p><a name="CodeableConcept"><br><a name="codeableconcept"></a></a></p>
+<h4 id="1-17-1-6_CodeableConcept">1.17.1.6 CodeableConcept</h4>
+<p>See also <a href="datatypes.html#CodeableConcept">Base Definition</a>, <a href="datatypes-definitions.html#CodeableConcept">Detailed Descriptions</a> and <a href="datatypes-mappings.html#CodeableConcept">Mappings</a>.</p>
+<p><strong>Examples</strong></p>
+<p>SNOMED-CT编码的头痛，转换成ICD-10编码:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">concept</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">coding</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"http://hl7.org/fhir/sid/icd-10"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"R51"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">coding</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">coding</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"http://snomed.info/sct"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"25064002"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">display</span> <span class="attribute">value</span>=<span class="value">"Headache"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">primary</span> <span class="attribute">value</span>=<span class="value">"true"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">coding</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">text</span> <span class="attribute">value</span>=<span class="value">"general headache"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">concept</span>&gt;</span></div></pre></td></tr></table></figure>
 
-### <span class="sectioncount">1.17.1.6<a name="1.17.1.6"> </a></span> 
-CodeableConcept
+<p>`</p>
+<p>本地编码的剂型单位，UCUM中找不到对应编码:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">unit</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">coding</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"urn:oid:2.16.840.1.113883.19.5.2"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"tab"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">display</span> <span class="attribute">value</span>=<span class="value">"Tablet"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">coding</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">coding</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"http://unitsofmeasure.org"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">coding</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">unit</span>&gt;</span></div></pre></td></tr></table></figure>
 
-See also [Base Definition](datatypes.html#CodeableConcept), [Detailed Descriptions](datatypes-definitions.html#CodeableConcept) and [Mappings](datatypes-mappings.html#CodeableConcept).
+<p>A SNOMED CT expression(由于该SNOMED-CT表达式不存在display，所以没有display元素):</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">diagnosis</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">coding</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"http://snomed.info/sct"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"128045006:{363698007=56459004}"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">coding</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">text</span> <span class="attribute">value</span>=<span class="value">"Cellulitis of the foot"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">diagnosis</span>&gt;</span></div></pre></td></tr></table></figure>
 
-<div class="example">
-
-**Examples**
-
-A simple code for headache initially coded in SNOMED CT (by picking the SNOMED CT code from a pick-list), and then translated to ICD-10:
-
-<pre class="xml" fragment="CodeableConcept">
-  &lt;concept&gt;
-    &lt;coding&gt;
-      &lt;system value=&quot;http://hl7.org/fhir/sid/icd-10&quot; /&gt;
-      &lt;code value=&quot;R51&quot; /&gt;
-    &lt;/coding&gt;
-    &lt;coding&gt;
-      &lt;system value=&quot;http://snomed.info/sct&quot; /&gt;
-      &lt;code value=&quot;25064002&quot; /&gt;
-      &lt;display value=&quot;Headache&quot; /&gt;
-      &lt;primary value=&quot;true&quot; /&gt;
-    &lt;/coding&gt;
-    &lt;text value=&quot;general headache&quot; /&gt;
-  &lt;/concept&gt;
-</pre>
-
-<p>A concept represented in an institution’s local coding systems for unit for which no UCUM equivalent exists:</p>
-<pre class="xml" fragment="CodeableConcept">
-  &lt;unit&gt;
-    &lt;coding&gt;
-      &lt;system value=&quot;urn:oid:2.16.840.1.113883.19.5.2&quot; /&gt;
-      &lt;code value=&quot;tab&quot; /&gt;
-      &lt;display value=&quot;Tablet&quot; /&gt;
-    &lt;/coding&gt;
-    &lt;coding&gt;
-      &lt;system value=&quot;http://unitsofmeasure.org&quot; /&gt;
-    &lt;/coding&gt;
-  &lt;/unit&gt;
-</pre>
-
-<p>A SNOMED CT expression:</p>
-<pre class="xml" fragment="CodeableConcept">
-  &lt;diagnosis&gt;
-    &lt;coding&gt;
-      &lt;system value=&quot;http://snomed.info/sct&quot; /&gt;
-      &lt;code value=&quot;128045006:{363698007=56459004}&quot; /&gt;
-    &lt;/coding&gt;
-    &lt;text value=&quot;Cellulitis of the foot&quot; /&gt;
-  &lt;/diagnosis&gt;
-</pre>
-
-<p>In this case, there is no display element, because no display is defined for SNOMED CT expressions.</p>
+<p>`</p>
 <p>Using the valueset:</p>
 <p>The results on a urinalysis strip:</p>
-<pre class="xml" fragment="Coding">
-  &lt;valueCoding&gt;
-    &lt;system value=&quot;http://example.org/codes/simple-grades&quot; /&gt;
-    &lt;code value=&quot;+&quot; /&gt;
-    &lt;valueSet&gt;
-      &lt;reference url=&quot;ValueSet/simple-grades&quot; /&gt;
-    &lt;/valueSet&gt;
-  &lt;/valueCoding&gt;
-</pre>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">valueCoding</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"http://example.org/codes/simple-grades"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"+"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">valueSet</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">reference</span> <span class="attribute">url</span>=<span class="value">"ValueSet/simple-grades"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">valueSet</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">valueCoding</span>&gt;</span></div></pre></td></tr></table></figure>
 
-<p>And where the value set would be something like this:</p>
-<pre>
-  &lt;ValueSet xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-    &lt;text&gt;
-      &lt;status value=&quot;generated&quot;/&gt;
-      &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
-        &lt;p&gt;Possible Clinistix codes: neg, trace, +, ++, and +++&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/text&gt;
-    &lt;identifier value=&quot;http://hl7.org/fhir/vs/clinistix&quot;/&gt;
-    &lt;name value=&quot;Codes for Clinistix&quot;/&gt;
-    &lt;publisher value=&quot;HL7&quot;/&gt;
-    &lt;telecom&gt;
-      &lt;system value=&quot;url&quot;/&gt;
-      &lt;value value=&quot;http://hl7.org/fhir&quot;/&gt;
-    &lt;/telecom&gt;
-    &lt;description value=&quot;Clinistix Codes&quot;/&gt;
-    &lt;status value=&quot;draft&quot;/&gt;
-    &lt;experimental value=&quot;true&quot;/&gt;
-    &lt;date value=&quot;2013-10-01&quot;/&gt;
-    &lt;define&gt;
-      &lt;system value=&quot;http://hl7.org/fhir/clinistix&quot;/&gt;
-      &lt;caseSensitive value=&quot;false&quot;/&gt;
-      &lt;concept&gt;
-        &lt;code value=&quot;neg&quot;/&gt;
-      &lt;/concept&gt;
-      &lt;concept&gt;
-        &lt;code value=&quot;trace&quot;/&gt;
-      &lt;/concept&gt;
-      &lt;concept&gt;
-        &lt;code value=&quot;+&quot;/&gt;
-      &lt;/concept&gt;
-      &lt;concept&gt;
-        &lt;code value=&quot;+&quot;/&gt;
-      &lt;/concept&gt;
-      &lt;concept&gt;
-        &lt;code value=&quot;++&quot;/&gt;
-      &lt;/concept&gt;
-      &lt;concept&gt;
-        &lt;code value=&quot;+++&quot;/&gt;
-      &lt;/concept&gt;
-    &lt;/define&gt;
-  &lt;/ValueSet&gt;
-</pre>
-</div>
-<a name="Quantity">
-<a name="quantity">
-<a name="age">
-<a name="distance">
-<a name="duration">
-<a name="count">
-<a name="money">
+<p>`</p>
+<p>具体定义编码的value set如下所示:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">ValueSet</span> <span class="attribute">xmlns</span>=<span class="value">"http://hl7.org/fhir"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">text</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">status</span> <span class="attribute">value</span>=<span class="value">"generated"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">xmlns</span>=<span class="value">"http://www.w3.org/1999/xhtml"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">p</span>&gt;</span>Possible Clinistix codes: neg, trace, +, ++, and +++<span class="tag">&lt;/<span class="title">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">text</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">identifier</span> <span class="attribute">value</span>=<span class="value">"http://hl7.org/fhir/vs/clinistix"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">name</span> <span class="attribute">value</span>=<span class="value">"Codes for Clinistix"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">publisher</span> <span class="attribute">value</span>=<span class="value">"HL7"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">telecom</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"url"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">value</span> <span class="attribute">value</span>=<span class="value">"http://hl7.org/fhir"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">telecom</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">description</span> <span class="attribute">value</span>=<span class="value">"Clinistix Codes"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">status</span> <span class="attribute">value</span>=<span class="value">"draft"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">experimental</span> <span class="attribute">value</span>=<span class="value">"true"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">date</span> <span class="attribute">value</span>=<span class="value">"2013-10-01"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">define</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"http://hl7.org/fhir/clinistix"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">caseSensitive</span> <span class="attribute">value</span>=<span class="value">"false"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">concept</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"neg"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">concept</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">concept</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"trace"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">concept</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">concept</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"+"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">concept</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">concept</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"+"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">concept</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">concept</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"++"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">concept</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">concept</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"+++"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">concept</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">define</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">ValueSet</span>&gt;</span></div></pre></td></tr></table></figure>
 
-### <span class="sectioncount">1.17.1.7<a name="1.17.1.7"> </a></span> 
-Quantity
+<p><a name="Quantity"><br><a name="quantity"><br><a name="age"><br><a name="distance"><br><a name="duration"><br><a name="count"><br><a name="money"></a></a></a></a></a></a></a></p>
+<h4 id="1-17-1-7_Quantity">1.17.1.7 Quantity</h4>
+<p>See also <a href="datatypes.html#Quantity">Base Definition</a>, <a href="datatypes-definitions.html#Quantity">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Quantity">Mappings</a>.</p>
+<p><strong>Examples</strong></p>
+<p>A duration:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="built_in">time</span>&gt;</div><div class="line">  &lt;<span class="built_in">value</span> <span class="built_in">value</span>=<span class="string">"25"</span> /&gt;</div><div class="line">  &lt;units <span class="built_in">value</span>=<span class="string">"sec"</span> /&gt;</div><div class="line">  &lt;<span class="keyword">system</span> <span class="built_in">value</span>=<span class="string">"http://unitsofmeasure.org"</span> /&gt;</div><div class="line">  &lt;code <span class="built_in">value</span>=<span class="string">"s"</span> /&gt;</div><div class="line">&lt;/<span class="built_in">time</span>&gt;</div></pre></td></tr></table></figure>
 
-See also [Base Definition](datatypes.html#Quantity), [Detailed Descriptions](datatypes-definitions.html#Quantity) and [Mappings](datatypes-mappings.html#Quantity).
+<p>`</p>
+<p>浓度超出范围:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="literal">result</span>&gt;</div><div class="line">  &lt;value value=<span class="string">"40000"</span> /&gt;</div><div class="line">  &lt;comparator value=<span class="string">"&gt;"</span> /&gt;</div><div class="line">  &lt;units value=<span class="string">"mcg/L"</span> /&gt;</div><div class="line">  &lt;system value=<span class="string">"http://unitsofmeasure.org"</span> /&gt;</div><div class="line">  &lt;code value=<span class="string">"ug"</span> /&gt;</div><div class="line">&lt;/<span class="literal">result</span>&gt;</div></pre></td></tr></table></figure>
 
-<div class="example">
+<p>`</p>
+<p>处方药的数量:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">dose</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">value</span> <span class="attribute">value</span>=<span class="value">"3"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">units</span> <span class="attribute">value</span>=<span class="value">"capsules"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"http://snomed.info/sct"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"385049006"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">dose</span>&gt;</span></div></pre></td></tr></table></figure>
 
-**Examples**
+<p>`<br>A price (coded using currency codes defined in ISO 4217):</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">cost</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">value</span> <span class="attribute">value</span>=<span class="value">"25.45"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">units</span> <span class="attribute">value</span>=<span class="value">"US$"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"urn:std:iso:4217"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"USD"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">cost</span>&gt;</span></div></pre></td></tr></table></figure>
 
-A duration:
+<p>`</p>
+<p><a name="Range"><br><a name="range"></a></a></p>
+<h4 id="1-17-1-8_Range">1.17.1.8 Range</h4>
+<p>See also <a href="datatypes.html#Range">Base Definition</a>, <a href="datatypes-definitions.html#Range">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Range">Mappings</a>.</p>
+<p><strong>Examples</strong></p>
+<p>Range of Quantity (distance):</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">estimate</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="title">low</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">value</span> <span class="attribute">value</span>=<span class="value">"1.6"</span> /&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">units</span> <span class="attribute">value</span>=<span class="value">"m"</span> /&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="title">low</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="title">high</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">value</span> <span class="attribute">value</span>=<span class="value">"1.9"</span> /&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">units</span> <span class="attribute">value</span>=<span class="value">"m"</span> /&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="title">high</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">estimate</span>&gt;</span></div></pre></td></tr></table></figure>
 
-<pre class="xml" fragment="Quantity">
-  &lt;time&gt;
-    &lt;value value=&quot;25&quot; /&gt;
-    &lt;units value=&quot;sec&quot; /&gt;
-    &lt;system value=&quot;http://unitsofmeasure.org&quot; /&gt;
-    &lt;code value=&quot;s&quot; /&gt;
-  &lt;/time&gt;
-</pre>
+<p>`<br><a name="Ratio"><br><a name="ratio"></a></a></p>
+<h4 id="1-17-1-9_Ratio">1.17.1.9  Ratio</h4>
+<p>See also <a href="datatypes.html#Ratio">Base Definition</a>, <a href="datatypes-definitions.html#Ratio">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Ratio">Mappings</a>.</p>
+<p><strong>Examples</strong></p>
+<p>滴速 (Ratio of integer:integer)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="literal">result</span>&gt;</div><div class="line"> &lt;numerator&gt;</div><div class="line">   &lt;value value=<span class="string">"1"</span> /&gt;</div><div class="line"> &lt;/numerator&gt;</div><div class="line"> &lt;denominator&gt;</div><div class="line">   &lt;value value=<span class="string">"128"</span> /&gt;</div><div class="line"> &lt;/denominator&gt;</div><div class="line">&lt;/<span class="literal">result</span>&gt;</div></pre></td></tr></table></figure>
 
-<p>A concentration where the value was out of range:</p>
-<pre class="xml" fragment="Quantity">
-  &lt;result&gt;
-    &lt;value value=&quot;40000&quot; /&gt;
-    &lt;comparator value=&quot;&amp;gt;&quot; /&gt;
-    &lt;units value=&quot;mcg/L&quot; /&gt;
-    &lt;system value=&quot;http://unitsofmeasure.org&quot; /&gt;
-    &lt;code value=&quot;ug&quot; /&gt;
-  &lt;/result&gt;
-</pre>
+<p>`</p>
+<p>单位成本(Ratio of<br>Money:Quantity):</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="title">charge</span>&gt;</span></span></div><div class="line"> <span class="tag">&lt;<span class="title">numerator</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">value</span> <span class="attribute">value</span>=<span class="value">"103.50"</span> /&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">units</span> <span class="attribute">value</span>=<span class="value">"US$"</span> /&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"USD"</span> /&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"urn:std:iso:4217"</span> /&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="title">numerator</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="title">denominator</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">value</span> <span class="attribute">value</span>=<span class="value">"1"</span> /&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">units</span> <span class="attribute">value</span>=<span class="value">"day"</span> /&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"day"</span> /&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"http://unitsofmeasure.org"</span> /&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="title">denominator</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">charge</span>&gt;</span></div></pre></td></tr></table></figure>
 
-<p>An amount of prescribed medication:</p>
-<pre class="xml" fragment="Quantity">
-  &lt;dose&gt;
-    &lt;value value=&quot;3&quot; /&gt;
-    &lt;units value=&quot;capsules&quot; /&gt;
-    &lt;system value=&quot;http://snomed.info/sct&quot; /&gt;
-    &lt;code value=&quot;385049006&quot; /&gt;
-  &lt;/dose&gt;
-</pre>
+<p>`<br><a name="Period"><br><a name="period"></a></a></p>
+<h4 id="1-17-1-10_Period">1.17.1.10 Period</h4>
+<p>See also <a href="datatypes.html#Period">Base Definition</a>, <a href="datatypes-definitions.html#Period">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Period">Mappings</a>.</p>
+<p><strong>Examples</strong></p>
+<p>2011年5月23到27 包括27号:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">coverage</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="title">start</span> <span class="attribute">value</span>=<span class="value">"2011-05-23"</span> /&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="title">end</span> <span class="attribute">value</span>=<span class="value">"2011-05-27"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">coverage</span>&gt;</span></div></pre></td></tr></table></figure>
 
-<p>A price (coded using currency codes defined in ISO 4217):</p>
-<pre class="xml" fragment="Quantity">
-  &lt;cost&gt;
-    &lt;value value=&quot;25.45&quot; /&gt;
-    &lt;units value=&quot;US$&quot; /&gt;
-    &lt;system value=&quot;urn:std:iso:4217&quot; /&gt;
-    &lt;code value=&quot;USD&quot; /&gt;
-  &lt;/cost&gt;
-</pre>
-</div>
+<p>`</p>
+<p><a name="SampledData"><br><a name="sampleddata"></a></a></p>
+<h4 id="1-17-1-11_SampledData">1.17.1.11 SampledData</h4>
+<p>See also <a href="datatypes.html#SampledData">Base Definition</a>, <a href="datatypes-definitions.html#SampledData">Detailed Descriptions</a> and <a href="datatypes-mappings.html#SampledData">Mappings</a>.</p>
+<p><strong>Example</strong></p>
+<p>EKG设备的输出:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">sampledData</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="title">origin</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">value</span> <span class="attribute">value</span>=<span class="value">"0"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">units</span> <span class="attribute">value</span>=<span class="value">"μV"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">system</span> <span class="attribute">value</span>=<span class="value">"http://unitsofmeasure.org"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">code</span> <span class="attribute">value</span>=<span class="value">"uV"</span>/&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="title">origin</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="title">period</span> <span class="attribute">value</span>=<span class="value">"2"</span>/&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="title">factor</span> <span class="attribute">value</span>=<span class="value">"2.5"</span>/&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="title">dimensions</span> <span class="attribute">value</span>=<span class="value">"1"</span>/&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="title">data</span> <span class="attribute">value</span>=<span class="value">"-4 -13 -18 -18 -18 -17 -16 -16 -16 -16 -16 -17 -18 -18 -18 ...."</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">sampledData</span>&gt;</span></div></pre></td></tr></table></figure>
 
-<a name="Range">
-<a name="range">
+<p>`<br><a name="HumanName"><br><a name="humanname"></a></a></p>
+<h4 id="1-17-1-12_HumanName">1.17.1.12 HumanName</h4>
+<p>See also <a href="datatypes.html#HumanName">Base Definition</a>, <a href="datatypes-definitions.html#HumanName">Detailed Descriptions</a> and <a href="datatypes-mappings.html#HumanName">Mappings</a>.</p>
+<p>A Simple example</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">name</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">family</span> <span class="attribute">value</span>=<span class="value">"Everyman"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">given</span> <span class="attribute">value</span>=<span class="value">"Adam"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">given</span> <span class="attribute">value</span>=<span class="value">"A."</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">name</span>&gt;</span></div></pre></td></tr></table></figure>
 
-### <span class="sectioncount">1.17.1.8<a name="1.17.1.8"> </a></span> 
-Range
-
-See also [Base Definition](datatypes.html#Range), [Detailed Descriptions](datatypes-definitions.html#Range) and [Mappings](datatypes-mappings.html#Range).
-
-<div class="example">
-
-**Examples**
-
-Range of Quantity (distance):
-
-<pre class="xml" fragment="Range">
-  &lt;estimate&gt;
-   &lt;low&gt;
-     &lt;value value=&quot;1.6&quot; /&gt;
-     &lt;units value=&quot;m&quot; /&gt;
-   &lt;/low&gt;
-   &lt;high&gt;
-     &lt;value value=&quot;1.9&quot; /&gt;
-     &lt;units value=&quot;m&quot; /&gt;
-   &lt;/high&gt;
-  &lt;/estimate&gt;
-</pre>
-</div>
-<a name="Ratio">
-<a name="ratio">
-
-### <span class="sectioncount">1.17.1.9<a name="1.17.1.9"> </a></span> 
-Ratio
-
-See also [Base Definition](datatypes.html#Ratio), [Detailed Descriptions](datatypes-definitions.html#Ratio) and [Mappings](datatypes-mappings.html#Ratio).
-
-<div class="example">
-
-**Examples**
-
-Titer (Ratio of integer:integer)
-
-<pre class="xml" fragment="Ratio">
-  &lt;result&gt;
-   &lt;numerator&gt;
-     &lt;value value=&quot;1&quot; /&gt;
-   &lt;/numerator&gt;
-   &lt;denominator&gt;
-     &lt;value value=&quot;128&quot; /&gt;
-   &lt;/denominator&gt;
-  &lt;/result&gt;
-</pre>
-
-<p>Unit cost (Ratio of<br>Money:Quantity):</p>
-<pre class="xml" fragment="Ratio">
-  &lt;charge&gt;
-   &lt;numerator&gt;
-     &lt;value value=&quot;103.50&quot; /&gt;
-     &lt;units value=&quot;US$&quot; /&gt;
-     &lt;code value=&quot;USD&quot; /&gt;
-     &lt;system value=&quot;urn:std:iso:4217&quot; /&gt;
-   &lt;/numerator&gt;
-   &lt;denominator&gt;
-     &lt;value value=&quot;1&quot; /&gt;
-     &lt;units value=&quot;day&quot; /&gt;
-     &lt;code value=&quot;day&quot; /&gt;
-     &lt;system value=&quot;http://unitsofmeasure.org&quot; /&gt;
-   &lt;/denominator&gt;
-  &lt;/charge&gt;
-</pre>
-</div>
-<a name="Period">
-<a name="period">
-
-### <span class="sectioncount">1.17.1.10<a name="1.17.1.10"> </a></span> 
-Period
-
-See also [Base Definition](datatypes.html#Period), [Detailed Descriptions](datatypes-definitions.html#Period) and [Mappings](datatypes-mappings.html#Period).
-
-<div class="example">
-
-**Examples**
-
-23rd May 2011 to 27th May, including 27th May:
-
-<pre class="xml" fragment="Period">
-  &lt;coverage&gt;
-   &lt;start value=&quot;2011-05-23&quot; /&gt;
-   &lt;end value=&quot;2011-05-27&quot; /&gt;
-  &lt;/coverage&gt;
-</pre>
-</div>
-
-<a name="SampledData">
-<a name="sampleddata">
-
-### <span class="sectioncount">1.17.1.11<a name="1.17.1.11"> </a></span> 
-SampledData
-
-See also [Base Definition](datatypes.html#SampledData), [Detailed Descriptions](datatypes-definitions.html#SampledData) and [Mappings](datatypes-mappings.html#SampledData).
-
-<div class="example">
-
-**Example**
-
-The output from an EKG device:
-
-<pre class="xml" fragment="SampledData">
- &lt;sampledData&gt;
-  &lt;origin&gt;
-   &lt;value value=&quot;0&quot;/&gt;
-   &lt;units value=&quot;μV&quot;/&gt;
-   &lt;system value=&quot;http://unitsofmeasure.org&quot;/&gt;
-   &lt;code value=&quot;uV&quot;/&gt;
-  &lt;/origin&gt;
-  &lt;period value=&quot;2&quot;/&gt;
-  &lt;factor value=&quot;2.5&quot;/&gt;
-  &lt;dimensions value=&quot;1&quot;/&gt;
-  &lt;data value=&quot;-4 -13 -18 -18 -18 -17 -16 -16 -16 -16 -16 -17 -18 -18 -18 ....&quot;/&gt;
- &lt;/sampledData&gt;
-</pre>
-</div>
-<a name="HumanName">
-<a name="humanname">
-
-### <span class="sectioncount">1.17.1.12<a name="1.17.1.12"> </a></span> 
-HumanName
-
-See also [Base Definition](datatypes.html#HumanName), [Detailed Descriptions](datatypes-definitions.html#HumanName) and [Mappings](datatypes-mappings.html#HumanName).
-
-<div class="example">
-
-A Simple example
-
-<pre class="xml" fragment="HumanName">
-&lt;name&gt;
-  &lt;family value=&quot;Everyman&quot; /&gt;
-  &lt;given value=&quot;Adam&quot; /&gt;
-  &lt;given value=&quot;A.&quot; /&gt;
-&lt;/name&gt;
-</pre>
-
+<p>`</p>
 <p>Composite names</p>
-<pre class="xml" fragment="HumanName">
-&lt;name&gt;
-  &lt;family value=&quot;Contrata&quot; /&gt;
-  &lt;given value=&quot;Mary Jane&quot; /&gt;
-&lt;/name&gt;
-</pre>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">name</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">family</span> <span class="attribute">value</span>=<span class="value">"Contrata"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">given</span> <span class="attribute">value</span>=<span class="value">"Mary Jane"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">name</span>&gt;</span></div></pre></td></tr></table></figure>
 
+<p>`</p>
 <p>These cases can be quite ambiguous - is &quot;Mary Jane&quot; one name, or two? Different systems,<br>and data enterers may treat this differently, and the person themselves may not know.<br>Parts are allowed to contain spaces, but systems should consider how to treat<br>these cases. Composite names separated by &quot;-&quot; should be treated as a single name part.</p>
 <p>A common pattern: a person is called by a name other than that expected from their official name (first given name in most cultures).</p>
 <pre class="xml" fragment="HumanName">
@@ -726,9 +382,9 @@ A Simple example
   &lt;given value=&quot;Jim&quot; /&gt;
 &lt;/name&gt;
 </pre>
-</div>
 
-<div class="example">
+
+
 
 Karen van Hentenryck is of Dutch origin, and the &quot;van&quot; is a voorvoegsel.
 
@@ -746,18 +402,158 @@ Karen van Hentenryck is of Dutch origin, and the &quot;van&quot; is a voorvoegse
 </pre>
 
 <p>See <a href="extensibility-examples.html">the Extensibility Example for more information</a>.<br>Note that this name has multiple family name parts. Systems that do not support as many name parts<br>as are provided in an instance they are processing may wish to append parts together using spaces,<br>so that this becomes &quot;van Hentenryck&quot;.</p>
-<p></p></div><p></p>
-<div class="example"><br><br>Complex example from Germany: Dr.phil. Regina Johanna Maria Gräfin Hochheim-Weilenfels, NCFSA. This example shows extensive use of<br>multiple given names, prefixes, suffixes, for academic degrees, nobility titles, and professional designations.<br><br><pre class="xml" fragment="HumanName"><br>&lt;name&gt;<br>  &lt;use value=&quot;official&quot; /&gt;<br>  &lt;family value=&quot;Hochheim-Weilenfels&quot; /&gt;<br>  &lt;given value=&quot;Regina&quot; /&gt;<br>  &lt;given value=&quot;Johanna&quot; /&gt;<br>  &lt;given value=&quot;Maria&quot; /&gt;<br>  &lt;prefix value=&quot;Gräfin&quot;&gt;<br>    &lt;extension url=&quot;<a href="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&amp;quot" target="_blank" rel="external">http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&amp;quot</a>; &gt;<br>      &lt;valueCode value=&quot;NB&quot; /&gt;<br>    &lt;/extension&gt;<br>  &lt;/prefix&gt;<br>  &lt;prefix value=&quot;Dr. phil.&quot;&gt;<br>    &lt;extension url=&quot;<a href="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&amp;quot" target="_blank" rel="external">http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&amp;quot</a>; &gt;<br>      &lt;valueCode value=&quot;AC&quot; /&gt;<br>    &lt;/extension&gt;<br>  &lt;/prefix&gt;<br>  &lt;suffix value=&quot;NCFSA&quot; /&gt;<br>&lt;/name&gt;<br>&lt;name&gt;<br>  &lt;use value=&quot;maiden&quot; /&gt;<br>  &lt;family value=&quot;Hochheim&quot; /&gt;<br>&lt;/name&gt;<br></pre><br><br>This example makes use of the ISO 21090 extensions to carry the rare ISO 21090 qualifier attributes &quot;AC&quot; and &quot;NB&quot;.<br><br></div>
+<p></p>
+<p>Complex example from Germany: Dr.phil. Regina Johanna Maria Gräfin Hochheim-Weilenfels, NCFSA. This example shows extensive use of<br>multiple given names, prefixes, suffixes, for academic degrees, nobility titles, and professional designations.</p>
+<pre class="xml" fragment="HumanName">
+&lt;name&gt;
+  &lt;use value=&quot;official&quot; /&gt;
+  &lt;family value=&quot;Hochheim-Weilenfels&quot; /&gt;
+  &lt;given value=&quot;Regina&quot; /&gt;
+  &lt;given value=&quot;Johanna&quot; /&gt;
+  &lt;given value=&quot;Maria&quot; /&gt;
+  &lt;prefix value=&quot;Gräfin&quot;&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&quot; &gt;
+      &lt;valueCode value=&quot;NB&quot; /&gt;
+    &lt;/extension&gt;
+  &lt;/prefix&gt;
+  &lt;prefix value=&quot;Dr. phil.&quot;&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&quot; &gt;
+      &lt;valueCode value=&quot;AC&quot; /&gt;
+    &lt;/extension&gt;
+  &lt;/prefix&gt;
+  &lt;suffix value=&quot;NCFSA&quot; /&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;use value=&quot;maiden&quot; /&gt;
+  &lt;family value=&quot;Hochheim&quot; /&gt;
+&lt;/name&gt;
+</pre>
 
-<div class="example"><br><br>Japanese example in the three forms: ideographic (Kanji), syllabic (Hiragana) and alphabetic (Romaji).<br><br><pre class="xml" fragment="HumanName"><br>&lt;name&gt;<br>  &lt;family value=&quot;??&quot; /&gt;<br>  &lt;given value=&quot;??&quot; /&gt;<br>  &lt;/name&gt;<br>&lt;name&gt;<br> &lt;family value=&quot;???&quot; /&gt;<br> &lt;given value=&quot;???&quot; /&gt;<br>&lt;/name&gt;<br>&lt;name&gt;<br>  &lt;family value=&quot;KIMURA&quot; /&gt;<br>  &lt;given value=&quot;MICHIO&quot; /&gt;<br>&lt;/name&gt;<br></pre><br><br>The three forms are differentiated by the character subset each contains.<br><br></div>
+<p>This example makes use of the ISO 21090 extensions to carry the rare ISO 21090 qualifier attributes &quot;AC&quot; and &quot;NB&quot;.</p>
+<p></p>
+<p>Japanese example in the three forms: ideographic (Kanji), syllabic (Hiragana) and alphabetic (Romaji).</p>
+<pre class="xml" fragment="HumanName">
+&lt;name&gt;
+  &lt;family value=&quot;??&quot; /&gt;
+  &lt;given value=&quot;??&quot; /&gt;
+  &lt;/name&gt;
+&lt;name&gt;
+ &lt;family value=&quot;???&quot; /&gt;
+ &lt;given value=&quot;???&quot; /&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;family value=&quot;KIMURA&quot; /&gt;
+  &lt;given value=&quot;MICHIO&quot; /&gt;
+&lt;/name&gt;
+</pre>
 
-<div class="example"><br><br>Russian example in the two forms: cyrillic, and latin:<br><br><pre class="xml" fragment="HumanName"><br>&lt;name&gt;<br>  &lt;family value=&quot;??????&quot; /&gt;<br>  &lt;given value=&quot;????&quot; /&gt;<br>  &lt;given value=&quot;????????????&quot; /&gt;<br>&lt;/name&gt;<br>&lt;name&gt;<br>  &lt;family value=&quot;EMELIN&quot; /&gt;<br>  &lt;given value=&quot;IVAN&quot; /&gt;<br>  &lt;given value=&quot;VLADIMIROVICH&quot; /&gt;<br>&lt;/name&gt;<br></pre><br><br>In  Russian  usage, these names are known as<br>the domestic and foreign names respectively. The two forms are differentiated by the character subset each contains.<br><br></div>
+<p>The three forms are differentiated by the character subset each contains.</p>
+<p></p>
+<p>Russian example in the two forms: cyrillic, and latin:</p>
+<pre class="xml" fragment="HumanName">
+&lt;name&gt;
+  &lt;family value=&quot;??????&quot; /&gt;
+  &lt;given value=&quot;????&quot; /&gt;
+  &lt;given value=&quot;????????????&quot; /&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;family value=&quot;EMELIN&quot; /&gt;
+  &lt;given value=&quot;IVAN&quot; /&gt;
+  &lt;given value=&quot;VLADIMIROVICH&quot; /&gt;
+&lt;/name&gt;
+</pre>
 
-<div class="example"><br><br>Scandinavian example: Erikson is the family name. Jan Erik are the given names, and Östlund the family name of the mother, which is taken as a Mellannamn.<br><br><pre class="xml" fragment="HumanName"><br>&lt;name&gt;<br>  &lt;use value=&quot;official&quot; /&gt;<br>  &lt;family value=&quot;Erikson&quot; /&gt;<br>  &lt;given value=&quot;Jan&quot; /&gt;<br>  &lt;given value=&quot;Erik&quot; /&gt;<br>  &lt;given value=&quot;Östlund&quot;&gt;<br>    &lt;extension url=&quot;<a href="http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&amp;quot" target="_blank" rel="external">http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&amp;quot</a>; &gt;<br>      &lt;valueCoding&gt;<br>         &lt;code value=&quot;MID&quot; /&gt;<br>         &lt;system value=&quot;<a href="http://hl7.org/fhir/v3/EntityNamePartQualifier2&amp;quot" target="_blank" rel="external">http://hl7.org/fhir/v3/EntityNamePartQualifier2&amp;quot</a>; /&gt;<br>      &lt;/valueCoding&gt;<br>    &lt;/extension&gt;<br>  &lt;/given&gt;<br>&lt;/name&gt;<br></pre><br><br>This example makes use of the ISO 21090 extension to carry the culture specific ISO 21090 qualifier attribute &quot;MID&quot; for the Mellannamn.<br><br>Then Jan Erikson has a daughter, Karin, with his wife Margrete Hansen. The first communications of the new born<br>name is &quot;Margrete Jente&quot; (Margrete’s Girl) and the mother’s family name, not the given name (Karin). The<br>father’s Family name is  not used at all. This is a known temporary name assigned directly after the birth of<br>the child.<br><br><pre class="xml" fragment="HumanName"><br>&lt;name&gt;<br>  &lt;use value=&quot;temp&quot; /&gt;<br>  &lt;!— use could be OR+OLD, depends how record keeping is done —&gt;<br>  &lt;family value=&quot;Hansen&quot; /&gt;<br>  &lt;given value=&quot;Margrete Jente&quot; /&gt;<br>&lt;/name&gt;<br></pre><br><br>The baby’s name is subsequently changed to the fathers’ family name, and to use the mother’s name as<br>mellomnamn.<br><br><pre class="xml" fragment="HumanName"><br>&lt;name&gt;<br>  &lt;use value=&quot;official&quot; /&gt;<br>  &lt;family value=&quot;Erikson&quot; /&gt;<br>  &lt;given value=&quot;Karin&quot; /&gt;<br>  &lt;given value=&quot;Hansen&quot;&gt;<br>    &lt;extension url=&quot;<a href="http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&amp;quot" target="_blank" rel="external">http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&amp;quot</a>; &gt;<br>      &lt;valueCoding&gt;<br>         &lt;code value=&quot;MID&quot; /&gt;<br>         &lt;system value=&quot;<a href="http://hl7.org/fhir/v3/EntityNamePartQualifier2&amp;quot" target="_blank" rel="external">http://hl7.org/fhir/v3/EntityNamePartQualifier2&amp;quot</a>; /&gt;<br>      &lt;/valueCoding&gt;<br>    &lt;/extension&gt;<br>  &lt;/given&gt;<br>&lt;/name&gt;<br></pre><br><br>Later, Karin gets married to Per Berg, and decides to adopts Berg as her family name, and also decides to use<br>Erikson as the mellom navn. (Note: Karin could have chosen to use another mellom navn, e.g. the family name of<br>her mother, her father or other family names as specified by naming laws of the country in question).<br><br><pre class="xml" fragment="HumanName"><br>&lt;name&gt;<br>  &lt;use value=&quot;old&quot; /&gt;<br>  &lt;family value=&quot;Erikson&quot; /&gt;<br>  &lt;given value=&quot;Karin&quot; /&gt;<br>  &lt;given value=&quot;Hansen&quot;&gt;<br>    &lt;extension url=&quot;<a href="http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&amp;quot" target="_blank" rel="external">http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&amp;quot</a>; &gt;<br>      &lt;valueCoding&gt;<br>        &lt;code value=&quot;MID&quot; /&gt;<br>        &lt;system value=&quot;<a href="http://hl7.org/fhir/v3/EntityNamePartQualifier2&amp;quot" target="_blank" rel="external">http://hl7.org/fhir/v3/EntityNamePartQualifier2&amp;quot</a>; /&gt;<br>      &lt;/valueCoding&gt;<br>    &lt;/extension&gt;<br>  &lt;/given&gt;<br>&lt;/name&gt;<br>&lt;name&gt;<br>  &lt;use value=&quot;official&quot; /&gt;<br>  &lt;family value=&quot;Berg&quot; /&gt;<br>  &lt;given value=&quot;Karin&quot; /&gt;<br>  &lt;given value=&quot;Erikson&quot;&gt;<br>    &lt;extension url=&quot;<a href="http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&amp;quot" target="_blank" rel="external">http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&amp;quot</a>; &gt;<br>      &lt;valueCoding&gt;<br>        &lt;code value=&quot;MID&quot; /&gt;<br>        &lt;system value=&quot;<a href="http://hl7.org/fhir/v3/EntityNamePartQualifier2&amp;quot" target="_blank" rel="external">http://hl7.org/fhir/v3/EntityNamePartQualifier2&amp;quot</a>; /&gt;<br>      &lt;/valueCoding&gt;<br>    &lt;/extension&gt;<br>  &lt;/given&gt;<br>&lt;/name&gt;<br>&lt;name&gt;<br>  &lt;use value=&quot;usual&quot; /&gt;<br>  &lt;family value=&quot;Berg&quot; /&gt;<br>  &lt;given value=&quot;Karin&quot; /&gt;<br>&lt;/name&gt;<br></pre><br></div>
+<p>In  Russian  usage, these names are known as<br>the domestic and foreign names respectively. The two forms are differentiated by the character subset each contains.</p>
+<p></p>
+<p>Scandinavian example: Erikson is the family name. Jan Erik are the given names, and Östlund the family name of the mother, which is taken as a Mellannamn.</p>
+<pre class="xml" fragment="HumanName">
+&lt;name&gt;
+  &lt;use value=&quot;official&quot; /&gt;
+  &lt;family value=&quot;Erikson&quot; /&gt;
+  &lt;given value=&quot;Jan&quot; /&gt;
+  &lt;given value=&quot;Erik&quot; /&gt;
+  &lt;given value=&quot;Östlund&quot;&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&quot; &gt;
+      &lt;valueCoding&gt;
+         &lt;code value=&quot;MID&quot; /&gt;
+         &lt;system value=&quot;http://hl7.org/fhir/v3/EntityNamePartQualifier2&quot; /&gt;
+      &lt;/valueCoding&gt;
+    &lt;/extension&gt;
+  &lt;/given&gt;
+&lt;/name&gt;
+</pre>
 
-<h4 id="1-17-1-12-1_W3C_International_Examples"><span class="sectioncount">1.17.1.12.1<a name="1.17.1.12.1"> </a></span> W3C International Examples</h4>
-<p>These examples are taken from the <a href="http://www.w3.org/International/questions/qa-personal-names" target="_blank" rel="external">W3C International Examples</a>,<br>which should be consulted for further information.</p>
-<p>A patronymic is &quot;The part of a name that links to the genealogy&quot;:</p>
+<p>This example makes use of the ISO 21090 extension to carry the culture specific ISO 21090 qualifier attribute &quot;MID&quot; for the Mellannamn.</p>
+<p>Then Jan Erikson has a daughter, Karin, with his wife Margrete Hansen. The first communications of the new born<br>name is &quot;Margrete Jente&quot; (Margrete’s Girl) and the mother’s family name, not the given name (Karin). The<br>father’s Family name is  not used at all. This is a known temporary name assigned directly after the birth of<br>the child.</p>
+<pre class="xml" fragment="HumanName">
+&lt;name&gt;
+  &lt;use value=&quot;temp&quot; /&gt;
+  &lt;!-- use could be OR+OLD, depends how record keeping is done --&gt;
+  &lt;family value=&quot;Hansen&quot; /&gt;
+  &lt;given value=&quot;Margrete Jente&quot; /&gt;
+&lt;/name&gt;
+</pre>
+
+<p>The baby’s name is subsequently changed to the fathers’ family name, and to use the mother’s name as<br>mellomnamn.</p>
+<pre class="xml" fragment="HumanName">
+&lt;name&gt;
+  &lt;use value=&quot;official&quot; /&gt;
+  &lt;family value=&quot;Erikson&quot; /&gt;
+  &lt;given value=&quot;Karin&quot; /&gt;
+  &lt;given value=&quot;Hansen&quot;&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&quot; &gt;
+      &lt;valueCoding&gt;
+         &lt;code value=&quot;MID&quot; /&gt;
+         &lt;system value=&quot;http://hl7.org/fhir/v3/EntityNamePartQualifier2&quot; /&gt;
+      &lt;/valueCoding&gt;
+    &lt;/extension&gt;
+  &lt;/given&gt;
+&lt;/name&gt;
+</pre>
+
+<p>Later, Karin gets married to Per Berg, and decides to adopts Berg as her family name, and also decides to use<br>Erikson as the mellom navn. (Note: Karin could have chosen to use another mellom navn, e.g. the family name of<br>her mother, her father or other family names as specified by naming laws of the country in question).</p>
+<pre class="xml" fragment="HumanName">
+&lt;name&gt;
+  &lt;use value=&quot;old&quot; /&gt;
+  &lt;family value=&quot;Erikson&quot; /&gt;
+  &lt;given value=&quot;Karin&quot; /&gt;
+  &lt;given value=&quot;Hansen&quot;&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&quot; &gt;
+      &lt;valueCoding&gt;
+        &lt;code value=&quot;MID&quot; /&gt;
+        &lt;system value=&quot;http://hl7.org/fhir/v3/EntityNamePartQualifier2&quot; /&gt;
+      &lt;/valueCoding&gt;
+    &lt;/extension&gt;
+  &lt;/given&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;use value=&quot;official&quot; /&gt;
+  &lt;family value=&quot;Berg&quot; /&gt;
+  &lt;given value=&quot;Karin&quot; /&gt;
+  &lt;given value=&quot;Erikson&quot;&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&quot; &gt;
+      &lt;valueCoding&gt;
+        &lt;code value=&quot;MID&quot; /&gt;
+        &lt;system value=&quot;http://hl7.org/fhir/v3/EntityNamePartQualifier2&quot; /&gt;
+      &lt;/valueCoding&gt;
+    &lt;/extension&gt;
+  &lt;/given&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;use value=&quot;usual&quot; /&gt;
+  &lt;family value=&quot;Berg&quot; /&gt;
+  &lt;given value=&quot;Karin&quot; /&gt;
+&lt;/name&gt;
+</pre>
+
+
+#### <span class="sectioncount">1.17.1.12.1<a name="1.17.1.12.1"> </a></span> W3C International Examples
+
+These examples are taken from the [W3C International Examples](http://www.w3.org/International/questions/qa-personal-names),
+which should be consulted for further information.
+
+A patronymic is &quot;The part of a name that links to the genealogy&quot;:
+
 <pre class="xml" fragment="HumanName">
 &lt;name&gt;
   &lt;text value=&quot;Björk Guðmundsdóttir&quot;/&gt;
@@ -894,29 +690,130 @@ Karen van Hentenryck is of Dutch origin, and the &quot;van&quot; is a voorvoegse
 <h3 id="1-17-1-13_"><span class="sectioncount">1.17.1.13<a name="1.17.1.13"> </a></span></h3>
 <p>Address</p>
 <p>See also <a href="datatypes.html#Address">Base Definition</a>, <a href="datatypes-definitions.html#Address">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Address">Mappings</a>.</p>
-<div class="example"><br><br><strong>Example</strong><br><br>HL7 office’s address.<br><br><pre class="xml" fragment="Address"><br>  &lt;address&gt;<br>   &lt;use value=&quot;work&quot; /&gt;<br>   &lt;text value=&quot;1050 W Wishard Blvd<br>RG<br>         5th floor<br>Indianapolis, IN 46240&quot; /&gt;<br>   &lt;line value=&quot;1050 W Wishard Blvd&quot; /&gt;<br>   &lt;line value=&quot;RG 5th floor&quot; /&gt;<br>   &lt;city value=&quot;Indianapolis&quot; /&gt;<br>   &lt;state value=&quot;IN&quot; /&gt;<br>   &lt;postalCode value=&quot;46240&quot; /&gt;<br>  &lt;/address&gt;<br></pre><br><br>A UK example address.<br><br><pre class="xml" fragment="Address"><br>  &lt;address&gt;<br>    &lt;extension url=&quot;<a href="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-county&amp;quot" target="_blank" rel="external">http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-county&amp;quot</a>; &gt; &lt;!— todo: review this —&gt;<br>      &lt;valueString value=&quot;HUDDERSFIELD&quot;/&gt;<br>    &lt;/extension&gt;<br>    &lt;text value=&quot;1 Back Lane&amp;#13;&amp;#10;Holmfirth&amp;#13;&amp;#10;HUDDERSFIELD&amp;#13;&amp;#10;HD7 1HQ&quot;/&gt;<br>    &lt;line value=&quot;1 Back Lane&quot;/&gt;<br>    &lt;city value=&quot;Holmfirth&quot;/&gt;<br>    &lt;postalCode value=&quot;HD7 1HQ&quot;/&gt;<br>  &lt;/address&gt;<br></pre><br><br>A Postal address - i.e. an address that it doesn’t make sense to try and visit.<br><br><pre class="xml" fragment="Address"><br>  &lt;address&gt;<br>    &lt;extension url=&quot;<a href="http://hl7.org/fhir/StructureDefinition/iso21090-AD-use&quot;&amp;gt" target="_blank" rel="external">http://hl7.org/fhir/StructureDefinition/iso21090-AD-use&quot;&amp;gt</a>; &lt;!— todo: review this —&gt;<br>      &lt;valueCode value=&quot;PST&quot;/&gt;<br>    &lt;/extension&gt;<br>    &lt;line value=&quot;PO Box 31445&quot;/&gt;<br>    &lt;city value=&quot;Erewhon&quot;/&gt;<br>    &lt;postalCode value=&quot;0001&quot;/&gt;<br>  &lt;/address&gt;<br></pre><br></div>
+<p><strong>Example</strong></p>
+<p>HL7 office’s address.</p>
+<pre class="xml" fragment="Address">
+  &lt;address&gt;
+   &lt;use value=&quot;work&quot; /&gt;
+   &lt;text value=&quot;1050 W Wishard Blvd
+RG
+         5th floor
+Indianapolis, IN 46240&quot; /&gt;
+   &lt;line value=&quot;1050 W Wishard Blvd&quot; /&gt;
+   &lt;line value=&quot;RG 5th floor&quot; /&gt;
+   &lt;city value=&quot;Indianapolis&quot; /&gt;
+   &lt;state value=&quot;IN&quot; /&gt;
+   &lt;postalCode value=&quot;46240&quot; /&gt;
+  &lt;/address&gt;
+</pre>
 
-<p><a name="ContactPoint"><br><a name="contactpoint"></a></a></p>
-<h3 id="1-17-1-14_"><span class="sectioncount">1.17.1.14<a name="1.17.1.14"> </a></span></h3>
-<p>ContactPoint</p>
-<p>See also <a href="datatypes.html#ContactPoint">Base Definition</a>, <a href="datatypes-definitions.html#ContactPoint">Detailed Descriptions</a> and <a href="datatypes-mappings.html#ContactPoint">Mappings</a>.</p>
-<div class="example"><br><br><strong>Example</strong><br><br>Home phone number:<br><br><pre class="xml" fragment="ContactPoint"><br>  &lt;telecom&gt;<br>   &lt;system value=&quot;phone&quot; /&gt;<br>   &lt;value value=&quot;+15556755745&quot; /&gt;<br>   &lt;use value=&quot;home&quot; /&gt;<br>  &lt;/telecom&gt;<br></pre><br></div>
+<p>A UK example address.</p>
+<pre class="xml" fragment="Address">
+  &lt;address&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-county&quot; &gt; &lt;!-- todo: review this --&gt;
+      &lt;valueString value=&quot;HUDDERSFIELD&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;text value=&quot;1 Back Lane&amp;#13;&amp;#10;Holmfirth&amp;#13;&amp;#10;HUDDERSFIELD&amp;#13;&amp;#10;HD7 1HQ&quot;/&gt;
+    &lt;line value=&quot;1 Back Lane&quot;/&gt;
+    &lt;city value=&quot;Holmfirth&quot;/&gt;
+    &lt;postalCode value=&quot;HD7 1HQ&quot;/&gt;
+  &lt;/address&gt;
+</pre>
 
-<p><a name="Timing"><br><a name="timing"></a></a></p>
-<h3 id="1-17-1-15_"><span class="sectioncount">1.17.1.15<a name="1.17.1.15"> </a></span></h3>
-<p>Timing</p>
-<p>See also <a href="datatypes.html#Timing">Base Definition</a>, <a href="datatypes-definitions.html#Timing">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Timing">Mappings</a>.</p>
-<div class="example"><br><br><strong>Example</strong><br><br>A series of appointments for radiotherapy:<br><br><pre class="xml" fragment="Timing"><br>  &lt;schedule&gt;<br>    &lt;event&gt;<br>      &lt;start value=&quot;2012-01-07T09:00:00+10:00&quot; /&gt;<br>      &lt;end value=&quot;2012-01-07T13:00:00+10:00&quot; /&gt;<br>    &lt;/event&gt;<br>    &lt;event&gt;<br>      &lt;start value=&quot;2012-01-14T09:00:00+10:00&quot; /&gt;<br>      &lt;end value=&quot;2012-01-14T13:00:00+10:00&quot; /&gt;<br>    &lt;/event&gt;<br>    &lt;event&gt;<br>      &lt;start value=&quot;2012-01-22T11:00:00+10:00&quot; /&gt;<br>      &lt;end value=&quot;2012-01-22T15:00:00+10:00&quot; /&gt;<br>    &lt;/event&gt;<br>  &lt;/schedule&gt;<br></pre><br><br>BID (twice a day) (no start or end specified):<br><br><pre class="xml" fragment="Timing"><br>  &lt;schedule&gt;<br>   &lt;repeat&gt;<br>     &lt;frequency value=&quot;2&quot; /&gt;<br>     &lt;duration value=&quot;1&quot; /&gt;<br>     &lt;units value=&quot;d&quot; /&gt;<br>   &lt;/repeat&gt;<br>  &lt;/schedule&gt;<br></pre><br><br>1/2 an hour before breakfast for 10 days from 23-Dec 2011:<br><br><pre class="xml" fragment="Timing"><br>  &lt;schedule&gt;<br>    &lt;event&gt;<br>      &lt;start value=&quot;2011-12-23&quot; /&gt;<br>    &lt;/event&gt;<br>    &lt;repeat&gt;<br>      &lt;when value=&quot;ACM&quot; /&gt;<br>      &lt;duration value=&quot;30&quot; /&gt;<br>      &lt;units value=&quot;min&quot; /&gt;<br>      &lt;end value=&quot;2012-01-02&quot; /&gt;<br>    &lt;/repeat&gt;<br>  &lt;/schedule&gt;<br></pre><br><br>Note that the end date is inclusive like the high date of a Period.<br><br></div>
+<p>A Postal address - i.e. an address that it doesn’t make sense to try and visit.</p>
+<pre class="xml" fragment="Address">
+  &lt;address&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-AD-use&quot;&gt; &lt;!-- todo: review this --&gt;
+      &lt;valueCode value=&quot;PST&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;line value=&quot;PO Box 31445&quot;/&gt;
+    &lt;city value=&quot;Erewhon&quot;/&gt;
+    &lt;postalCode value=&quot;0001&quot;/&gt;
+  &lt;/address&gt;
+</pre>
 
-<p><a name="Signature"><br><a name="timing"></a></a></p>
-<h3 id="1-17-1-16_"><span class="sectioncount">1.17.1.16<a name="1.17.1.16"> </a></span></h3>
-<p>Signature</p>
-<p>See also <a href="datatypes.html#Signature">Base Definition</a>, <a href="datatypes-definitions.html#Signature">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Signature">Mappings</a>.</p>
-<div class="example"><br><br><strong>Example</strong><br><br>todo<br><br><pre class="xml" fragment="Signature"><br>  &lt;signature&gt;<br>    &lt;!— todo —&gt;<br>  &lt;/signature&gt;<br></pre><br><br></div>
+
+<a name="ContactPoint">
+<a name="contactpoint">
+
+#### 1.17.1.14 ContactPoint
+
+See also [Base Definition](datatypes.html#ContactPoint), [Detailed Descriptions](datatypes-definitions.html#ContactPoint) and [Mappings](datatypes-mappings.html#ContactPoint).
+
+
+
+**Example**
+
+Home phone number:
+
+<pre class="xml" fragment="ContactPoint">
+  &lt;telecom&gt;
+   &lt;system value=&quot;phone&quot; /&gt;
+   &lt;value value=&quot;+15556755745&quot; /&gt;
+   &lt;use value=&quot;home&quot; /&gt;
+  &lt;/telecom&gt;
+</pre>
+
+
+如果是微信二维码的话，如何标识：
+<a name="Timing">
+<a name="timing">
+
+#### 1.17.1.15  Timing
+
+See also [Base Definition](datatypes.html#Timing), [Detailed Descriptions](datatypes-definitions.html#Timing) and [Mappings](datatypes-mappings.html#Timing).
+
+
+
+**Example**
+
+预约了一个疗程的放疗？:
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">schedule</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">event</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">start</span> <span class="attribute">value</span>=<span class="value">"2012-01-07T09:00:00+10:00"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">end</span> <span class="attribute">value</span>=<span class="value">"2012-01-07T13:00:00+10:00"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">event</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">event</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">start</span> <span class="attribute">value</span>=<span class="value">"2012-01-14T09:00:00+10:00"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">end</span> <span class="attribute">value</span>=<span class="value">"2012-01-14T13:00:00+10:00"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">event</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">event</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">start</span> <span class="attribute">value</span>=<span class="value">"2012-01-22T11:00:00+10:00"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">end</span> <span class="attribute">value</span>=<span class="value">"2012-01-22T15:00:00+10:00"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">event</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">schedule</span>&gt;</span></div></pre></td></tr></table></figure>
+
+`
+
+一天两次BID (twice a day) (no start or end specified):
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">schedule</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="title">repeat</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">frequency</span> <span class="attribute">value</span>=<span class="value">"2"</span> /&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">duration</span> <span class="attribute">value</span>=<span class="value">"1"</span> /&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="title">units</span> <span class="attribute">value</span>=<span class="value">"d"</span> /&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="title">repeat</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">schedule</span>&gt;</span></div></pre></td></tr></table></figure>
+
+`
+
+早饭前半小时，从2011年12月23开始连续十天
+1/2 an hour before breakfast for 10 days from 23-Dec 2011:
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">schedule</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">event</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">start</span> <span class="attribute">value</span>=<span class="value">"2011-12-23"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">event</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">repeat</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">when</span> <span class="attribute">value</span>=<span class="value">"ACM"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">duration</span> <span class="attribute">value</span>=<span class="value">"30"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">units</span> <span class="attribute">value</span>=<span class="value">"min"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">end</span> <span class="attribute">value</span>=<span class="value">"2012-01-02"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">repeat</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">schedule</span>&gt;</span></div></pre></td></tr></table></figure>
+
+`
+
+Note that the end date is inclusive like the high date of a Period.
+
+
+
+<a name="Signature">
+<a name="timing">
+
+### <span class="sectioncount">1.17.1.16<a name="1.17.1.16"> </a></span> 
+Signature
+
+See also [Base Definition](datatypes.html#Signature), [Detailed Descriptions](datatypes-definitions.html#Signature) and [Mappings](datatypes-mappings.html#Signature).
+
+
+
+**Example**
+
+todo
+
+<pre class="xml" fragment="Signature">
+  &lt;signature&gt;
+    &lt;!-- todo --&gt;
+  &lt;/signature&gt;
+</pre>
 
 <p></p>
+<p></p>
 <p>&copy; HL7.org 2011+. FHIR DSTU (v0.4.0-3900) 构建于2014  12月20号 2014 22:38+0000 星期六 .<br>链接：<a href="http://hl7.org/implement/standards/fhir/dstu.html" target="_blank" rel="external">试行版是什么</a> |<a href="http://hl7.org/implement/standards/fhir/history.html" target="_blank" rel="external">版本更新情况</a> | <a href="http://hl7.org/implement/standards/fhir/license.html" target="_blank" rel="external">许可协议</a> |<a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank" rel="external">提交变更建议</a>       </p>
-</a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>
+</a></a></a></a></a></a>
         
       </div>
     
